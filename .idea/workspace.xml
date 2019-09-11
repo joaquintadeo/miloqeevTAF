@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d93e587-ec3e-4872-b8bc-7869f7a8de56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-framework/src/main/java/functions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-framework/src/main/java/utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/pageObjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/test_with_framework.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/test_without_framework.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/test_without_framework.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/test_without_framework_testng.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,19 +30,44 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/test_with_framework.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="306">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+                <element signature="e#627#628#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework.java">
+        <entry file="file://$PROJECT_DIR$/miloqeev-tests/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="425">
+              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/pageObjects.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/functions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,18 +76,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-framework/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-domain/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -78,6 +102,11 @@
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework_testng.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework.java" />
+        <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/pageObjects.java" />
+        <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/functions.java" />
+        <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/utils.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/test_with_framework.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/pom.xml" />
       </list>
     </option>
   </component>
@@ -109,6 +138,58 @@
             <path>
               <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
               <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-page-objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-page-objects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-page-objects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-page-objects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
@@ -163,12 +244,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.test_without_framework_testng">
+  <component name="RunManager" selected="TestNG.test_with_framework">
     <configuration name="test_without_framework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="miloqeev-tests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="test_without_framework" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test_with_framework" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="miloqeev-tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test_with_framework" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,6 +278,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.test_with_framework" />
         <item itemvalue="TestNG.test_without_framework_testng" />
         <item itemvalue="JUnit.test_without_framework" />
       </list>
@@ -211,6 +304,12 @@
     <history-entry file="test_without_framework_testng - 2019.09.11 at 16h 27m 13s.xml">
       <configuration name="test_without_framework_testng" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="test_with_framework - 2019.09.11 at 19h 42m 20s.xml">
+      <configuration name="test_with_framework" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="test_with_framework - 2019.09.11 at 19h 45m 14s.xml">
+      <configuration name="test_with_framework" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -221,7 +320,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -229,7 +328,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -245,16 +344,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/miloqeev-framework/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-domain/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/miloqeevTAF.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/pom.xml">
@@ -270,6 +360,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-framework/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -277,13 +383,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/javax/swing/text/html/parser/DTDConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="198">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/pageObjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/test_with_framework.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
         </state>
       </provider>
     </entry>
