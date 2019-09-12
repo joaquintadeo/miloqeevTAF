@@ -1,3 +1,5 @@
+package UI;
+
 public class utils {
     static public final int ID = 0;
     static public final int NAME = 1;

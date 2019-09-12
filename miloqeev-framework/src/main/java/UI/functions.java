@@ -1,3 +1,5 @@
+package UI;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -63,5 +65,10 @@ public class functions{
                 break;
             default: break;
         }
+    }
+
+    public static void clickElement(int selectorType, String selectorValue){
+        WebElement element = findBy(selectorType, selectorValue);
+        element.click();
     }
 }
