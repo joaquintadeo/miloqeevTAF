@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="miloqeev-tests" />
-        <module name="miloqeev-framework" />
-        <module name="miloqeev-domain" />
         <module name="miloqeev-page-objects" />
+        <module name="miloqeev-tests" />
+        <module name="miloqeev-domain" />
+        <module name="miloqeev-framework" />
       </profile>
     </annotationProcessing>
   </component>

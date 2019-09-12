@@ -1,5 +1,6 @@
 import UI.functions;
 import UI.utils;
+import UI.browserManagement;
 import Google.basePage;
 import facetTest.pageObjects;
 import org.testng.annotations.AfterMethod;
@@ -18,17 +19,19 @@ public class facetTest {
 
     @BeforeMethod
     public void setup(){
-        functions.openBrowser();
+        browserManagement.openBrowser("chrome");
+        browserManagement.setBrowserImplicitWait(600);
+        browserManagement.maximizeBrowserWindow();
     }
 
     @AfterMethod
     public void teardown(){
-        functions.closeBrowser();
+        browserManagement.closeBrowser();
     }
 
     @Test
     public void searchFacet(){
-        functions.goTo(googleURl);
+        browserManagement.goTo(googleURl);
         functions.inputText(name, searchBarr, "facet");
         functions.waitUntilPageContainsElement(xpath, facetXpath);
         functions.clickElement(xpath, facetLink);
