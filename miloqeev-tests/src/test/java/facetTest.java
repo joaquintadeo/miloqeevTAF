@@ -1,8 +1,8 @@
 import UI.functions;
 import UI.utils;
 import UI.browserManagement;
-import Google.basePage;
-import facetTest.pageObjects;
+import facetPage.pageObjects;
+import googlePage.googleLandingPage;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -11,8 +11,8 @@ public class facetTest {
     private static int name = utils.NAME;
     private static int xpath = utils.XPATH;
     private static int classname = utils.CLASSNAME;
-    private static String googleURl = basePage.googleUrl;
-    private static String searchBarr = basePage.searchBarr;
+    private static String googleURl = googleLandingPage.Url;
+    private static String searchBarr = googleLandingPage.searchBarr;
     private static String facetXpath = pageObjects.facetXpath;
     private static String facetLink = pageObjects.facetLink;
     private static String facetLogo = pageObjects.facetLogo;

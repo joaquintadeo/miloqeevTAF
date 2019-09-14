@@ -1,4 +1,4 @@
-package facetTest;
+package facetPage;
 
 public class pageObjects {
     static public final String facetXpath = "//div[@class='TbwUpd']//cite[text()='https://www.facet.unt.edu.ar']";
