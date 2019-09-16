@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d93e587-ec3e-4872-b8bc-7869f7a8de56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/googlePage/googleLandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-domain/src/main/java/Google/basePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-domain/src/main/java/Google/search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-domain/target/classes/META-INF/miloqeev-domain.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-framework/target/classes/META-INF/miloqeev-framework.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetTest/pageObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-page-objects/target/classes/META-INF/miloqeev-page-objects.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-page-objects/target/classes/facetTest/pageObjects.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/META-INF/miloqeev-tests.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/facetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/facetTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/test_without_framework.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-domain/src/main/java/Google/search.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-domain/target/classes/Google/basePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/facetTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,37 +28,48 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTest.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+            <state relative-caret-position="527">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#202#203#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/Google/search.java">
+        <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+            <state relative-caret-position="442">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#679#680#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+                <element signature="e#845#846#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/googlePage/googleLandingPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -77,10 +78,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
+        <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="198">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,10 +90,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
+        <entry file="file://$PROJECT_DIR$/miloqeev-tests/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="23" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-domain/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,13 +153,17 @@
         <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/pageObjects.java" />
         <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetTest/pageObjects.java" />
         <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/pageObjects.java" />
         <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java" />
         <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/googlePage/googleLandingPage.java" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTest.java" />
         <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" />
+        <option value="$PROJECT_DIR$/miloqeev-domain/pom.xml" />
         <option value="$PROJECT_DIR$/miloqeev-domain/src/main/java/Google/search.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTestGherkin.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java" />
+        <option value="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" />
       </list>
     </option>
   </component>
@@ -151,10 +174,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1440" />
+    <option name="height" value="801" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -164,8 +188,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,7 +230,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Google" type="462c0819:PsiDirectoryNode" />
+              <item name="facetPage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
@@ -343,12 +367,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.facetTest">
+  <component name="RunManager" selected="TestNG.facet.facetLogo">
     <configuration name="test_without_framework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="miloqeev-tests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="test_without_framework" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="facet" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="miloqeev-tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="facet" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -364,11 +399,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test_without_framework" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="facet.facetLogo" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="miloqeev-tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test_without_framework" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="facet" />
+      <option name="METHOD_NAME" value="facetLogo" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="facet.searchFacet" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="miloqeev-tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="facet" />
+      <option name="METHOD_NAME" value="searchFacet" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -377,6 +425,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.facet.facetLogo" />
+        <item itemvalue="TestNG.facet.searchFacet" />
+        <item itemvalue="TestNG.facetTestGherkin" />
         <item itemvalue="TestNG.facetTest" />
         <item itemvalue="JUnit.test_without_framework" />
       </list>
@@ -396,42 +447,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_with_framework - 2019.09.12 at 12h 22m 49s.xml">
-      <configuration name="test_with_framework" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="test_with_framework - 2019.09.12 at 12h 54m 07s.xml">
-      <configuration name="test_with_framework" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTest - 2019.09.12 at 13h 03m 37s.xml">
-      <configuration name="facetTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTest - 2019.09.12 at 14h 12m 37s.xml">
-      <configuration name="facetTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTest - 2019.09.12 at 14h 14m 32s.xml">
-      <configuration name="facetTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTest - 2019.09.12 at 14h 15m 09s.xml">
-      <configuration name="facetTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTest - 2019.09.12 at 14h 19m 52s.xml">
-      <configuration name="facetTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTest - 2019.09.12 at 14h 22m 18s.xml">
-      <configuration name="facetTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTest - 2019.09.14 at 14h 07m 06s.xml">
-      <configuration name="facetTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="facetTest - 2019.09.14 at 14h 09m 43s.xml">
       <configuration name="facetTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="facetTestGherkin - 2019.09.16 at 12h 12m 40s.xml">
+      <configuration name="facetTestGherkin" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 12h 23m 54s.xml">
+      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 12h 24m 42s.xml">
+      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 12h 31m 46s.xml">
+      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 12h 38m 08s.xml">
+      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 13h 30m 44s.xml">
+      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 13h 41m 55s.xml">
+      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facetTestGherkin_facetLogo - 2019.09.16 at 13h 46m 52s.xml">
+      <configuration name="facetTestGherkin.facetLogo" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facet_facetLogo - 2019.09.16 at 14h 26m 58s.xml">
+      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38730854" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18869936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -440,7 +491,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32932165" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -448,7 +499,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32932165" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -466,19 +517,7 @@
     <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-domain/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/test_without_framework.java" />
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/javax/swing/text/html/parser/DTDConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -496,28 +535,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/pom.xml">
+    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/googlePage/googleLandingPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="198">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/googlePage/googleLandingPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -526,31 +561,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="18" selection-start-line="18" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -561,10 +591,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/Google/search.java">
+    <entry file="file://$PROJECT_DIR$/miloqeev-domain/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        <state relative-caret-position="391">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#202#203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
