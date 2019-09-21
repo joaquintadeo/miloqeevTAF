@@ -12,6 +12,7 @@
         <module>miloqeev-domain</module>
         <module>miloqeev-page-objects</module>
         <module>miloqeev-tests</module>
+        <module>miloqeev-reports</module>
     </modules>
     <dependencies>
         <dependency>
