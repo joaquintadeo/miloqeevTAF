@@ -8,6 +8,7 @@ public class facet {
     public void teardown(){
         main.close_browser();
     }
+
     @Test
     public void facetLogo(){
         main.Given_user_opens_a_browser();
