@@ -19,7 +19,7 @@ public class main {
     }
 
     public static void Then_user_must_see_facet_logo(){
-        functions.waitUntilPageContainsElement(classname, facetLogo);
+        functions.PageShouldContainElement(classname, facetLogo);
     }
 
     public static void close_browser(){

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d93e587-ec3e-4872-b8bc-7869f7a8de56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/miloqeev-reports/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miloqeev-reports/src/main/java/extentReports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-reports/src/test/java/reports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-domain/target/classes/facetPage/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-domain/target/classes/facetPage/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/extent.html" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/extent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/facetExtentReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/facetExtentReport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-framework/target/classes/UI/functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-framework/target/classes/UI/functions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,22 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#776#777#0" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="333">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -56,12 +41,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            <state relative-caret-position="221">
+              <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="65" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#776#777#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,10 +76,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="340">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
+                <element signature="e#744#745#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+            <state relative-caret-position="391">
+              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1156#1157#0" expanded="true" />
@@ -93,32 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/github/bonigarcia/webdrivermanager/3.6.2/webdrivermanager-3.6.2.jar!/io/github/bonigarcia/wdm/WebDriverManager.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="116" column="48" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/java/extentReports.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+            <state relative-caret-position="-204">
+              <caret line="28" column="88" lean-forward="true" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,13 +144,13 @@
         <option value="$PROJECT_DIR$/miloqeev-domain/pom.xml" />
         <option value="$PROJECT_DIR$/miloqeev-domain/src/main/java/Google/search.java" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTestGherkin.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/extentReport.java" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java" />
-        <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" />
-        <option value="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" />
         <option value="$PROJECT_DIR$/miloqeev-reports/src/main/java/extentReports.java" />
+        <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" />
         <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" />
       </list>
     </option>
@@ -239,6 +226,36 @@
             <path>
               <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
               <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
               <item name="miloqeev-reports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -259,7 +276,14 @@
               <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
               <item name="miloqeev-reports" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-reports" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -401,34 +425,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 12h 38m 08s.xml">
-      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 13h 30m 44s.xml">
-      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTestGherkin_searchFacet - 2019.09.16 at 13h 41m 55s.xml">
-      <configuration name="facetTestGherkin.searchFacet" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetTestGherkin_facetLogo - 2019.09.16 at 13h 46m 52s.xml">
-      <configuration name="facetTestGherkin.facetLogo" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.16 at 14h 26m 58s.xml">
+    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 13m 08s.xml">
       <configuration name="facet.facetLogo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facetExtentReport_facetLogo - 2019.09.21 at 13h 41m 22s.xml">
-      <configuration name="facetExtentReport.facetLogo" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetExtentReport_facetLogo - 2019.09.21 at 13h 50m 10s.xml">
-      <configuration name="facetExtentReport.facetLogo" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facetExtentReport_facetLogo - 2019.09.21 at 13h 54m 32s.xml">
-      <configuration name="facetExtentReport.facetLogo" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.21 at 14h 16m 14s.xml">
+    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 25m 50s.xml">
       <configuration name="facet.facetLogo" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.21 at 15h 25m 55s.xml">
+    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 26m 43s.xml">
+      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 27m 42s.xml">
+      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 56m 29s.xml">
+      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 57m 56s.xml">
+      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facet_facetLogo - 2019.09.24 at 13h 15m 29s.xml">
+      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facet_facetLogo - 2019.09.24 at 16h 12m 44s.xml">
+      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facet_facetLogo - 2019.09.24 at 16h 22m 38s.xml">
+      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="facet_facetLogo - 2019.09.24 at 16h 23m 44s.xml">
       <configuration name="facet.facetLogo" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -436,7 +460,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19083156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19083156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -445,8 +469,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -463,6 +487,20 @@
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>Assert.assertTrue(findBy(selectorType,selectorValue).isDisplayed());</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>functions.PageShouldContainElement(classname, facetLogo)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/miloqeevTAF.iml">
@@ -494,20 +532,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTest.java" />
-    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -525,30 +549,6 @@
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/extent.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-domain/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -565,24 +565,10 @@
     <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/java/extentReports.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/github/bonigarcia/webdrivermanager/3.6.2/webdrivermanager-3.6.2.jar!/io/github/bonigarcia/wdm/WebDriverManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="116" column="48" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -597,17 +583,161 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/jdk.hotspot.agent/sun/jvm/hotspot/utilities/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8.jar!/org/testng/asserts/Assertion.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.1/selenium-support-2.53.1.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1264">
+          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/github/bonigarcia/webdrivermanager/3.6.2/webdrivermanager-3.6.2.jar!/io/github/bonigarcia/wdm/WebDriverManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+          <folding>
+            <element signature="e#12182#12183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.1/selenium-support-2.53.1.jar!/org/openqa/selenium/support/events/EventFiringWebDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="538" column="23" selection-start-line="538" selection-start-column="23" selection-end-line="538" selection-end-column="23" />
+          <folding>
+            <element signature="e#19221#19222#0" expanded="true" />
+            <element signature="e#19278#19279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/WebElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8.jar!/org/testng/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/test/java/reports.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="65" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/SearchContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/WebDriver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="221">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        <state relative-caret-position="391">
+          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1156#1157#0" expanded="true" />
@@ -616,34 +746,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.53.1/selenium-support-2.53.1.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/jdk.hotspot.agent/sun/jvm/hotspot/utilities/Assert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+        <state relative-caret-position="-204">
+          <caret line="28" column="88" lean-forward="true" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
