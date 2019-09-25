@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d93e587-ec3e-4872-b8bc-7869f7a8de56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/miloqeev-reports/src/test/java/reports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-reports/src/main/resources/extent-reports-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReportClean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/noOpCommerce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-domain/target/classes/facetPage/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-domain/target/classes/facetPage/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-framework/target/classes/UI/functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-framework/target/classes/UI/functions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/extent.html" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/extent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/facetExtentReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/facetExtentReport.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,19 +30,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="41" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#746#747#0" expanded="true" />
@@ -74,10 +65,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/noOpCommerce.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="160" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1511#1512#0" expanded="true" />
+                <element signature="e#1541#1542#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReportClean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="28" column="112" lean-forward="true" selection-start-line="28" selection-start-column="112" selection-end-line="28" selection-end-column="112" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/resources/extent-reports-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#672#673#0" expanded="true" />
@@ -90,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+            <state relative-caret-position="384">
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1156#1157#0" expanded="true" />
@@ -101,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="28" column="88" lean-forward="true" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+            <state relative-caret-position="476">
+              <caret line="28" column="88" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,6 +147,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Extent</find>
+      <find>test</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -146,12 +178,17 @@
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetTestGherkin.java" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/extentReport.java" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java" />
         <option value="$PROJECT_DIR$/miloqeev-reports/src/main/java/extentReports.java" />
         <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java" />
         <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java" />
+        <option value="$PROJECT_DIR$/miloqeev-reports/src/test/resources/extent-reports-config.xml" />
+        <option value="$PROJECT_DIR$/miloqeev-reports/src/main/reports/extent.html" />
+        <option value="$PROJECT_DIR$/miloqeev-reports/src/main/resources/extent-reports-config.xml" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/noOpCommerce.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReportClean.java" />
       </list>
     </option>
   </component>
@@ -276,6 +313,22 @@
               <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
               <item name="miloqeev-reports" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-reports" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
+              <item name="miloqeev-reports" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -323,8 +376,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2518116" />
   </component>
   <component name="RecentsManager">
@@ -344,12 +397,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.facet.facetLogo">
-    <configuration name="test_without_framework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.facetExtentReportClean">
+    <configuration name="facetExtentReportClean" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="miloqeev-tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test_without_framework" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="facetExtentReportClean" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -366,11 +421,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="facetTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="facetExtentReport.facetLogoExtentReport" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="miloqeev-tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="facetTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="facetExtentReport" />
+      <option name="METHOD_NAME" value="facetLogoExtentReport" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -389,11 +445,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="facet.searchFacet" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="noOpCommerce.ExtentReport" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="miloqeev-tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="facet" />
-      <option name="METHOD_NAME" value="searchFacet" />
+      <option name="MAIN_CLASS_NAME" value="noOpCommerce" />
+      <option name="METHOD_NAME" value="ExtentReport" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -403,11 +459,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.facetExtentReportClean" />
+        <item itemvalue="TestNG.noOpCommerce.ExtentReport" />
+        <item itemvalue="TestNG.facetExtentReport.facetLogoExtentReport" />
         <item itemvalue="TestNG.facet.facetLogo" />
         <item itemvalue="TestNG.facetExtentReport.facetLogo" />
-        <item itemvalue="TestNG.facet.searchFacet" />
-        <item itemvalue="TestNG.facetTest" />
-        <item itemvalue="JUnit.test_without_framework" />
       </list>
     </recent_temporary>
   </component>
@@ -425,42 +481,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 13m 08s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean_ExtentReport - 2019.09.24 at 20h 22m 58s.xml">
+      <configuration name="facetExtentReportClean.ExtentReport" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 25m 50s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean_ExtentReport - 2019.09.24 at 20h 32m 24s.xml">
+      <configuration name="facetExtentReportClean.ExtentReport" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 26m 43s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean_ExtentReport - 2019.09.24 at 20h 34m 48s.xml">
+      <configuration name="facetExtentReportClean.ExtentReport" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 27m 42s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean - 2019.09.25 at 10h 15m 06s.xml">
+      <configuration name="facetExtentReportClean" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 56m 29s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean - 2019.09.25 at 10h 22m 20s.xml">
+      <configuration name="facetExtentReportClean" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.23 at 20h 57m 56s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean - 2019.09.25 at 10h 29m 32s.xml">
+      <configuration name="facetExtentReportClean" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.24 at 13h 15m 29s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean - 2019.09.25 at 10h 29m 41s.xml">
+      <configuration name="facetExtentReportClean" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.24 at 16h 12m 44s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean - 2019.09.25 at 10h 30m 05s.xml">
+      <configuration name="facetExtentReportClean" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.24 at 16h 22m 38s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean - 2019.09.25 at 10h 31m 28s.xml">
+      <configuration name="facetExtentReportClean" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="facet_facetLogo - 2019.09.24 at 16h 23m 44s.xml">
-      <configuration name="facet.facetLogo" configurationId="TestNG" />
+    <history-entry file="facetExtentReportClean - 2019.09.25 at 10h 43m 38s.xml">
+      <configuration name="facetExtentReportClean" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19083156" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19083156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -468,9 +523,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -487,6 +542,34 @@
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19083156" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -672,29 +755,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="65" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -722,10 +786,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/test/resources/extent-reports-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="65" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-domain/src/main/java/facetPage/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#672#673#0" expanded="true" />
@@ -734,10 +812,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="88" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        <state relative-caret-position="384">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1156#1157#0" expanded="true" />
@@ -746,10 +834,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
+    <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/reports/extent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="28" column="88" lean-forward="true" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+        <state relative-caret-position="340">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/resources/extent-reports-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/noOpCommerce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="160" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1541#1542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/Screenshots/noCommerceTitleTest20190924083446.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/facetExtentReportClean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="28" column="112" lean-forward="true" selection-start-line="28" selection-start-column="112" selection-end-line="28" selection-end-column="112" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -807,7 +936,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>miloqeevTAF</last-edited>
+          <last-edited>miloqeev-reports</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

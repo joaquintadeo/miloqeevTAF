@@ -14,7 +14,8 @@ public class facetExtentReport {
 
     @BeforeMethod
     public void setup(){
-        htmlReporter = new ExtentHtmlReporter("extent.html");
+        htmlReporter = new ExtentHtmlReporter("C:\\Users\\Joaquin\\Documents\\Facultad\\Tesis\\miloqeevTAF\\miloqeev-reports\\src\\main\\reports\\extent.html");
+        htmlReporter.loadXMLConfig("C:\\Users\\Joaquin\\Documents\\Facultad\\Tesis\\miloqeevTAF\\miloqeev-reports\\src\\main\\resources\\extent-reports-config.xml");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }
