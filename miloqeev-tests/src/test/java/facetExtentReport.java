@@ -42,8 +42,8 @@ public class facetExtentReport extends browserManagement{
 
     @BeforeClass
     public void createReport(){
-        htmlReporter = new ExtentHtmlReporter("C:\\Users\\Joaquin\\Documents\\Facultad\\Tesis\\miloqeevTAF\\miloqeev-reports\\src\\main\\reports\\extent.html");
-        htmlReporter.loadXMLConfig("C:\\Users\\Joaquin\\Documents\\Facultad\\Tesis\\miloqeevTAF\\miloqeev-reports\\src\\main\\resources\\extent-reports-config.xml");
+        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/report.html");
+        htmlReporter.loadXMLConfig(System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/src/main/resources/extent-reports-config.xml");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }
