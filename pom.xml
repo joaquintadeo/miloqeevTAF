@@ -12,6 +12,7 @@
         <module>miloqeev-domain</module>
         <module>miloqeev-page-objects</module>
         <module>miloqeev-tests</module>
+        <module>miloqeev-reports</module>
     </modules>
     <dependencies>
         <dependency>
@@ -28,7 +29,11 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.8</version>
-            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>3.1.5</version>
         </dependency>
     </dependencies>
 </project>
