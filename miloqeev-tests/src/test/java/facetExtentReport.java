@@ -1,7 +1,6 @@
 import UI.browserManagement;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import facetPage.main;
@@ -43,8 +42,8 @@ public class facetExtentReport extends browserManagement{
 
     @BeforeClass
     public void createReport(){
-        htmlReporter = new ExtentHtmlReporter("/Users/joaquin/Documents/framework/miloqeevTAF/miloqeev-reports/src/main/reports/extent.html");
-        htmlReporter.loadXMLConfig("/Users/joaquin/Documents/framework/miloqeevTAF/miloqeev-reports/src/main/resources/extent-reports-config.xml");
+        htmlReporter = new ExtentHtmlReporter("C:\\Users\\Joaquin\\Documents\\Facultad\\Tesis\\miloqeevTAF\\miloqeev-reports\\src\\main\\reports\\extent.html");
+        htmlReporter.loadXMLConfig("C:\\Users\\Joaquin\\Documents\\Facultad\\Tesis\\miloqeevTAF\\miloqeev-reports\\src\\main\\resources\\extent-reports-config.xml");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
     }

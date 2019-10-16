@@ -43,8 +43,4 @@ public class browserManagement {
     public static void setBrowserImplicitWait(int miliseconds){
         driver.manage().timeouts().implicitlyWait(miliseconds, TimeUnit.MILLISECONDS);
     }
-
-    public static void maximizeBrowserWindow(){
-        driver.manage().window().maximize();
-    }
 }

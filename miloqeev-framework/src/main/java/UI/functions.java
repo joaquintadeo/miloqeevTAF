@@ -49,21 +49,6 @@ public class functions extends browserManagement{
         }
     }
 
-    public static void waitUntilPageContainsElement(int selectorType, String selectorValue){
-        WebDriverWait wait = new WebDriverWait(driver,40);
-        switch (selectorType){
-            case utils.ID: wait.until(ExpectedConditions.presenceOfElementLocated(By.id(selectorValue)));
-                break;
-            case utils.NAME: wait.until(ExpectedConditions.presenceOfElementLocated(By.name(selectorValue)));
-                break;
-            case utils.CLASSNAME: wait.until(ExpectedConditions.presenceOfElementLocated(By.className(selectorValue)));
-                break;
-            case utils.XPATH: wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(selectorValue)));
-                break;
-            default: break;
-        }
-    }
-
     public static void clickElement(int selectorType, String selectorValue){
         WebElement element = findElementBy(selectorType, selectorValue);
         element.click();
