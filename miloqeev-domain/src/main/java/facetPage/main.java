@@ -35,11 +35,10 @@ public class main {
         test.createNode("Then_user_must_see_facet_logo");
         functions.PageShouldContainElement(classname, facetLogo);
         wait.waitUntilPageContainsElement(xpath, siuGuarani,20);
-        String handle = window.getWindowHandle();
-        functions.clickElement(xpath, siuGuarani);
-        wait.waitUntilPageContainsElement(classname, facetLogo, 10);
-        window.selectWindow(handle);
-
+        functions.clickElement(0, "menu-item-2636");
+        functions.clickElement(0, "menu-item-1972");
+        wait.waitUntilPageContains("La misión de la FACET", 10);
+        browserManagement.locationShouldBe("https://www.facet.unt.edu.ar/institucional/mision/");
     }
 
     public void close_browser(){

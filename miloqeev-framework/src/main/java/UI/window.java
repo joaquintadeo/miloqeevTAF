@@ -13,7 +13,7 @@ public class window extends browserManagement{
 
     public static void getWindowSize(){
         Dimension size = driver.manage().window().getSize();
-        System.out.println("The screen size is = " + size);
+        System.out.println("The screen size is: " + size);
     }
 
     public static void setWindowSize(int width, int height){
@@ -23,7 +23,7 @@ public class window extends browserManagement{
 
     public static void getWindowPosition(){
         Point position = driver.manage().window().getPosition();
-        System.out.println("The window position is = " + position);
+        System.out.println("The window position is: " + position);
     }
 
     public static void setWindowPosition(int x, int y){
@@ -55,8 +55,8 @@ public class window extends browserManagement{
     /*
     Lists windows identifiers
      */
-    public static void getWindowHandles(){
+    public static Set<String> getWindowHandles(){
         Set<String> handles = driver.getWindowHandles();
-        System.out.println("handles = " + handles);
+        return handles;
     }
 }
