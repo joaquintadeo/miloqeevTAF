@@ -1,5 +1,6 @@
 package UI;
 
+import com.automationFramework.testListeners.extentReportListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class browserManagement{
+public class browserManagement extends extentReportListener {
     public static WebDriver driver;
 
     public static void openBrowser(String browser) throws Throwable{
@@ -30,9 +31,10 @@ public class browserManagement{
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
             }
-//            logInfo.pass("Browser opened");
+            logInfo.pass("Browser opened");
         } catch (AssertionError | Exception e){
-//            logInfo.fail(e);
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e);
         }
     }
 
@@ -41,8 +43,14 @@ public class browserManagement{
         driver.quit();
     }
 
-    public static void goTo(String url){
-        driver.get(url);
+    public static void goTo(String url) throws Throwable{
+        try {
+            driver.get(url);
+            logInfo.pass("Entered Url");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e);
+        }
     }
 
     public static void setBrowserImplicitWait(int miliseconds){

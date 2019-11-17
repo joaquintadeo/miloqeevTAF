@@ -102,4 +102,22 @@ public class extentReportListener {
             logInfo.fail(e);
         }
     }
+
+    public static void createTestStep(String When){
+        try {
+            logInfo = test.createNode(new GherkinKeyword("When"), When);
+
+        } catch (AssertionError | Exception e){
+            logInfo.fail(e);
+        }
+    }
+
+    public static void createClosingStep(String Then){
+        try {
+            logInfo = test.createNode(new GherkinKeyword("Then"), Then);
+
+        } catch (AssertionError | Exception e){
+            logInfo.fail(e);
+        }
+    }
 }
