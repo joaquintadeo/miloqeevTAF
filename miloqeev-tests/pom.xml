@@ -9,24 +9,36 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>miloqeev-tests</artifactId>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>Miloqeev</groupId>
             <artifactId>miloqeev-framework</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>test</scope>
+            <scope>main</scope>
         </dependency>
         <dependency>
             <groupId>Miloqeev</groupId>
             <artifactId>miloqeev-page-objects</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>test</scope>
+            <scope>main</scope>
         </dependency>
         <dependency>
             <groupId>Miloqeev</groupId>
-            <artifactId>miloqeev-domain</artifactId>
+            <artifactId>miloqeev-reports</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

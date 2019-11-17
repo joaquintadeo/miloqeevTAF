@@ -54,9 +54,18 @@ public class functions extends browserManagement{
         element.click();
     }
 
-    public static void PageShouldContainElement(int selectorType, String selectorValue){
-        int numberOfElements = getElementCount(selectorType, selectorValue);
-        Assert.assertNotEquals(0, numberOfElements);
+    public static void PageShouldContainElement(int selectorType, String selectorValue) throws Throwable{
+        try {
+            int numberOfElements = getElementCount(selectorType, selectorValue);
+            int expectedNumberOfElements = 0;
+            int actualNumberOfElements = numberOfElements;
+            Assert.assertNotEquals(expectedNumberOfElements, actualNumberOfElements, "Page does not contain element");
+            logInfo.pass("Validated presence of element");
+
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL",driver,logInfo,e);
+            logInfo.fail(e);
+        }
     }
 
     public static void PageShouldNotContainElement(int selectorType, String selectorValue){

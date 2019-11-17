@@ -6,12 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="miloqeev-tests" />
         <module name="miloqeev-reports" />
         <module name="miloqeev-framework" />
-        <module name="miloqeev-domain" />
+        <module name="miloqeev-tests" />
         <module name="miloqeev-page-objects" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="miloqeev-domain" target="1.5" />
+      <module name="miloqeev-gherkin-feature" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
