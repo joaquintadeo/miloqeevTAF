@@ -26,7 +26,7 @@
 	</style>
 </head>
 
-	<body class='extent dark default hide-overflow '>
+	<body class='extent dark default hide-overflow bdd-report'>
 		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
 			<span><i class='material-icons'>desktop_windows</i></span>
 		</div>
@@ -42,7 +42,7 @@
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>Report</span>
+		<span class='report-name'>Automation Test Report</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -51,7 +51,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Oct 16, 2019 02:47:01 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 17, 2019 01:13:37 AM</span>
 				</a>
 			</li>
 			<li>
@@ -120,98 +120,99 @@
 
 <div id='test-view-charts' class='subview-full'>
 	<div id='charts-row' class='row nm-v nm-h'>
-		<div class='col s12 m6 l6 np-h'>
+		<div class='col s12 m4 l4 np-h'>
 			<div class='card-panel nm-v'>
-				<div class='left panel-name'>Tests</div>
+				<div class='left panel-name'>Features</div>
 				<div class='chart-box'>
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
 		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Scenarios</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
 		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 	<div class='subview-left left'>
 		
 		<div class='view-summary'>
-			<h5>Tests</h5>
+			<h5>Features</h5>
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>MyFirstTest</span>
-						<span class='test-time'>Oct 16, 2019 02:47:01 PM</span>
+						<span class='test-name'>Facet logo validation</span>
+						<span class='test-time'>Nov 17, 2019 01:13:37 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Oct 16, 2019 02:47:01 PM</span>
-	<span class='label end-time'>Oct 16, 2019 02:47:10 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+401ms</span>
-</div>
-	<div class='test-desc'>Sample description </div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>2:47:11 PM</td>
-					<td class='step-details'>Test Case PASSED IS facetLogoExtentReport</td>
-				</tr>
-			</tbody>
-		</table>
+<div class='scenario node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 11s+963ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Facet logo should appear on Facet Web Page</span>
 	</div>
-	<ul class='collapsible node-list' data-collapsible='accordion'>
-		
-				<li class='node level-1 leaf pass' status='pass' test-id='2'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Given_user_opens_a_browser</h5>
-						<span class="node-time label grey lighten-1 white-text">Oct 16, 2019 02:47:01 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-				</li>
-				<li class='node level-1 leaf pass' status='pass' test-id='3'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>When_user_navigates_to_facet_web_page</h5>
-						<span class="node-time label grey lighten-1 white-text">Oct 16, 2019 02:47:04 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-				</li>
-				<li class='node level-1 leaf pass' status='pass' test-id='4'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>Then_user_must_see_facet_logo</h5>
-						<span class="node-time label grey lighten-1 white-text">Oct 16, 2019 02:47:10 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-				</li>
-				<li class='node level-1 leaf pass' status='pass' test-id='5'>
-					<div class='collapsible-header'>
-						<h5 class='node-name'>close_browser</h5>
-						<span class="node-time label grey lighten-1 white-text">Oct 16, 2019 02:47:10 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 0s+0ms</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-				</li>
+	<ul class='steps'>
+		<li test-id='3' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">User opens a browser</span>
+			
+		</li>
+		<li test-id='4' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">User navigates to Facet Web Page</span>
+				<div class='pre'>Entered Url</div>
+			
+		</li>
+		<li test-id='5' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">User must see facet logo</span>
+				<div class='pre'>Verified logo</div>
+			
+		</li>
 	</ul>
+</div>
 					</div>
 				</li>
 			</ul>
@@ -248,32 +249,62 @@
 		<div class='row'>
 			<div class='col s2'>
 				<div class='card-panel r'>
-					Tests
-					<div class='panel-lead'>4</div>
+					Features
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>0</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 16, 2019 02:47:01 PM</div>
+					<div class='panel-lead'>Nov 17, 2019 01:13:37 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 16, 2019 02:47:11 PM</div>
+			 		<div class='panel-lead'>Nov 17, 2019 01:13:55 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 9s+776ms</div>
+					<div class='panel-lead'>0h 0m 18s+43ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Application</td>
+								<td>miloqeev</td>
+							</tr>
+							<tr>
+								<td>Operating System</td>
+								<td>Windows 10</td>
+							</tr>
+							<tr>
+								<td>User Name</td>
+								<td>Joaquin</td>
+							</tr>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -286,7 +317,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 4,
+				passParent: 1,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -294,7 +325,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 0,
+				passChild: 1,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -303,7 +334,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 0,
+				passGrandChild: 3,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

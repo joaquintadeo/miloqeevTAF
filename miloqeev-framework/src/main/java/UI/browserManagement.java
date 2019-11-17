@@ -6,29 +6,33 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-public class browserManagement {
+public class browserManagement{
     public static WebDriver driver;
 
-    public static void openBrowser(String browser){
-        if (browser == "chrome"){
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-        }
-        if (browser == "firefox"){
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-        }
-        if (browser == "iexplorer"){
-            WebDriverManager.iedriver().setup();
-            driver = new InternetExplorerDriver();
-        }
-        if (browser == "edge"){
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
+    public static void openBrowser(String browser) throws Throwable{
+        try {
+            if (browser == "chrome"){
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+            }
+            if (browser == "firefox"){
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+            }
+            if (browser == "iexplorer"){
+                WebDriverManager.iedriver().setup();
+                driver = new InternetExplorerDriver();
+            }
+            if (browser == "edge"){
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+            }
+//            logInfo.pass("Browser opened");
+        } catch (AssertionError | Exception e){
+//            logInfo.fail(e);
         }
     }
 
