@@ -1,4 +1,4 @@
-package com.automationFramework.testListeners;
+package testListeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import org.testng.ITestContext;
