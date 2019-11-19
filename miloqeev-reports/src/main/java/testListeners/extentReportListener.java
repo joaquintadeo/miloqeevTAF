@@ -1,4 +1,4 @@
-package com.automationFramework.testListeners;
+package testListeners;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class extentReportListener {
     public static ExtentReports setUp() {
         String reportLocation = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/report.html";
         report = new ExtentHtmlReporter(reportLocation);
-        report.loadXMLConfig(System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/resources/extent-reports-config.xml");
+        report.loadXMLConfig(System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/src/main/resources/extent-reports-config.xml");
         report.config().setDocumentTitle("Miloqeev Test Automation Framework");
         report.config().setReportName("Automation Test Report");
         report.config().setTheme(Theme.DARK);
@@ -92,32 +92,41 @@ public class extentReportListener {
         return str;
     }
 
-    public static void createTest(String testName, String Scenario, String Given){
+    public static void createTest(String testName, String scenario, String given){
         try {
             test = extent.createTest(Feature.class, testName);
-            test = test.createNode(Scenario.class, Scenario);
-            logInfo = test.createNode(new GherkinKeyword("Given"), Given);
+            test = test.createNode(Scenario.class, scenario);
+            logInfo = test.createNode(new GherkinKeyword("Given"), given);
 
         } catch (AssertionError | Exception e){
             logInfo.fail(e);
         }
     }
 
-    public static void createTestStep(String When){
-        try {
-            logInfo = test.createNode(new GherkinKeyword("When"), When);
+    public static void createTestStep(String gherkinKeyword, String name){
+        if (gherkinKeyword == "When") {
+            try {
+                logInfo = test.createNode(new GherkinKeyword("When"), name);
 
-        } catch (AssertionError | Exception e){
-            logInfo.fail(e);
+            } catch (AssertionError | Exception e) {
+                logInfo.fail(e);
+            }
         }
-    }
+        if (gherkinKeyword == "Then"){
+            try {
+                logInfo = test.createNode(new GherkinKeyword("Then"), name);
 
-    public static void createClosingStep(String Then){
-        try {
-            logInfo = test.createNode(new GherkinKeyword("Then"), Then);
+            } catch (AssertionError | Exception e){
+                logInfo.fail(e);
+            }
+        }
+        if (gherkinKeyword == "And") {
+            try {
+                logInfo = test.createNode(new GherkinKeyword("And"), name);
 
-        } catch (AssertionError | Exception e){
-            logInfo.fail(e);
+            } catch (AssertionError | Exception e) {
+                logInfo.fail(e);
+            }
         }
     }
 }

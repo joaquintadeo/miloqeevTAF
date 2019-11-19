@@ -1,4 +1,4 @@
-package com.automationFramework.testRunner;
+package testRunners;
 
 import io.cucumber.testng.CucumberFeatureWrapper;
 import io.cucumber.testng.CucumberOptions;
@@ -10,8 +10,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @CucumberOptions(
-        features = "./gherkinFeatures",
-        glue = {"com.automationFramework.tests"},
+        features = "src/test/resources/features",
+        glue = {"tests"},
         tags = {"@FirstTest"},
         monochrome = true
 )
@@ -28,7 +28,7 @@ public class testRunner {
         testNGCucumberRunner.runScenario(eventWrapper.getPickleEvent());
     }
 
-    @DataProvider(parallel=true)
+    @DataProvider()
     public Object[] [] features(){
         return testNGCucumberRunner.provideScenarios();
     }
