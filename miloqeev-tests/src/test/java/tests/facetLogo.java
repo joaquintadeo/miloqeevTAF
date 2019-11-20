@@ -11,7 +11,7 @@ import UI.window;
 import testListeners.extentReportListener;
 import facetPage.facetLandingPage;
 
-public class facetLogo extends extentReportListener {
+public class facetLogo{
     private static int classname = utils.CLASSNAME;
     private static String facetLogo = facetLandingPage.facetLogo;
     private static String facetUrl = facetLandingPage.facetUrl;
