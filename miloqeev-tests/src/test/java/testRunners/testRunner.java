@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"tests"},
-        tags = {"@FirstTest, @SecondTest"},
+        tags = {"@SecondTest"},
         monochrome = true
 )
 public class testRunner {
