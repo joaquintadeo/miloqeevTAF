@@ -10,7 +10,6 @@ public class testListener extends extentReportListener implements ITestListener 
     private static ExtentReports extent;
 
     public void onTestStart(ITestResult iTestResult) {
-        extent = setUp();
     }
 
     public void onTestSuccess(ITestResult iTestResult) {

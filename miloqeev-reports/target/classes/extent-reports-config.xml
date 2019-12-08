@@ -27,7 +27,8 @@
         <scripts>
             <![CDATA[
             $(document).ready(function() {
-            $('.brand-logo.blue.darken-3').html("Miloqeev");
+            $('.brand-logo black')
+                $("#img").src("src",C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-reports\src\main\resources\miloqeev.jpg);
             });
             ]]>
         </scripts>

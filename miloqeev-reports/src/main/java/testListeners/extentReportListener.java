@@ -29,7 +29,6 @@ public class extentReportListener {
     public static ExtentReports setUp() {
         String reportLocation = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/report" + getcurrentdateandtime() + ".html";
         report = new ExtentHtmlReporter(reportLocation);
-//        report.setAppendExisting(true);
         report.loadXMLConfig(System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/src/main/resources/extent-reports-config.xml");
         report.config().setDocumentTitle("Miloqeev Test Automation Framework");
         report.config().setReportName("Automation Test Report");
