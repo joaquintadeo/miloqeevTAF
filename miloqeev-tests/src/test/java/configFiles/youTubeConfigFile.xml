@@ -7,8 +7,8 @@
     <!-- Test Started... -->
     <test name="Automation Test Report">
         <classes>
-            <class name="testRunners.testRunner"/>
-<!--            <class name="com.automationFramework.testRunner.testRunner"></class>-->
+            <class name="testRunners.youTubeTestRunner"/>
+            <!--            <class name="com.automationFramework.testRunner.testRunner"></class>-->
         </classes>
     </test>
     <!-- Listners implemented in below location -->

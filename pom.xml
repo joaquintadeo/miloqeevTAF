@@ -37,12 +37,12 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>4.4.0</version>
+            <version>4.8.0</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>4.4.0</version>
+            <version>4.8.0</version>
         </dependency>
         <dependency>
             <groupId>org.freemarker</groupId>
@@ -60,6 +60,5 @@
             <version>1.0.6</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 </project>

@@ -1,4 +1,4 @@
-package tests;
+package tests.youtube;
 
 import UI.browserManagement;
 import UI.functions;

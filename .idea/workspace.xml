@@ -2,21 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d93e587-ec3e-4872-b8bc-7869f7a8de56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/youTubePage/youTubeLandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetIngresoPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/facetConfigFile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/youTubeTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facet/facetIngresoLogo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/template.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/template.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-framework/target/classes/UI/browserManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-framework/target/classes/UI/browserManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-page-objects/target/classes/facetPage/facetLandingPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-page-objects/target/classes/googlePage/googleLandingPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/extentReportListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/extentReportListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-reports/target/classes/testListeners/extentReportListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-reports/target/classes/testListeners/extentReportListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-reports/target/classes/testListeners/testListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-reports/target/classes/testListeners/testListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-reports/test-results/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-reports/test-results/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/testRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/testRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youTubeLogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youTubeLogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/testRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/facetTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facetLogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facet/facetLogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youTubeLogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youtube/youTubeLogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/facetLogo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/facetLogo.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/youTubeLogo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/youTubeLogo.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/features/facetLogo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/features/facetLogo.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/testRunners/testRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/testRunners/testRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/tests/youTubeLogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/tests/youTubeLogo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/tests/facetLogo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/target/test-classes/tests/youTubeLogo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/miloqeev-tests/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/youTubeConfigFile.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,68 +47,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/testRunner.java">
+        <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/testListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-testng/4.8.0/cucumber-testng-4.8.0.jar!/io/cucumber/testng/CucumberOptions.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/youTubeLogo.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youTubeLogo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="510">
+              <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/facetLogo.feature">
+      <file pinned="false" current-in-tab="true">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8.jar!/org/testng/ITestListener.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miloqeev-tests/testng.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="68">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -109,7 +77,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="template" />
         <option value="Class" />
+        <option value="Test Template" />
+        <option value="Feature Template" />
       </list>
     </option>
   </component>
@@ -133,17 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/miloqeev-gherkin-feature/src/com/gherkinFeature/testRunner/testRunner.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/com/automationFramework/testListener/testListener.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/test/java/facetLogo.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/pom.xml" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/com/automationFramework/tests/facetExtentReport.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/com/automationFramework/tests/facetExtentReportClean.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/com/automationFramework/testListeners/testListener.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/com/automationFramework/tests/youTubeLogo.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/youTubeChannel.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/gherkinFeatures/youtubeLogo.feature" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/com/automationFramework/tests/youTubeChannel.java" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/com/automationFramework/testListeners/extentReportListener.java" />
         <option value="$PROJECT_DIR$/miloqeev-framework/pom.xml" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/tests/facetLogo.java" />
@@ -169,21 +129,32 @@
         <option value="$PROJECT_DIR$/miloqeev-tests/testng.xml" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/youtubeLogo.feature" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youtubeLogo.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/facetLogo.feature" />
         <option value="$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/testListener.java" />
-        <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/youTubePage/youTubeLandingPage.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/algo.feature" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/testRunner.java" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facetLogo.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/youTubeLogo.feature" />
-        <option value="$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/extentReportListener.java" />
-        <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/algo.feature" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youTubeLogo.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/test.feature" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/MyStepdefs2.java" />
-        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/MyStepdefs3.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/testRunner.java" />
+        <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java" />
+        <option value="$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetIngresoPage.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facetIngresoLogo.java" />
+        <option value="$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/extentReportListener.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/facet.xml" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facet/facetIngresoLogo.java" />
+        <option value="$PROJECT_DIR$/miloqeev-reports/test-results/report.html" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/youtubeTestRunner.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/youTubeConfigFile.xml" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youtube/youTubeLogo.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/youTubeLogo.feature" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/youTubeTestRunner.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/facetTestRunner.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facet/facetLogo.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/facetLogo.feature" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/template.feature" />
         <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/MyStepdefs.java" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/template.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/template.xml" />
       </list>
     </option>
   </component>
@@ -194,11 +165,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -208,48 +179,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
               <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
@@ -286,112 +222,41 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="testListeners" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-reports" type="462c0819:PsiDirectoryNode" />
-              <item name="test-results" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="testRunners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miloqeevTAF" type="462c0819:PsiDirectoryNode" />
-              <item name="miloqeev-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miloqeevTAF" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/miloqeev-tests/src/test/resources/features" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2518116" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-reports\test-results" />
+      <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-tests" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="testRunners" />
+      <recent name="facetPage" />
+      <recent name="com.automationFramework.tests" />
+      <recent name="com.automation.Framework.testRunner" />
+      <recent name="tests" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-tests\src\test\java\configFiles" />
       <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-tests\src\test\resources\features" />
       <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-reports\src\main\resources" />
       <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-reports\src" />
       <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-reports\resources" />
-      <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-tests\gherkinFeature" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.automationFramework.tests" />
-      <recent name="com.automation.Framework.testRunner" />
-      <recent name="tests" />
-      <recent name="UI" />
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-reports\test-results" />
-      <recent name="C:\Users\Joaquin\Documents\Facultad\Tesis\miloqeevTAF\miloqeev-tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -406,7 +271,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/facetConfigFile.xml">
+    <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/facetConfigFile.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="miloqeev-tests" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/facetConfigFile.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/facet.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="miloqeev-tests" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/facet.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/youTubeConfigFile.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="miloqeev-tests" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/youTubeConfigFile.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" type="TestNG" nameIsGenerated="true">
       <module name="miloqeev-tests" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/miloqeev-tests/testng.xml" />
@@ -417,6 +312,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/facetConfigFile.xml" />
+        <item itemvalue="TestNG.C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/youTubeConfigFile.xml" />
+        <item itemvalue="TestNG.C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/facet.xml" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -429,48 +331,43 @@
       <option name="presentableId" value="Default" />
       <updated>1568225351446</updated>
       <workItem from="1574184806232" duration="246000" />
-      <workItem from="1575036807537" duration="1035000" />
-      <workItem from="1575041479705" duration="1810000" />
-      <workItem from="1575053128469" duration="1942000" />
-      <workItem from="1575641640646" duration="2282000" />
-      <workItem from="1575659621687" duration="1659000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.11.29 at 15h 53m 41s.xml">
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.12.07 at 14h 13m 45s.xml">
       <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.11.29 at 15h 55m 03s.xml">
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.12.07 at 14h 14m 51s.xml">
       <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.11.29 at 15h 56m 10s.xml">
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.12.07 at 20h 48m 04s.xml">
       <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.11.29 at 15h 58m 07s.xml">
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.12.07 at 20h 49m 08s.xml">
       <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.11.29 at 16h 04m 34s.xml">
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.12.07 at 20h 51m 48s.xml">
       <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.11.29 at 16h 07m 45s.xml">
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.12.07 at 20h 52m 53s.xml">
       <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.11.29 at 16h 09m 24s.xml">
-      <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_src_test_java_configFiles_facet_xml - 2019.12.07 at 21h 12m 09s.xml">
+      <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/facet.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.11.29 at 16h 14m 01s.xml">
-      <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_src_test_java_configFiles_facet_xml - 2019.12.07 at 21h 15m 51s.xml">
+      <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/facet.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.12.06 at 11h 20m 11s.xml">
-      <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_src_test_java_configFiles_facetConfigFile_xml - 2019.12.07 at 21h 16m 39s.xml">
+      <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/facetConfigFile.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_testng_xml - 2019.12.06 at 11h 21m 47s.xml">
-      <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/testng.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_Joaquin_Documents_Facultad_Tesis_miloqeevTAF_miloqeev-tests_src_test_java_configFiles_youTubeConfigFile_xml - 2019.12.07 at 21h 20m 05s.xml">
+      <configuration name="C:/Users/Joaquin/Documents/Facultad/Tesis/miloqeevTAF/miloqeev-tests/src/test/java/configFiles/youTubeConfigFile.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13224000" />
+    <option name="totallyTimeSpent" value="4496000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -482,10 +379,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="23" width="1920" height="1057" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15228967" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16364606" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -494,7 +391,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26321244" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35427952" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -502,7 +399,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32328767" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32719395" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -584,31 +481,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar!/org/openqa/selenium/WebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/ExtentTest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="405" column="9" lean-forward="true" selection-start-line="405" selection-start-column="9" selection-end-line="405" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/gherkinFeatures/googleSearch.feature" />
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/gherkinFeatures/facetLogo.feature" />
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src2/com/automationFramework/tests/MyStepdefs.java" />
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/MyStepdefs.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-testng/4.8.0/cucumber-testng-4.8.0.jar!/io/cucumber/testng/CucumberOptions.class" />
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src2/com/automationFramework/tests/googleSearch.java" />
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src2/com/automationFramework/tests/facetLogo.java" />
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src2/com/automationFramework/testRunner/testRunner.java" />
@@ -629,13 +505,6 @@
     <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/screenshots/11172019145242378.png" />
     <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/screenshots/11162019234305548.png" />
     <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/report11192019235630477.html" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/ExtentReports.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/reporter/ExtentHtmlReporter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -643,189 +512,224 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/googlePage/googleLandingPage.java">
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/target/test-classes/features/facetLogo.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/ExtentTest.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="6" selection-end-column="59" />
+        <state relative-caret-position="102">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/youTubePage/youTubeLandingPage.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar!/com/aventstack/extentreports/ExtentReports.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+        <state relative-caret-position="102">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8.jar!/org/testng/ITestListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/report11292019123753345.html" />
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/report11292019123902592.html" />
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/report11292019123742406.html" />
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/algo.feature" />
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/screenshots/11292019123902390.png" />
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facetLogo.java">
+    <entry file="file://$MAVEN_REPOSITORY$/io/cucumber/cucumber-testng/4.4.0/cucumber-testng-4.4.0.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8.jar!/org/testng/SuiteRunnerWorker.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+        <state relative-caret-position="173">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2428#2429#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/screenshots/11292019155126801.png" />
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/screenshots/11292019160433697.png" />
-    <entry file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-testng/4.8.0/cucumber-testng-4.8.0.jar!/io/cucumber/testng/CucumberFeatureWrapper.class">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/net/URLClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="190">
+          <caret line="381" column="18" selection-start-line="381" selection-start-column="18" selection-end-line="381" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/screenshots/11292019160744494.png" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/jre/lib/rt.jar!/sun/misc/Launcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_221/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="356" column="15" selection-start-line="356" selection-start-column="15" selection-end-line="356" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/browserManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        <state relative-caret-position="799">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-framework/src/main/java/UI/functions.java">
+    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetLandingPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="144" lean-forward="true" selection-start-line="7" selection-start-column="144" selection-end-line="7" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/extentReportListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/testng.xml" />
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/testRunner.java" />
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/youTubeLogo.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/youTubeConfigFile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/youTubeTestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/testListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-680" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/test-results/report12062019111950738.html" />
-    <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/extentReportListener.java">
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youtube/youTubeLogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        <state relative-caret-position="561">
+          <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-java/4.8.0/cucumber-java-4.8.0.jar!/cucumber/api/java/en/Given.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-java/4.8.0/cucumber-java-4.8.0-sources.jar!/cucumber/api/java/en/Given.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/cucumber/cucumber-testng/4.8.0/cucumber-testng-4.8.0.jar!/io/cucumber/testng/CucumberOptions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/testRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/MyStepdefs2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/MyStepdefs3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/youTubeLogo.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/youTubeLogo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/test.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/MyStepdefs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/asda/asda.feature" />
     <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/facetLogo.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state>
+          <caret selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facet/facetLogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-page-objects/src/main/java/facetPage/facetIngresoPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="90" lean-forward="true" selection-start-line="4" selection-start-column="90" selection-end-line="4" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/MyStepdefs.java" />
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facet/facetIngresoLogo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/test.feature" />
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/facet/elli.java" />
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/testRunners/facetTestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-reports/src/main/java/testListeners/testListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/template.feature">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/resources/features/template.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/tests/template.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/template.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miloqeev-tests/src/test/java/configFiles/facetConfigFile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8.jar!/org/testng/ITestListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -838,7 +742,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2518116" />
               </list>
             </option>
           </splitter-proportions>
@@ -846,10 +750,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2518116" />
               </list>
             </option>
           </splitter-proportions>
@@ -860,7 +765,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2518116" />
               </list>
             </option>
           </splitter-proportions>
@@ -880,7 +785,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>miloqeev-tests</last-edited>
+          <last-edited>miloqeevTAF</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -893,10 +798,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: com.aventstack:extentreports:3.1.5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2518116" />
               </list>
             </option>
           </splitter-proportions>

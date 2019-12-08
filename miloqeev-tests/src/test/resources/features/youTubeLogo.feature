@@ -1,4 +1,4 @@
-@SecondTest
+@YouTubeTest
 Feature: YouTube logo validation
   Scenario: YouTube logo should appear on YouTube Web Page
     Given User opens browser

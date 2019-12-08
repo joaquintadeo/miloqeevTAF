@@ -41,7 +41,6 @@ public class browserManagement extends extentReportListener {
     public static void closeBrowser() throws Throwable {
         try {
             driver.close();
-            driver.quit();
         } catch (AssertionError | Exception e) {
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e);

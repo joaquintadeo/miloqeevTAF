@@ -1,9 +1,8 @@
-package tests;
+package tests.facet;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
 import UI.browserManagement;
 import UI.functions;
 import UI.utils;

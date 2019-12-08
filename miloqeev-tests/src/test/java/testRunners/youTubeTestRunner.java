@@ -11,11 +11,11 @@ import org.testng.annotations.Test;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"tests"},
-        tags = {"@SecondTest"},
+        glue = {"tests/youtube"},
+        tags = {"@YouTubeTest"},
         monochrome = true
 )
-public class testRunner {
+public class youTubeTestRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
 
     @BeforeClass(alwaysRun = true)
