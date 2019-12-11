@@ -74,10 +74,13 @@ public class extentReportListener {
     public static String captureScreenShot(WebDriver driver) throws IOException {
         TakesScreenshot screen = (TakesScreenshot) driver;
         File src = screen.getScreenshotAs(OutputType.FILE);
-        String destination = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/screenshots/"  + getcurrentdateandtime() + ".png";
+
+        String tmp = getcurrentdateandtime();
+        String destination = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/screenshots/"  + tmp  + ".png";
+        String dst = "screenshots/"  + tmp + ".png";
         File target = new File(destination);
         FileUtils.copyFile(src, target);
-        return destination;
+        return dst;
     }
 
     private static String getcurrentdateandtime() {
