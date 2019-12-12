@@ -8,9 +8,15 @@ import org.testng.Assert;
 
 public class functions extends browserManagement{
 
-    public static void inputText(int selectorType, String selectorValue, String text){
-        WebElement element = findElementBy(selectorType, selectorValue);
-        element.sendKeys(text);
+    public static void inputText(int selectorType, String selectorValue, String text) throws Throwable{
+        try {
+            WebElement element = findElementBy(selectorType, selectorValue);
+            element.sendKeys(text);
+            logInfo.pass("Entered text in selected element");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e);
+        }
     }
 
     public static void inputTextAndSubmit(int selectorType, String selectorValue, String text){
@@ -49,9 +55,15 @@ public class functions extends browserManagement{
         }
     }
 
-    public static void clickElement(int selectorType, String selectorValue){
-        WebElement element = findElementBy(selectorType, selectorValue);
-        element.click();
+    public static void clickElement(int selectorType, String selectorValue)throws Throwable{
+        try {
+            WebElement element = findElementBy(selectorType, selectorValue);
+            element.click();
+            logInfo.pass("Clicked selected element");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e);
+        }
     }
 
     public static void PageShouldContainElement(int selectorType, String selectorValue) throws Throwable{
