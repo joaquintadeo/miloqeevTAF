@@ -26,8 +26,15 @@ public class extentReportListener {
     public static ExtentTest test = null;
     public static ExtentTest logInfo = null;
 
-    public static ExtentReports setUp() {
-        String reportLocation = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/report" + getcurrentdateandtime() + ".html";
+    public static ExtentReports setUp(){
+        try {
+            String reportLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "/miloqeev-reports/test-results/report.html";
+            if (reportLocation == null)
+                new File(System.getProperty("user.dir") + File.separator + ".." + File.separator + "/miloqeev-reports/test-results/report.html");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        String reportLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "/miloqeev-reports/test-results/report.html";
         report = new ExtentHtmlReporter(reportLocation);
         report.loadXMLConfig(System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/src/main/resources/extent-reports-config.xml");
         report.config().setDocumentTitle("Miloqeev Test Automation Framework");
@@ -74,7 +81,6 @@ public class extentReportListener {
     public static String captureScreenShot(WebDriver driver) throws IOException {
         TakesScreenshot screen = (TakesScreenshot) driver;
         File src = screen.getScreenshotAs(OutputType.FILE);
-
         String tmp = getcurrentdateandtime();
         String destination = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/screenshots/"  + tmp  + ".png";
         String dst = "screenshots/"  + tmp + ".png";
