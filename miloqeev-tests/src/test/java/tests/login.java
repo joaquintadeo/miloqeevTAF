@@ -1,6 +1,7 @@
 package tests;
 
 import UI.*;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -28,7 +29,6 @@ public class login {
         extentReportListener.createTestStep("When", "User enters valid credentials");
         functions.inputText(name, user, "test");
         functions.inputText(name, password, "pass");
-        functions.clickElement(name, loginButton);
     }
 
     @Then("User should see success message")
@@ -38,12 +38,20 @@ public class login {
         browserManagement.closeBrowser();
     }
 
+    @Given("User navigates to login site")
+    public void userNavigatesToLoginSite() throws Throwable{
+        extentReportListener.createTest("Testing successful login", "Login With Invalid Credentials", "User navigates to login page");
+        browserManagement.openBrowser("chrome");
+        browserManagement.setBrowserImplicitWait(600);
+        window.maximizeBrowserWindow();
+        browserManagement.goTo(loginUrl);
+    }
+
     @When("User enters invalid credentials")
     public void userEntersInvalidCredentials() throws Throwable{
         extentReportListener.createTestStep("When", "User enters invalid credentials");
         functions.inputText(name, user, "test");
         functions.inputText(name, password, "test");
-        functions.clickElement(name, loginButton);
     }
 
     @Then("User should see failure message")
@@ -51,5 +59,11 @@ public class login {
         extentReportListener.createTestStep("Then", "User should see failure message");
         wait.waitUntilPageContains("**Failed Login**", 5);
         browserManagement.closeBrowser();
+    }
+
+    @And("User clicks login button")
+    public void clicksLoginButton() throws Throwable{
+        extentReportListener.createTestStep("And", "User clicks login button");
+        functions.clickElement(name, loginButton);
     }
 }

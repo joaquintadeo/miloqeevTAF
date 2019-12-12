@@ -76,7 +76,7 @@ public class functions extends browserManagement{
 
         } catch (AssertionError | Exception e) {
             testStepHandle("FAIL",driver,logInfo,e);
-            logInfo.fail(e);
+            logInfo.fail(e.getCause());
         }
     }
 

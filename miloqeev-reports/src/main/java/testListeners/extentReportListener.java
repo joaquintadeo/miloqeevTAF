@@ -101,11 +101,11 @@ public class extentReportListener {
         return str;
     }
 
-    public static void createTest(String testName, String scenario, String given){
+    public static void createTest(String testName, String scenario, String name){
         try {
             test = extent.createTest(Feature.class, testName);
             test = test.createNode(Scenario.class, scenario);
-            logInfo = test.createNode(new GherkinKeyword("Given"), given);
+            logInfo = test.createNode(new GherkinKeyword("Given"), "Given" + " " + name);
 
         } catch (AssertionError | Exception e){
             logInfo.fail(e);
@@ -115,7 +115,7 @@ public class extentReportListener {
     public static void createTestStep(String gherkinKeyword, String name){
         if (gherkinKeyword == "When") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("When"), name);
+                logInfo = test.createNode(new GherkinKeyword("When"), gherkinKeyword + " " + name);
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
@@ -123,7 +123,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "Then"){
             try {
-                logInfo = test.createNode(new GherkinKeyword("Then"), name);
+                logInfo = test.createNode(new GherkinKeyword("Then"), gherkinKeyword + " " + name);
 
             } catch (AssertionError | Exception e){
                 logInfo.fail(e);
@@ -131,7 +131,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "And") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("And"), name);
+                logInfo = test.createNode(new GherkinKeyword("And"), gherkinKeyword + " " + name);
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
