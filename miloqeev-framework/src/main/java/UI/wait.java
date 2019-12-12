@@ -36,9 +36,16 @@ public class wait extends browserManagement{
         }
     }
 
-    public static void waitUntilPageContains(String text, int timeout){
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), text));
+    public static void waitUntilPageContains(String text, int timeout) throws Throwable{
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, timeout);
+            wait.until(ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), text));
+            logInfo.pass("Successful wait for presence of element");
+
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL",driver,logInfo,e);
+            logInfo.fail(e);
+        }
     }
 
     public static void waitUntilPageDoesNotContain(String text, int timeout){
