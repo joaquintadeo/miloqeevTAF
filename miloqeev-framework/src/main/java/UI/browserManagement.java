@@ -13,6 +13,11 @@ import java.util.concurrent.TimeUnit;
 public class browserManagement extends extentReportListener {
     public static WebDriver driver;
 
+    /**
+     * Opens the given browser to a blank page.
+     * @param browser
+     * @throws Throwable
+     */
     public static void openBrowser(String browser) throws Throwable{
         try {
             if (browser == "chrome"){
@@ -34,80 +39,175 @@ public class browserManagement extends extentReportListener {
             logInfo.pass("Browser opened");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
-            logInfo.fail(e);
+            logInfo.fail(e.getCause());
         }
     }
 
-    public static void closeBrowser() throws Throwable {
+    /**
+     * Closes the current browser.
+     * @throws Throwable
+     */
+    public static void closeBrowser() throws Throwable{
         try {
             driver.close();
+            logInfo.pass("Browser closed");
         } catch (AssertionError | Exception e) {
             testStepHandle("FAIL", driver, logInfo, e);
-            logInfo.fail(e);
+            logInfo.fail(e.getCause());
         }
     }
 
+    /**
+     * Navigates the active browser instance to the provided url.
+     * @param url
+     * @throws Throwable
+     */
     public static void goTo(String url) throws Throwable{
         try {
             driver.get(url);
-            logInfo.pass("Entered Url");
+            logInfo.pass("Navigated to Url");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
-            logInfo.fail(e);
+            logInfo.fail(e.getCause());
         }
     }
 
-    public static void setBrowserImplicitWait(int miliseconds){
-        driver.manage().timeouts().implicitlyWait(miliseconds, TimeUnit.MILLISECONDS);
+    /**
+     * Sets the implicit wait value used by Selenium.
+     * @param miliseconds
+     */
+    public static void setBrowserImplicitWait(int miliseconds) throws Throwable{
+        try {
+            driver.manage().timeouts().implicitlyWait(miliseconds, TimeUnit.MILLISECONDS);
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
     }
 
-    public static void refreshPage(){
-        driver.navigate().refresh();
+    /**
+     * Simulates user refreshing page.
+     */
+    public static void refreshPage() throws Throwable{
+        try {
+            driver.navigate().refresh();
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
     }
 
-    public static void goBack(){
-        driver.navigate().back();
+    /**
+     * Simulates user clicking the back button on their browser.
+     */
+    public static void goBack() throws Throwable{
+        try {
+            driver.navigate().back();
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
     }
 
-    public static void goFoward(){
-        driver.navigate().forward();
+    /**
+     * Simulates user clicking the foward button on their browser.
+     */
+    public static void goFoward() throws Throwable{
+        try {
+            driver.navigate().forward();
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
     }
 
-    public static String getPageTitle(){
-        String title = driver.getTitle();
+    /**
+     * Returns the title of the current page.
+     * @return
+     */
+    public static String getPageTitle() throws Throwable{
+        String title = null;
+        try {
+            title = driver.getTitle();
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
         return title;
     }
 
-    public static void logPageTitle(){
-        String title = getPageTitle();
-        System.out.println("The page title is: " + title);
+    /**
+     * Logs the current page title.
+     */
+    public static void logPageTitle() throws Throwable{
+        try {
+            String title = getPageTitle();
+            System.out.println("The page title is: " + title);
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
     }
 
-    public static void titleShouldBe(String expectedTitle){
-        String actualTitle = getPageTitle();
-        if (!actualTitle.equals(expectedTitle)){
-            System.out.println("Page title should have been: " + expectedTitle + " but it was: " + actualTitle);
-        }
-        System.out.println("Current page title is: " + actualTitle); //esto deberia ir dentro del error
-    }
-    /*
-    algo se debe poder hacer para no repetir codigo
+    /**
+     * Verifies that current page title equals `expectedTitle`
+     * @param expectedTitle
      */
-    public static String getLocation(){
-        String location = driver.getCurrentUrl();
+    public static void titleShouldBe(String expectedTitle) throws Throwable{
+        String actualTitle = getPageTitle();
+        try {
+            if (!actualTitle.equals(expectedTitle)){
+                System.out.println("Page title should have been: " + expectedTitle + " but it was: " + actualTitle);
+                System.out.println("Current page title is: " + actualTitle);
+            }
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
+    }
+
+    /**
+     * Returns the current URL.
+     * @return
+     */
+    public static String getLocation() throws Throwable{
+        String location = null;
+        try {
+            location = driver.getCurrentUrl();
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
         return location;
     }
 
-    public static void logLocation(){
-        String location = getLocation();
-        System.out.println("Current location is: " + location);
+    /**
+     * Logs the current URL.
+     */
+    public static void logLocation() throws Throwable{
+        try {
+            String location = getLocation();
+            System.out.println("Current location is: " + location);
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
+        }
     }
 
-    public static void locationShouldBe(String expectedLocation){
+    /**
+     * Verifies current URL is exactly `expectedLocation`.
+     * @param expectedLocation
+     */
+    public static void locationShouldBe(String expectedLocation) throws Throwable{
         String actualLocation = getLocation();
-        if (!actualLocation.equals(expectedLocation)){
-            System.out.println("Location should have been: " + expectedLocation + " but it was: " + actualLocation);
+        try {
+            if (!actualLocation.equals(expectedLocation)){
+                System.out.println("Location should have been: " + expectedLocation + " but it was: " + actualLocation);
+                System.out.println("Current location is: " + actualLocation);
+            }
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo, e);
+            logInfo.fail(e.getCause());
         }
-        System.out.println("Current location is: " + actualLocation); //esto deberia ir dentro del error
     }
 }
