@@ -167,7 +167,7 @@ public class browserManagement extends extentReportListener {
     }
 
     /**
-     * Returns the current URL.
+     * Returns the current browser's URL.
      * @return
      */
     public static String getLocation() throws Throwable{
@@ -182,7 +182,7 @@ public class browserManagement extends extentReportListener {
     }
 
     /**
-     * Logs the current URL.
+     * Logs the current browser's URL.
      */
     public static void logLocation() throws Throwable{
         try {
@@ -195,7 +195,7 @@ public class browserManagement extends extentReportListener {
     }
 
     /**
-     * Verifies current URL is exactly `expectedLocation`.
+     * Verifies current browser's URL is exactly `expectedLocation`.
      * @param expectedLocation
      */
     public static void locationShouldBe(String expectedLocation) throws Throwable{
