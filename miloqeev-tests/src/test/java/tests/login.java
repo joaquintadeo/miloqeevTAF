@@ -9,7 +9,6 @@ import loginPage.loginLandingPage;
 import testListeners.extentReportListener;
 
 public class login {
-    private static int name = utils.NAME;
     private static String loginUrl = loginLandingPage.loginUrl;
     private static String user = loginLandingPage.nameInput;
     private static String password = loginLandingPage.passwordInput;
@@ -27,8 +26,8 @@ public class login {
     @When("User enters valid credentials")
     public void userEntersValidCredentials() throws Throwable{
         extentReportListener.createTestStep("When", "User enters valid credentials");
-        functions.inputText(name, user, "test");
-        functions.inputText(name, password, "pass");
+        wip.inputText("name", user, "test");
+        wip.inputText("name", password, "pass");
     }
 
     @Then("User should see success message")
@@ -50,8 +49,8 @@ public class login {
     @When("User enters invalid credentials")
     public void userEntersInvalidCredentials() throws Throwable{
         extentReportListener.createTestStep("When", "User enters invalid credentials");
-        functions.inputText(name, user, "test");
-        functions.inputText(name, password, "test");
+        wip.inputText("name", user, "test");
+        wip.inputText("name", password, "test");
     }
 
     @Then("User should see failure message")
@@ -64,6 +63,6 @@ public class login {
     @And("User clicks login button")
     public void clicksLoginButton() throws Throwable{
         extentReportListener.createTestStep("And", "User clicks login button");
-        functions.clickElement(name, loginButton);
+        wip.clickElement("name", loginButton);
     }
 }

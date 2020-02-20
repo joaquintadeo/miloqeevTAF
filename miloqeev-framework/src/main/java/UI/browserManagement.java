@@ -36,7 +36,7 @@ public class browserManagement extends extentReportListener {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
             }
-            logInfo.pass("Browser opened");
+            logInfo.pass("Browser opened: '" + browser + "'");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -65,7 +65,7 @@ public class browserManagement extends extentReportListener {
     public static void goTo(String url) throws Throwable{
         try {
             driver.get(url);
-            logInfo.pass("Navigated to Url");
+            logInfo.pass("Navigated to Url: " + "'" + url + "'");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -79,6 +79,7 @@ public class browserManagement extends extentReportListener {
     public static void setBrowserImplicitWait(int miliseconds) throws Throwable{
         try {
             driver.manage().timeouts().implicitlyWait(miliseconds, TimeUnit.MILLISECONDS);
+            logInfo.pass("Browser implicit wait set to " + miliseconds + " miliseconds");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -91,6 +92,7 @@ public class browserManagement extends extentReportListener {
     public static void refreshPage() throws Throwable{
         try {
             driver.navigate().refresh();
+            logInfo.pass("Refreshed current page");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -103,6 +105,7 @@ public class browserManagement extends extentReportListener {
     public static void goBack() throws Throwable{
         try {
             driver.navigate().back();
+            logInfo.pass("Moved back one page");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -115,6 +118,7 @@ public class browserManagement extends extentReportListener {
     public static void goFoward() throws Throwable{
         try {
             driver.navigate().forward();
+            logInfo.pass("Moved foward one page");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -129,6 +133,7 @@ public class browserManagement extends extentReportListener {
         String title = null;
         try {
             title = driver.getTitle();
+            logInfo.pass("Saved page title to variable");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -143,6 +148,7 @@ public class browserManagement extends extentReportListener {
         try {
             String title = getPageTitle();
             System.out.println("The page title is: " + title);
+            logInfo.pass("Logged page title to console");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -159,6 +165,7 @@ public class browserManagement extends extentReportListener {
             if (!actualTitle.equals(expectedTitle)){
                 System.out.println("Page title should have been: " + expectedTitle + " but it was: " + actualTitle);
                 System.out.println("Current page title is: " + actualTitle);
+                logInfo.pass("Successfully compared page titles");
             }
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
@@ -174,6 +181,8 @@ public class browserManagement extends extentReportListener {
         String location = null;
         try {
             location = driver.getCurrentUrl();
+            logInfo.pass("Saved current URL to variable");
+
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -188,6 +197,7 @@ public class browserManagement extends extentReportListener {
         try {
             String location = getLocation();
             System.out.println("Current location is: " + location);
+            logInfo.pass("Logged current URL to console");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -204,6 +214,7 @@ public class browserManagement extends extentReportListener {
             if (!actualLocation.equals(expectedLocation)){
                 System.out.println("Location should have been: " + expectedLocation + " but it was: " + actualLocation);
                 System.out.println("Current location is: " + actualLocation);
+                logInfo.pass("Successfully compared URLs");
             }
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
