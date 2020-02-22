@@ -26,14 +26,14 @@ public class facetIngresoLogo {
     @When("User clicks on Ingreso button")
     public void userClicksOnIngresoButton() throws Throwable{
         extentReportListener.createTestStep("When", "User clicks on Ingreso button");
-        wip.clickElement("xpath", ingresoButton);
+        element.clickElement("xpath", ingresoButton);
         wait.waitUntilPageContains(ingresoText, 20);
     }
 
     @Then("User must see ingreso logo")
     public void userMustSeeIngresoLogo() throws Throwable{
         extentReportListener.createTestStep("Then", "User must see ingreso logo");
-        wip.PageShouldContainElement("xpath", ingresoLogo);
+        element.PageShouldContainElement("xpath", ingresoLogo);
         browserManagement.closeBrowser();
     }
 }

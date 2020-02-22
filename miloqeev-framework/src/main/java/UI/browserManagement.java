@@ -16,9 +16,8 @@ public class browserManagement extends extentReportListener {
     /**
      * Opens the given browser to a blank page.
      * @param browser
-     * @throws Throwable
      */
-    public static void openBrowser(String browser) throws Throwable{
+    public static void openBrowser(String browser){
         try {
             if (browser == "chrome"){
                 WebDriverManager.chromedriver().setup();
@@ -45,24 +44,19 @@ public class browserManagement extends extentReportListener {
 
     /**
      * Closes the current browser.
-     * @throws Throwable
      */
-    public static void closeBrowser() throws Throwable{
-        try {
+    public static void closeBrowser(){
+        if (driver != null) {
             driver.close();
             logInfo.pass("Browser closed");
-        } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo, e);
-            logInfo.fail(e.getCause());
         }
     }
 
     /**
      * Navigates the active browser instance to the provided url.
      * @param url
-     * @throws Throwable
      */
-    public static void goTo(String url) throws Throwable{
+    public static void goTo(String url){
         try {
             driver.get(url);
             logInfo.pass("Navigated to Url: " + "'" + url + "'");
@@ -76,10 +70,10 @@ public class browserManagement extends extentReportListener {
      * Sets the implicit wait value used by Selenium.
      * @param miliseconds
      */
-    public static void setBrowserImplicitWait(int miliseconds) throws Throwable{
+    public static void setBrowserImplicitWait(int miliseconds){
         try {
             driver.manage().timeouts().implicitlyWait(miliseconds, TimeUnit.MILLISECONDS);
-            logInfo.pass("Browser implicit wait set to " + miliseconds + " miliseconds");
+            logInfo.pass("Browser implicit wait set to '" + miliseconds + " miliseconds'");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", driver, logInfo, e);
             logInfo.fail(e.getCause());
@@ -89,7 +83,7 @@ public class browserManagement extends extentReportListener {
     /**
      * Simulates user refreshing page.
      */
-    public static void refreshPage() throws Throwable{
+    public static void refreshPage(){
         try {
             driver.navigate().refresh();
             logInfo.pass("Refreshed current page");
@@ -102,7 +96,7 @@ public class browserManagement extends extentReportListener {
     /**
      * Simulates user clicking the back button on their browser.
      */
-    public static void goBack() throws Throwable{
+    public static void goBack(){
         try {
             driver.navigate().back();
             logInfo.pass("Moved back one page");
@@ -115,7 +109,7 @@ public class browserManagement extends extentReportListener {
     /**
      * Simulates user clicking the foward button on their browser.
      */
-    public static void goFoward() throws Throwable{
+    public static void goFoward(){
         try {
             driver.navigate().forward();
             logInfo.pass("Moved foward one page");
@@ -129,7 +123,7 @@ public class browserManagement extends extentReportListener {
      * Returns the title of the current page.
      * @return
      */
-    public static String getPageTitle() throws Throwable{
+    public static String getPageTitle(){
         String title = null;
         try {
             title = driver.getTitle();
@@ -144,7 +138,7 @@ public class browserManagement extends extentReportListener {
     /**
      * Logs the current page title.
      */
-    public static void logPageTitle() throws Throwable{
+    public static void logPageTitle(){
         try {
             String title = getPageTitle();
             System.out.println("The page title is: " + title);
@@ -159,7 +153,7 @@ public class browserManagement extends extentReportListener {
      * Verifies that current page title equals `expectedTitle`
      * @param expectedTitle
      */
-    public static void titleShouldBe(String expectedTitle) throws Throwable{
+    public static void titleShouldBe(String expectedTitle){
         String actualTitle = getPageTitle();
         try {
             if (!actualTitle.equals(expectedTitle)){
@@ -177,7 +171,7 @@ public class browserManagement extends extentReportListener {
      * Returns the current browser's URL.
      * @return
      */
-    public static String getLocation() throws Throwable{
+    public static String getLocation(){
         String location = null;
         try {
             location = driver.getCurrentUrl();
@@ -193,7 +187,7 @@ public class browserManagement extends extentReportListener {
     /**
      * Logs the current browser's URL.
      */
-    public static void logLocation() throws Throwable{
+    public static void logLocation(){
         try {
             String location = getLocation();
             System.out.println("Current location is: " + location);
@@ -208,7 +202,7 @@ public class browserManagement extends extentReportListener {
      * Verifies current browser's URL is exactly `expectedLocation`.
      * @param expectedLocation
      */
-    public static void locationShouldBe(String expectedLocation) throws Throwable{
+    public static void locationShouldBe(String expectedLocation){
         String actualLocation = getLocation();
         try {
             if (!actualLocation.equals(expectedLocation)){

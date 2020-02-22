@@ -26,8 +26,8 @@ public class login {
     @When("User enters valid credentials")
     public void userEntersValidCredentials() throws Throwable{
         extentReportListener.createTestStep("When", "User enters valid credentials");
-        wip.inputText("name", user, "test");
-        wip.inputText("name", password, "pass");
+        element.inputText("name", user, "test");
+        element.inputText("name", password, "pass");
     }
 
     @Then("User should see success message")
@@ -49,8 +49,8 @@ public class login {
     @When("User enters invalid credentials")
     public void userEntersInvalidCredentials() throws Throwable{
         extentReportListener.createTestStep("When", "User enters invalid credentials");
-        wip.inputText("name", user, "test");
-        wip.inputText("name", password, "test");
+        element.inputText("name", user, "test");
+        element.inputText("name", password, "test");
     }
 
     @Then("User should see failure message")
@@ -63,6 +63,6 @@ public class login {
     @And("User clicks login button")
     public void clicksLoginButton() throws Throwable{
         extentReportListener.createTestStep("And", "User clicks login button");
-        wip.clickElement("name", loginButton);
+        element.clickElement("name", loginButton);
     }
 }
