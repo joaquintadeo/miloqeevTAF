@@ -17,17 +17,18 @@ public class wait extends browserManagement{
     public static void waitUntilPageContainsElement(String locatorType, String locatorValue, int timeout){
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         try{
-            switch (locatorType){
-                case "id": wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locatorValue)));
-                    break;
-                case "name": wait.until(ExpectedConditions.presenceOfElementLocated(By.name(locatorValue)));
-                    break;
-                case "class": wait.until(ExpectedConditions.presenceOfElementLocated(By.className(locatorValue)));
-                    break;
-                case "xpath": wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locatorValue)));
-                    break;
-                default: break;
-            }
+//            switch (locatorType){
+//                case "id": wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locatorValue)));
+//                    break;
+//                case "name": wait.until(ExpectedConditions.presenceOfElementLocated(By.name(locatorValue)));
+//                    break;
+//                case "class": wait.until(ExpectedConditions.presenceOfElementLocated(By.className(locatorValue)));
+//                    break;
+//                case "xpath": wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locatorValue)));
+//                    break;
+//                default: break;
+//            }
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.id(locatorValue)));
             logInfo.pass("Successfully waited for page to contain element located by '" + locatorType + "=" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
             testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "'" + " did not appear after " + timeout + " seconds"), e);
