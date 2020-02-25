@@ -655,4 +655,19 @@ public class element extends browserManagement{
             testStepHandle("FAIL", driver, logInfo.fail("Could not save to variable text of element located by " + locatorType + "='" + locatorValue + "'"), e);
         }
     }
+
+    /**
+     * Clicks button identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void clickButton(String locatorType, String locatorValue){
+        try {
+            WebElement element = driver.findElement(By.tagName("button"));
+            element.click();
+            logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
+        }
+    }
 }
