@@ -15,7 +15,7 @@ public class login {
     private static String loginButton = loginLandingPage.loginButton;
 
     @Given("User navigates to login page")
-    public void userNavigatesToLoginPage() throws Throwable{
+    public void userNavigatesToLoginPage(){
         extentReportListener.createTest("Testing successful login", "Login With Valid Credentials", "User navigates to login page");
         browserManagement.openBrowser("chrome");
         browserManagement.setBrowserImplicitWait(600);
@@ -24,21 +24,21 @@ public class login {
     }
 
     @When("User enters valid credentials")
-    public void userEntersValidCredentials() throws Throwable{
+    public void userEntersValidCredentials(){
         extentReportListener.createTestStep("When", "User enters valid credentials");
         element.inputText("name", user, "test");
         element.inputText("name", password, "pass");
     }
 
     @Then("User should see success message")
-    public void userShouldSeeSuccessMessage() throws Throwable{
+    public void userShouldSeeSuccessMessage(){
         extentReportListener.createTestStep("Then", "User should see success message");
         wait.waitUntilPageContains("**Successful Login**", 5);
         browserManagement.closeBrowser();
     }
 
     @Given("User navigates to login site")
-    public void userNavigatesToLoginSite() throws Throwable{
+    public void userNavigatesToLoginSite(){
         extentReportListener.createTest("Testing successful login", "Login With Invalid Credentials", "User navigates to login page");
         browserManagement.openBrowser("chrome");
         browserManagement.setBrowserImplicitWait(600);
@@ -47,21 +47,21 @@ public class login {
     }
 
     @When("User enters invalid credentials")
-    public void userEntersInvalidCredentials() throws Throwable{
+    public void userEntersInvalidCredentials(){
         extentReportListener.createTestStep("When", "User enters invalid credentials");
         element.inputText("name", user, "test");
         element.inputText("name", password, "test");
     }
 
     @Then("User should see failure message")
-    public void userShouldSeeFailureMessage() throws Throwable{
+    public void userShouldSeeFailureMessage(){
         extentReportListener.createTestStep("Then", "User should see failure message");
         wait.waitUntilPageContains("**Failed Login**", 5);
         browserManagement.closeBrowser();
     }
 
     @And("User clicks login button")
-    public void clicksLoginButton() throws Throwable{
+    public void clicksLoginButton(){
         extentReportListener.createTestStep("And", "User clicks login button");
         element.clickElement("name", loginButton);
     }
