@@ -69,7 +69,7 @@ public class wait extends browserManagement{
      * @param timeout
      * @throws Throwable
      */
-    public static void waitUntilPageContains(String text, int timeout) throws Throwable{
+    public static void waitUntilPageContains(String text, int timeout){
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         try {
             wait.until(ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), text));
