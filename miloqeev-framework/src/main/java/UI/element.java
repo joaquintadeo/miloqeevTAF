@@ -656,18 +656,187 @@ public class element extends browserManagement{
         }
     }
 
+//    /**
+//     * Clicks button identified by `locator`.
+//     * @param locatorType
+//     * @param locatorValue
+//     */
+//    public static void clickButton(String locatorType, String locatorValue){
+//        try {
+//            WebElement element = driver.findElement(By.tagName("button"));
+//            element.click();
+//            logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "'");
+//        } catch (AssertionError | Exception e){
+//            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
+//        }
+//    }
+
     /**
-     * Clicks button identified by `locator`.
+     * Click element `locator` at `xoffset/yoffset`.
+     * @param locatorType
+     * @param locatorValue
+     * @param xoffset
+     * @param yoffset
+     */
+    public static void clickElementAtCoordinates(String locatorType, String locatorValue, int xoffset, int yoffset){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.moveToElement(element);
+            actions.moveByOffset(xoffset,yoffset).click().perform();
+            logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "' at coordinates '" + xoffset + ", " + yoffset + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to click element located by '" + locatorType + " = " + locatorValue + "' at coordinates '" + xoffset + ", " + yoffset + "'"), e);
+        }
+    }
+
+    /**
+     * Double click element identified by `locator`.
      * @param locatorType
      * @param locatorValue
      */
-    public static void clickButton(String locatorType, String locatorValue){
+    public static void doubleClickElement(String locatorType, String locatorValue){
+        Actions actions = new Actions(driver);
         try {
-            WebElement element = driver.findElement(By.tagName("button"));
-            element.click();
-            logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "'");
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.moveToElement(element).doubleClick().perform();
+            logInfo.pass("Double clicked element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to double click element located by '" + locatorType + " = " + locatorValue + "'"), e);
+        }
+    }
+
+    /**
+     * Sets focus to element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void setFocusToElement(String locatorType, String locatorValue){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.moveToElement(element).perform();
+            logInfo.pass("Set focus on element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to focus element located by '" + locatorType + " = " + locatorValue + "'"), e);
+        }
+    }
+
+    /**
+     * Drags element identified by `locator` into `target` element.
+     * @param locatorType
+     * @param locatorValue
+     * @param targetType
+     * @param targetValue
+     */
+    public static void dragAndDrop(String locatorType, String locatorValue, String targetType, String targetValue){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            WebElement target = findElementBy(targetType, targetValue);
+            actions.dragAndDrop(element, target).perform();
+            logInfo.pass("Drag element located by '" + locatorType + " = " + locatorValue + "' and dropped into target located by '" + targetType + "=" + targetValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to drag element located by '" + locatorType + " = " + locatorValue + "' and dropped into target located by '" + targetType + "=" + targetValue + "'"), e);
+        }
+    }
+
+    /**
+     * Drags element identified with `locator` by `xoffset/yoffset`.
+     * @param locatorType
+     * @param locatorValue
+     * @param xoffset
+     * @param yoffset
+     */
+    public static void dragAndDropByOffset(String locatorType, String locatorValue, int xoffset, int yoffset){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.dragAndDropBy(element, xoffset, yoffset).perform();
+            logInfo.pass("Drag element located by '" + locatorType + " = " + locatorValue + "' and dropped at coordinates '" + xoffset + ", " + yoffset + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to drag element located by '" + locatorType + " = " + locatorValue + "' and dropped at coordinates '" + xoffset + ", " + yoffset + "'"), e);
+        }
+    }
+
+    /**
+     * Simulates pressing the left mouse button on the element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void mouseDown(String locatorType, String locatorValue){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.clickAndHold(element).perform();
+            logInfo.pass("Simulating Mouse Down on element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to simulate Mouse Down on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+        }
+    }
+
+    /**
+     * Simulates mouse over the element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void mouseOver(String locatorType, String locatorValue){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.moveToElement(element).perform();
+            logInfo.pass("Simulating Mouse Over on element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to simulate Mouse Over on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+        }
+    }
+
+    /**
+     * Simulates releasing the left mouse button on the element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void mouseUp(String locatorType, String locatorValue){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.release(element).perform();
+            logInfo.pass("Simulating Mouse Up on element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to simulate Mouse Up on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+        }
+    }
+
+    /**
+     * Opens context menu on element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void openContextMenu(String locatorType, String locatorValue){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.contextClick(element).perform();
+            logInfo.pass("Context menu opened on element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to open context menu on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+        }
+    }
+
+    /**
+     * Simulates preesing `key` on element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param key 
+     */
+    public static void pressKey(String locatorType, String locatorValue, String key){
+        Actions actions = new Actions(driver);
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            actions.sendKeys(element, key);
+            logInfo.pass("Pressing key '" + key + "' on element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", driver, logInfo.fail("Unable to press key '" + key + "' on element located by '" + locatorType + " = " + locatorValue + "'"), e);
         }
     }
 }
