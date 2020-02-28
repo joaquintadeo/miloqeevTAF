@@ -1,12 +1,7 @@
 miloqeev-reports/target
 miloqeev-tests/target
+miloqeev-framework/target
+miloqeev-page-objects/target
 miloqeev-reports/test-results
-*/target/**
-.idea/*
+.idea/
 
-miloqeev-framework/target/
-miloqeev-page-objects/target/
-
-miloqeev-reports/test-results
-
-/.idea/
