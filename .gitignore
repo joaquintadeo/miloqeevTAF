@@ -1,3 +1,3 @@
 miloqeev-reports/test-results
-*/target/**
-.idea/*
+/target/
+.idea
