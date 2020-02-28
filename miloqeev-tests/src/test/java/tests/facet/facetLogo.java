@@ -28,7 +28,7 @@ public class facetLogo{
     @Then("User must see facet logo")
     public void user_must_see_facet_logo() throws Throwable{
         extentReportListener.createTestStep("Then", "User must see facet logo");
-        element.PageShouldContainElement("class", facetLogo);
+        element.pageShouldContainElement("class", facetLogo);
         browserManagement.closeBrowser();
     }
 }

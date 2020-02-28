@@ -217,7 +217,7 @@ public class element extends browserManagement{
      * @param locatorType
      * @param locatorValue
      */
-    public static void PageShouldContainElement(String locatorType, String locatorValue){
+    public static void pageShouldContainElement(String locatorType, String locatorValue){
         try {
             int numberOfElements = getElementCount(locatorType, locatorValue);
             int expectedNumberOfElements = 0;
@@ -235,7 +235,7 @@ public class element extends browserManagement{
      * @param locatorType
      * @param locatorValue
      */
-    public static void PageShouldNotContainElement(String locatorType, String locatorValue){
+    public static void pageShouldNotContainElement(String locatorType, String locatorValue){
         try {
             int numberOfElements = getElementCount(locatorType, locatorValue);
             Assert.assertEquals(0, numberOfElements);
@@ -308,7 +308,7 @@ public class element extends browserManagement{
      * Verifies that current page contains `link text`.
      * @param linkText
      */
-    public static void PageShouldContainLink(String linkText){
+    public static void pageShouldContainLink(String linkText){
         try {
             int elementCount = driver.findElements(By.linkText(linkText)).size();
             Assert.assertNotEquals(elementCount, 0);
@@ -323,7 +323,7 @@ public class element extends browserManagement{
      * Verifies that current page does not contain `link text`.
      * @param linkText
      */
-    public static void PageShouldNotContainLink(String linkText){
+    public static void pageShouldNotContainLink(String linkText){
         try {
             int elementCount = driver.findElements(By.linkText(linkText)).size();
             Assert.assertEquals(elementCount, 0);
@@ -338,7 +338,7 @@ public class element extends browserManagement{
      * Verifies that current page contains `text`.
      * @param text
      */
-    public static void PageShouldContain(String text){
+    public static void pageShouldContain(String text){
         try {
             int elementCount = driver.findElements(By.tagName(text)).size();
             Assert.assertNotEquals(elementCount, 0);
@@ -353,7 +353,7 @@ public class element extends browserManagement{
      * Verifies that current page does not contain `text`.
      * @param text
      */
-    public static void PageShouldNotContain(String text){
+    public static void pageShouldNotContain(String text){
         try {
             int elementCount = driver.findElements(By.tagName(text)).size();
             Assert.assertEquals(elementCount, 0);
