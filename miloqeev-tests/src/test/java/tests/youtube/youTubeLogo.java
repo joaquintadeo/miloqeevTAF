@@ -31,7 +31,7 @@ public class youTubeLogo extends extentReportListener{
     @Then("User must see YouTube logo")
     public void user_must_see_YouTube_logo() throws Throwable{
         extentReportListener.createTestStep("Then", "User must see YouTube logo");
-        element.PageShouldContainElement("id", youTubeLogo);
+        element.pageShouldContainElement("id", youTubeLogo);
         browserManagement.closeBrowser();
     }
 }

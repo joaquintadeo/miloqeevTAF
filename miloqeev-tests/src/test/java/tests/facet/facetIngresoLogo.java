@@ -33,7 +33,7 @@ public class facetIngresoLogo {
     @Then("User must see ingreso logo")
     public void userMustSeeIngresoLogo() throws Throwable{
         extentReportListener.createTestStep("Then", "User must see ingreso logo");
-        element.PageShouldContainElement("xpath", ingresoLogo);
+        element.pageShouldContainElement("xpath", ingresoLogo);
         browserManagement.closeBrowser();
     }
 }
