@@ -4,4 +4,9 @@ miloqeev-framework/target
 miloqeev-page-objects/target
 miloqeev-reports/test-results
 .idea/
-
+miloqeevTAF.iml
+Miloqeev.iml
+miloqeev-framework/miloqeev-framework.iml
+miloqeev-page-objects/miloqeev-page-objects.iml
+miloqeev-reports/miloqeev-reports.iml
+miloqeev-tests/miloqeev-tests.iml
