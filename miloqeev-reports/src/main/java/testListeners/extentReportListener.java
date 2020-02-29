@@ -138,4 +138,17 @@ public class extentReportListener {
             }
         }
     }
+
+    public static void backendTestStepHandle(String teststatus,ExtentTest extenttest,Throwable throwable) {
+        switch (teststatus) {
+            case "FAIL":
+                extenttest.fail(MarkupHelper.createLabel("Test Case is Failed : ", ExtentColor.RED));
+                extenttest.error(throwable.fillInStackTrace());
+            case "PASS":
+                extenttest.pass(MarkupHelper.createLabel("Test Case is Passed : ", ExtentColor.GREEN));
+                break;
+            default:
+                break;
+        }
+    }
 }
