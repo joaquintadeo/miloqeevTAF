@@ -17,6 +17,10 @@ import static testListeners.extentReportListener.logInfo;
 
 public class json{
 
+    public static String responseString;
+    public static JSONObject responseJson;
+    public static int respCode;
+
     /**
      * Send a GET request on the session object found in the cache using the given ``label``.
      * @param url
@@ -25,12 +29,10 @@ public class json{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();  //creates one connection
             HttpGet httpGet = new HttpGet(url);
-            CloseableHttpResponse response = httpClient.execute(httpGet);
-            int statusCode = response.getStatusLine().getStatusCode();
-            System.out.println("statusCode = " + statusCode);
-            String responseString = EntityUtils.toString(response.getEntity(), "UTF-8");
-            JSONObject responseJson = new JSONObject(responseString);
-            System.out.println("responseJson = " + responseJson);
+            CloseableHttpResponse getResponse = httpClient.execute(httpGet);
+            respCode = getResponse.getStatusLine().getStatusCode();
+            responseString = EntityUtils.toString(getResponse.getEntity(), "UTF-8");
+            responseJson = new JSONObject(responseString);
             logInfo.pass("To be determined");
         }  catch (AssertionError | Exception e){
             backendTestStepHandle("FAIL", logInfo.fail("To be determined"), e);
@@ -41,7 +43,7 @@ public class json{
      * Send a POST request on the session object found in the cache using the given ``label``.
      * @param url
      */
-    public static void portRequest(String url, String entity, HashMap<String, String> headerMap) throws IOException {
+    public static void postRequest(String url, String entity, HashMap<String, String> headerMap) throws IOException {
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();  //creates one connection
             HttpPost httpPost = new HttpPost(url);
