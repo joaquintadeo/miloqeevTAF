@@ -1,7 +1,7 @@
 package tests.youtube;
 
 import UI.browserManagement;
-import UI.functions;
+import UI.element;
 import UI.window;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -31,7 +31,7 @@ public class youTubeLogo extends extentReportListener{
     @Then("User must see YouTube logo")
     public void user_must_see_YouTube_logo() throws Throwable{
         extentReportListener.createTestStep("Then", "User must see YouTube logo");
-        functions.PageShouldContainElement(0, youTubeLogo);
+        element.pageShouldContainElement("id", youTubeLogo);
         browserManagement.closeBrowser();
     }
 }

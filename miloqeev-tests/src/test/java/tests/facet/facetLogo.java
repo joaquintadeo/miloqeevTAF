@@ -1,17 +1,13 @@
 package tests.facet;
 
+import UI.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import UI.browserManagement;
-import UI.functions;
-import UI.utils;
-import UI.window;
 import testListeners.extentReportListener;
 import facetPage.facetLandingPage;
 
 public class facetLogo{
-    private static int classname = utils.CLASSNAME;
     private static String facetLogo = facetLandingPage.facetLogo;
     private static String facetUrl = facetLandingPage.facetUrl;
 
@@ -32,7 +28,7 @@ public class facetLogo{
     @Then("User must see facet logo")
     public void user_must_see_facet_logo() throws Throwable{
         extentReportListener.createTestStep("Then", "User must see facet logo");
-        functions.PageShouldContainElement(classname, facetLogo);
+        element.pageShouldContainElement("class", facetLogo);
         browserManagement.closeBrowser();
     }
 }

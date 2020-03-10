@@ -26,10 +26,16 @@ public class extentReportListener {
     public static ExtentTest test = null;
     public static ExtentTest logInfo = null;
 
-    public static ExtentReports setUp() {
-        String reportLocation = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/report" + getcurrentdateandtime() + ".html";
+    public static ExtentReports setUp(){
+        try {
+            String reportLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "/miloqeev-reports/test-results/report.html";
+            if (reportLocation == null)
+                new File(System.getProperty("user.dir") + File.separator + ".." + File.separator + "/miloqeev-reports/test-results/report.html");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        String reportLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "/miloqeev-reports/test-results/report.html";
         report = new ExtentHtmlReporter(reportLocation);
-//        report.setAppendExisting(true);
         report.loadXMLConfig(System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/src/main/resources/extent-reports-config.xml");
         report.config().setDocumentTitle("Miloqeev Test Automation Framework");
         report.config().setReportName("Automation Test Report");
@@ -75,10 +81,12 @@ public class extentReportListener {
     public static String captureScreenShot(WebDriver driver) throws IOException {
         TakesScreenshot screen = (TakesScreenshot) driver;
         File src = screen.getScreenshotAs(OutputType.FILE);
-        String destination = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/screenshots/"  + getcurrentdateandtime() + ".png";
+        String tmp = getcurrentdateandtime();
+        String destination = System.getProperty("user.dir") + File.separator +".." + File.separator + "/miloqeev-reports/test-results/screenshots/"  + tmp  + ".png";
+        String dst = "screenshots/"  + tmp + ".png";
         File target = new File(destination);
         FileUtils.copyFile(src, target);
-        return destination;
+        return dst;
     }
 
     private static String getcurrentdateandtime() {
@@ -93,11 +101,11 @@ public class extentReportListener {
         return str;
     }
 
-    public static void createTest(String testName, String scenario, String given){
+    public static void createTest(String testName, String scenario, String name){
         try {
             test = extent.createTest(Feature.class, testName);
             test = test.createNode(Scenario.class, scenario);
-            logInfo = test.createNode(new GherkinKeyword("Given"), given);
+            logInfo = test.createNode(new GherkinKeyword("Given"), "Given" + " " + name);
 
         } catch (AssertionError | Exception e){
             logInfo.fail(e);
@@ -107,7 +115,7 @@ public class extentReportListener {
     public static void createTestStep(String gherkinKeyword, String name){
         if (gherkinKeyword == "When") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("When"), name);
+                logInfo = test.createNode(new GherkinKeyword("When"), gherkinKeyword + " " + name);
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
@@ -115,7 +123,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "Then"){
             try {
-                logInfo = test.createNode(new GherkinKeyword("Then"), name);
+                logInfo = test.createNode(new GherkinKeyword("Then"), gherkinKeyword + " " + name);
 
             } catch (AssertionError | Exception e){
                 logInfo.fail(e);
@@ -123,11 +131,24 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "And") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("And"), name);
+                logInfo = test.createNode(new GherkinKeyword("And"), gherkinKeyword + " " + name);
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
             }
+        }
+    }
+
+    public static void backendTestStepHandle(String teststatus,ExtentTest extenttest,Throwable throwable) {
+        switch (teststatus) {
+            case "FAIL":
+                extenttest.fail(MarkupHelper.createLabel("Test Case is Failed : ", ExtentColor.RED));
+                extenttest.error(throwable.fillInStackTrace());
+            case "PASS":
+                extenttest.pass(MarkupHelper.createLabel("Test Case is Passed : ", ExtentColor.GREEN));
+                break;
+            default:
+                break;
         }
     }
 }

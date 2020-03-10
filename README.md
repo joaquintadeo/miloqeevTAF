@@ -6,16 +6,15 @@ Repository How-To
   3. Move to cloned repository "cd <repository name>"
   4. Open repository with IDE as a new project
   5. Create feature file for your test
-    @Tag
-    Feature: <Feature name>
-      Scenario: <Scenario name>
-        Given <Preconditions>
-        When <Something happens>
-        And <Something else may happen>
-        Then <Expected result to be verified>
+    * @Tag
+        1. Feature: <Feature name>
+            * Scenario: "Scenario name"
+              * Given "Preconditions"
+              * When "Something happens"
+              * And "Something else may happen"
+              * Then "Expected result to be verified"
   6. Generate test steps as Java class
   7. Create test runner
   8. Create test config file
   9. Execute test
   10. Check results in folder
-  

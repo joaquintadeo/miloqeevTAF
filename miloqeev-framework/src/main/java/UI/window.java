@@ -7,56 +7,143 @@ import java.util.Set;
 
 public class window extends browserManagement{
 
+    /**
+     * Maximizes current browser window.
+     */
     public static void maximizeBrowserWindow(){
-        driver.manage().window().maximize();
+        try {
+            driver.manage().window().maximize();
+            logInfo.pass("Maximized browser window");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not maximize browser window"), e);
+        }
     }
 
+    /**
+     * Logs current browser window's size.
+     */
     public static void getWindowSize(){
-        Dimension size = driver.manage().window().getSize();
-        System.out.println("The screen size is: " + size);
+        try {
+            Dimension size = driver.manage().window().getSize();
+            System.out.println("The screen size is: " + size);
+            logInfo.pass("Logged current browser window's size to console");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not get window's size"), e);
+        }
     }
 
+    /**
+     * Sets current browser window's size to the given width and height.
+     * @param width
+     * @param height
+     */
     public static void setWindowSize(int width, int height){
-        Dimension size = new Dimension (width, height);
-        driver.manage().window().setSize(size);
+        try {
+            Dimension size = new Dimension (width, height);
+            driver.manage().window().setSize(size);
+            logInfo.pass("Set browser window's size to '" + width + "x" + height + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not set window's size to desired value"), e);
+        }
     }
 
+    /**
+     * Logs the current browser window's position.
+     */
     public static void getWindowPosition(){
-        Point position = driver.manage().window().getPosition();
-        System.out.println("The window position is: " + position);
+        try {
+            Point position = driver.manage().window().getPosition();
+            System.out.println("The window position is: " + position);
+            logInfo.pass("Logged browser window's position to console");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not get browser window's position"), e);
+        }
     }
 
+    /**
+     * Sets current browser window's size to the given points.
+     * @param x
+     * @param y
+     */
     public static void setWindowPosition(int x, int y){
-        Point position = new Point (x, y);
-        driver.manage().window().setPosition(position);
+        try {
+            Point position = new Point (x, y);
+            driver.manage().window().setPosition(position);
+            logInfo.pass("Set browser window's position to '" + x + "," + y + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not set window's position to desired value"), e);
+        }
     }
 
+    /**
+     * Returns the current browser window's title.
+     * @return `title`.
+     */
     public static String getWindowTitle(){
-        String title = driver.getTitle();
+        String title = null;
+        try {
+            title = driver.getTitle();
+            logInfo.pass("Saved window's title='" + title + "' to variable");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not save window's title to variable"), e);
+        }
         return title;
     }
 
+    /**
+     * Returns current browser window's handle.
+     * @return `handle`.
+     */
     public static String getWindowHandle(){
-        String handle = driver.getWindowHandle();
+        String handle = null;
+        try {
+            handle = driver.getWindowHandle();
+            logInfo.pass("Saved window's handle='" + handle + "' to variable");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not save window's handle to variable"), e);
+        }
         return handle;
     }
-    /*
-    Algo le pasa
+
+    /**
+     * Selects the browser's window by identifier.
+     * @param identifier
      */
     public static void selectWindow(String identifier){
-        driver.switchTo().window(identifier);
+        try {
+            driver.switchTo().window(identifier);
+            logInfo.pass("Focus window selected by identifier='" + identifier + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not focus window selected by identifier='" + identifier + "'"), e);
+        }
     }
 
+    /**
+     * Closes the current browser's window.
+     * @param identifier
+     */
     public static void closeWindow(String identifier){
-        selectWindow(identifier);
-        driver.close();
+        try {
+            selectWindow(identifier);
+            driver.close();
+            logInfo.pass("Closed window selected by identifier='" + identifier + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not close window selected by identifier='" + identifier + "'"), e);
+        }
     }
 
-    /*
-    Lists windows identifiers
+    /**
+     * Returns list of current browser's windows identifiers.
+     * @return `handles`.
      */
     public static Set<String> getWindowHandles(){
-        Set<String> handles = driver.getWindowHandles();
+        Set<String>  handles = null;
+        try {
+            handles = driver.getWindowHandles();
+            logInfo.pass("Saved window's handle='" + handles + "' to list");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", driver, logInfo.fail("Could not save window's handle to list"), e);
+        }
         return handles;
     }
 }

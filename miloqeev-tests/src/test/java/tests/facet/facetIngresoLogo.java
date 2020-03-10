@@ -9,7 +9,6 @@ import facetPage.facetLandingPage;
 import facetPage.facetIngresoPage;
 
 public class facetIngresoLogo {
-    private static int xpath = utils.XPATH;
     private static String facetUrl = facetLandingPage.facetUrl;
     private static String ingresoButton = facetLandingPage.ingresoButton;
     private static String ingresoText = facetIngresoPage.ingresoText;
@@ -27,14 +26,14 @@ public class facetIngresoLogo {
     @When("User clicks on Ingreso button")
     public void userClicksOnIngresoButton() throws Throwable{
         extentReportListener.createTestStep("When", "User clicks on Ingreso button");
-        functions.clickElement(xpath, ingresoButton);
+        element.clickElement("xpath", ingresoButton);
         wait.waitUntilPageContains(ingresoText, 20);
     }
 
     @Then("User must see ingreso logo")
     public void userMustSeeIngresoLogo() throws Throwable{
         extentReportListener.createTestStep("Then", "User must see ingreso logo");
-        functions.PageShouldContainElement(xpath, ingresoLogo);
+        element.pageShouldContainElement("xpath", ingresoLogo);
         browserManagement.closeBrowser();
     }
 }
