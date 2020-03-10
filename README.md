@@ -18,4 +18,3 @@ Repository How-To
   8. Create test config file
   9. Execute test
   10. Check results in folder
-  
