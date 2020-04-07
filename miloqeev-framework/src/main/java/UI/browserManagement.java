@@ -1,6 +1,5 @@
 package UI;
 
-import static testListeners.extentReportListener.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.concurrent.TimeUnit;
+
+import static testListeners.extentReportListener.*;
 
 public class browserManagement {
     public static WebDriver driver;
