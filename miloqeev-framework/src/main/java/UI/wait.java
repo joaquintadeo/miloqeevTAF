@@ -3,9 +3,11 @@ package UI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-public class wait extends browserManagement{
+import static testListeners.extentReportListener.*;
+import static UI.browserManagement.driver;
+
+public class wait {
 
     /**
      * Waits until `element` appears on current page.

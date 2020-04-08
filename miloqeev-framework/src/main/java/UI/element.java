@@ -6,7 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-public class element extends browserManagement{
+import static testListeners.extentReportListener.*;
+import static UI.browserManagement.driver;
+
+public class element {
 
     /**
      * Finds and return `element` by given locator.
@@ -827,7 +830,7 @@ public class element extends browserManagement{
      * Simulates preesing `key` on element identified by `locator`.
      * @param locatorType
      * @param locatorValue
-     * @param key 
+     * @param key
      */
     public static void pressKey(String locatorType, String locatorValue, String key){
         Actions actions = new Actions(driver);

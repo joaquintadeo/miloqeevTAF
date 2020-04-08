@@ -5,7 +5,11 @@ import org.openqa.selenium.Cookie;
 import java.util.Date;
 import java.util.Set;
 
-public class cookies extends browserManagement{
+import static testListeners.extentReportListener.logInfo;
+import static testListeners.extentReportListener.testStepHandle;
+import static UI.browserManagement.driver;
+
+public class cookies {
 
     /**
      * Deletes all cookies.

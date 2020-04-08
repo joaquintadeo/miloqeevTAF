@@ -1,39 +1,39 @@
 package tests.facet;
 
-import UI.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import testListeners.extentReportListener;
-import facetPage.facetLandingPage;
-import facetPage.facetIngresoPage;
+
+import static UI.browserManagement.*;
+import static UI.element.*;
+import static UI.wait.*;
+import static UI.window.*;
+import static facetPage.facetLandingPage.*;
+import static facetPage.facetIngresoPage.*;
+import static testListeners.extentReportListener.*;
 
 public class facetIngresoLogo {
-    private static String facetUrl = facetLandingPage.facetUrl;
-    private static String ingresoButton = facetLandingPage.ingresoButton;
-    private static String ingresoText = facetIngresoPage.ingresoText;
-    private static String ingresoLogo = facetIngresoPage.ingresoLogo;
 
     @Given("User opens browser and goes to facet web page")
     public void userOpensBrowserAndGoesToFacetWebPage() throws Throwable{
-        extentReportListener.createTest("Ingreso logo validation", "Ingreso logo should appear on Facet Web Page", "User opens browser and goes to facet web page");
-        browserManagement.openBrowser("chrome");
-        browserManagement.setBrowserImplicitWait(600);
-        window.maximizeBrowserWindow();
-        browserManagement.goTo(facetUrl);
+        createTest("Ingreso logo validation", "Ingreso logo should appear on Facet Web Page", "User opens browser and goes to facet web page");
+        openBrowser("chrome");
+        setBrowserImplicitWait(600);
+        maximizeBrowserWindow();
+        goTo(FACET_URL);
     }
 
     @When("User clicks on Ingreso button")
     public void userClicksOnIngresoButton() throws Throwable{
-        extentReportListener.createTestStep("When", "User clicks on Ingreso button");
-        element.clickElement("xpath", ingresoButton);
-        wait.waitUntilPageContains(ingresoText, 20);
+        createTestStep("When", "User clicks on Ingreso button");
+        clickElement("xpath", INGRESO_BTN);
+        waitUntilPageContains(INGRESO_TXT, 20);
     }
 
     @Then("User must see ingreso logo")
     public void userMustSeeIngresoLogo() throws Throwable{
-        extentReportListener.createTestStep("Then", "User must see ingreso logo");
-        element.pageShouldContainElement("xpath", ingresoLogo);
-        browserManagement.closeBrowser();
+        createTestStep("Then", "User must see ingreso logo");
+        pageShouldContainElement("xpath", INGRESO_IMG);
+        closeBrowser();
     }
 }

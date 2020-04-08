@@ -5,7 +5,10 @@ import org.openqa.selenium.Point;
 
 import java.util.Set;
 
-public class window extends browserManagement{
+import static testListeners.extentReportListener.*;
+import static UI.browserManagement.driver;
+
+public class window {
 
     /**
      * Maximizes current browser window.

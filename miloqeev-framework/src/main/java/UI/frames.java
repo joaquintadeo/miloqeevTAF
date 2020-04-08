@@ -5,8 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import static UI.element.findElementBy;
+import static testListeners.extentReportListener.*;
+import static UI.browserManagement.driver;
 
-public class frames extends browserManagement{
+public class frames {
 
     /**
      * Sets frame identified by `locator` as the current frame.

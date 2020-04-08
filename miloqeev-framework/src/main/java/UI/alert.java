@@ -1,14 +1,13 @@
 package UI;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static UI.element.findElementBy;
+import static testListeners.extentReportListener.*;
+import static UI.browserManagement.driver;
 
-public class alert extends browserManagement{
+public class alert {
 
     /**
      * Waits for alert to appear on current page.
