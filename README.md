@@ -18,3 +18,8 @@ Repository How-To
   8. Create test config file
   9. Execute test
   10. Check results in folder
+  
+  To execute from console:
+  Open command promt
+  Go to project root
+  Execute mvn -pl '!miloqeev-reports, !miloqeev-framework, !miloqeev-page-objects' test -DtestFile='<testName>'
