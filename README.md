@@ -22,4 +22,8 @@ Repository How-To
   To execute from console:
   Open command promt
   Go to project root
-  Execute mvn -pl '!miloqeev-reports, !miloqeev-framework, !miloqeev-page-objects' test -DtestFile='<testName>'
+  Execute mvn clean install -DskipTests
+  MAC
+    Execute mvn -pl '!miloqeev-reports, !miloqeev-framework, !miloqeev-page-objects' test -DtestFile='<testName>'
+  Win
+    Execute mvn -pl miloqeev-tests test -DtestFile=<testName>
