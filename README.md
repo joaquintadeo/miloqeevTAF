@@ -27,3 +27,5 @@ Repository How-To
     Execute mvn -pl '!miloqeev-reports, !miloqeev-framework, !miloqeev-page-objects' test -DtestFile='<testName>'
   Win
     Execute mvn -pl miloqeev-tests test -DtestFile=<testName>
+
+  To run command on mac, first run chmod 755 <filename>.command
