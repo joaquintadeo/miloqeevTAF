@@ -5,12 +5,26 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 import static UI.browserManagement.*;
+import static UI.browserManagement.closeBrowser;
+import static UI.browserManagement.goTo;
+import static UI.browserManagement.openBrowser;
+import static UI.browserManagement.setBrowserImplicitWait;
 import static UI.element.*;
+import static UI.element.clickElement;
+import static UI.element.pageShouldContainElement;
 import static UI.wait.*;
+import static UI.wait.waitUntilPageContains;
 import static UI.window.*;
-import static facetPage.facetLandingPage.*;
+import static UI.window.maximizeBrowserWindow;
 import static facetPage.facetIngresoPage.*;
+import static facetPage.facetIngresoPage.INGRESO_IMG;
+import static facetPage.facetIngresoPage.INGRESO_TXT;
+import static facetPage.facetLandingPage.*;
+import static facetPage.facetLandingPage.FACET_URL;
+import static facetPage.facetLandingPage.INGRESO_BTN;
 import static testListeners.extentReportListener.*;
+import static testListeners.extentReportListener.createTest;
+import static testListeners.extentReportListener.createTestStep;
 
 public class facetIngresoLogo {
 

@@ -6,9 +6,17 @@ import cucumber.api.java.en.When;
 import testListeners.extentReportListener;
 
 import static UI.browserManagement.*;
+import static UI.browserManagement.closeBrowser;
+import static UI.browserManagement.goTo;
+import static UI.browserManagement.openBrowser;
+import static UI.browserManagement.setBrowserImplicitWait;
 import static UI.element.*;
+import static UI.element.pageShouldContainElement;
 import static UI.window.*;
+import static UI.window.maximizeBrowserWindow;
 import static youTubePage.youTubeLandingPage.*;
+import static youTubePage.youTubeLandingPage.YOUTUBE_IMG;
+import static youTubePage.youTubeLandingPage.YOUTUBE_URL;
 
 public class youTubeLogo extends extentReportListener{
 

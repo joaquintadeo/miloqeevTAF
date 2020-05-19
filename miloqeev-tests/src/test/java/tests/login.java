@@ -32,7 +32,7 @@ public class login {
     @Then("User should see success message")
     public void userShouldSeeSuccessMessage(){
         createTestStep("Then", "User should see success message");
-        waitUntilPageContains("**Successful Login**", 5);
+        waitUntilPageContains("**Successful Login**");
         closeBrowser();
     }
 

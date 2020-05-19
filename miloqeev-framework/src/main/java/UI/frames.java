@@ -6,7 +6,7 @@ import org.testng.Assert;
 
 import static UI.element.findElementBy;
 import static testListeners.extentReportListener.*;
-import static UI.browserManagement.driver;
+import static UI.browserManagement.getDriver;
 
 public class frames {
 
@@ -18,10 +18,10 @@ public class frames {
     public static void selectFrame(String locatorType, String locatorValue){
         try{
             WebElement element = findElementBy(locatorType, locatorValue);
-            driver.switchTo().frame(element);
+            getDriver().switchTo().frame(element);
             logInfo.pass("Selecting frame located by '" + locatorType + "=" + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to select frame located by '" + locatorType + "=" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to select frame located by '" + locatorType + "=" + locatorValue + "'"), e);
         }
     }
 
@@ -30,10 +30,10 @@ public class frames {
      */
     public static void unselectFrame(){
         try{
-            driver.switchTo().defaultContent();
+            getDriver().switchTo().defaultContent();
             logInfo.pass("Switched to default frame");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to switch to default frame"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to switch to default frame"), e);
         }
     }
 
@@ -43,11 +43,11 @@ public class frames {
      */
     public static void currentFrameShouldContain(String text){
         try {
-            int elementCount = driver.findElements(By.tagName(text)).size();
+            int elementCount = getDriver().findElements(By.tagName(text)).size();
             Assert.assertNotEquals(elementCount, 0);
             logInfo.pass("Current frame contains text='" + text + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL",driver,logInfo.fail("Current frame did not contain text='" + text + "'"),e);
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Current frame did not contain text='" + text + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
@@ -58,11 +58,11 @@ public class frames {
      */
     public static void currentFrameShouldNotContain(String text){
         try {
-            int elementCount = driver.findElements(By.tagName(text)).size();
+            int elementCount = getDriver().findElements(By.tagName(text)).size();
             Assert.assertEquals(elementCount, 0);
             logInfo.pass("Current frame does not contain text='" + text + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL",driver,logInfo.fail("Current frame contained text='" + text + "'"),e);
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Current frame contained text='" + text + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
@@ -76,12 +76,12 @@ public class frames {
     public static void frameShouldContain(String locatorType, String locatorValue, String text){
         try{
             WebElement element = findElementBy(locatorType, locatorValue);
-            driver.switchTo().frame(element);
-            int elementCount = driver.findElements(By.tagName(text)).size();
+            getDriver().switchTo().frame(element);
+            int elementCount = getDriver().findElements(By.tagName(text)).size();
             Assert.assertEquals(elementCount, 0);
             logInfo.pass("Frame located by '" + locatorType + "=" + locatorValue + "' contains text='" + text + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Frame located by '" + locatorType + "=" + locatorValue + "' did not contain text='" + text + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Frame located by '" + locatorType + "=" + locatorValue + "' did not contain text='" + text + "'"), e);
         }
     }
 }

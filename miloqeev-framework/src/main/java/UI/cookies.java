@@ -7,7 +7,7 @@ import java.util.Set;
 
 import static testListeners.extentReportListener.logInfo;
 import static testListeners.extentReportListener.testStepHandle;
-import static UI.browserManagement.driver;
+import static UI.browserManagement.getDriver;
 
 public class cookies {
 
@@ -16,10 +16,10 @@ public class cookies {
      */
     public static void deleteAllCookies(){
         try{
-            driver.manage().deleteAllCookies();
+            getDriver().manage().deleteAllCookies();
             logInfo.pass("Deleted all cookies");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to delete all cookies"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to delete all cookies"), e);
         }
     }
 
@@ -29,11 +29,11 @@ public class cookies {
      */
     public static void deleteCookie(String name){
         try{
-            Cookie cookie = driver.manage().getCookieNamed(name);
-            driver.manage().deleteCookie(cookie);
+            Cookie cookie = getDriver().manage().getCookieNamed(name);
+            getDriver().manage().deleteCookie(cookie);
             logInfo.pass("Deleted cookie: '" + name + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable delete cookie: '" + name + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable delete cookie: '" + name + "'"), e);
         }
     }
 
@@ -44,10 +44,10 @@ public class cookies {
     public static Set<Cookie> getCookies() {
         Set<Cookie> cookies = null;
         try {
-            cookies = driver.manage().getCookies();
+            cookies = getDriver().manage().getCookies();
             logInfo.pass("Saved cookies into list: '" + cookies + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to save cookies into list"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to save cookies into list"), e);
         }
         return cookies;
     }
@@ -60,10 +60,10 @@ public class cookies {
     public static Cookie getCookie(String name){
         Cookie cookie = null;
         try{
-            cookie = driver.manage().getCookieNamed(name);
+            cookie = getDriver().manage().getCookieNamed(name);
             logInfo.pass("Saved cookie into variable: '" + cookie + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to save cookie into variable"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to save cookie into variable"), e);
         }
         return cookie;
     }
@@ -81,10 +81,10 @@ public class cookies {
     public static void addCookie(String name, String value, String path, String domain, Date expiry, boolean isSecure, boolean isHttpOnly) {
         try {
             Cookie cookie = new Cookie(name, value, path, domain, expiry, isSecure, isHttpOnly);
-            driver.manage().addCookie(cookie);
+            getDriver().manage().addCookie(cookie);
             logInfo.pass("Added cookie to the current session: '" + cookie + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to add cookie to the current session"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to add cookie to the current session"), e);
         }
     }
 }

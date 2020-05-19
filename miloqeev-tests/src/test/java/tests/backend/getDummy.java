@@ -1,13 +1,19 @@
 package tests.backend;
 
 import cucumber.api.java.en.Given;
-import org.apache.http.Header;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 
 import static BE.json.*;
+import static BE.json.loadJsonFromFile;
+import static BE.json.logRespStatusToConsole;
+import static BE.json.postRequest;
+import static BE.json.responseJson;
+import static BE.json.saveJsonToFile;
+import static BE.json.setRequestHeader;
 import static testListeners.extentReportListener.*;
+import static testListeners.extentReportListener.createTest;
 
 public class getDummy {
 

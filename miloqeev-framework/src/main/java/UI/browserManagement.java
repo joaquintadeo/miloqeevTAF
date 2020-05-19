@@ -12,7 +12,11 @@ import java.util.concurrent.TimeUnit;
 import static testListeners.extentReportListener.*;
 
 public class browserManagement {
-    public static WebDriver driver;
+    private static WebDriver driver;
+
+    public static WebDriver getDriver() {
+        return driver;
+    }
 
     /**
      * Opens the given browser to a blank page.
