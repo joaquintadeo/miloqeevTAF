@@ -16,7 +16,7 @@ Repository How-To
   6. Generate test steps as Java class
   7. Create test runner
   8. Create test config file
-  9. Execute test
+  9. Execute test from config file
   10. Check results in folder
   
   To execute from console:
@@ -28,4 +28,4 @@ Repository How-To
   Win
     Execute mvn -pl miloqeev-tests test -DtestFile=<testName>
 
-  To run command on mac, first run chmod 755 <filename>.command
+  To run command on mac, first run cd miloqeev-tests/src/test/java/executables chmod 755 <filename>.command
