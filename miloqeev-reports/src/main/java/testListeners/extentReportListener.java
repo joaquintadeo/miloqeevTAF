@@ -101,21 +101,21 @@ public class extentReportListener {
         return str;
     }
 
-    public static void createTest(String testName, String scenario, String name){
+    public static void createTest(String feature, String scenario, String step){
         try {
-            test = extent.createTest(Feature.class, testName);
+            test = extent.createTest(Feature.class, feature);
             test = test.createNode(Scenario.class, scenario);
-            logInfo = test.createNode(new GherkinKeyword("Given"), "Given" + " " + name);
+            logInfo = test.createNode(new GherkinKeyword("Given"), "Given" + " " + step);
 
         } catch (AssertionError | Exception e){
             logInfo.fail(e);
         }
     }
 
-    public static void createTestStep(String gherkinKeyword, String name){
+    public static void createTestStep(String gherkinKeyword, String step){
         if (gherkinKeyword == "When") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("When"), gherkinKeyword + " " + name);
+                logInfo = test.createNode(new GherkinKeyword("When"), gherkinKeyword + " " + step);
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
@@ -123,7 +123,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "Then"){
             try {
-                logInfo = test.createNode(new GherkinKeyword("Then"), gherkinKeyword + " " + name);
+                logInfo = test.createNode(new GherkinKeyword("Then"), gherkinKeyword + " " + step);
 
             } catch (AssertionError | Exception e){
                 logInfo.fail(e);
@@ -131,7 +131,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "And") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("And"), gherkinKeyword + " " + name);
+                logInfo = test.createNode(new GherkinKeyword("And"), gherkinKeyword + " " + step);
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);

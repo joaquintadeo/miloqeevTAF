@@ -2,6 +2,7 @@ package UI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -343,7 +344,7 @@ public class element {
      */
     public static void pageShouldContain(String text){
         try {
-            int elementCount = getDriver().findElements(By.tagName(text)).size();
+            int elementCount = getDriver().findElements(By.xpath("//*[@text()='" + text + "']")).size();
             Assert.assertNotEquals(elementCount, 0);
             logInfo.pass("Page contains text='" + text + "'");
         } catch (AssertionError | Exception e) {
@@ -358,7 +359,7 @@ public class element {
      */
     public static void pageShouldNotContain(String text){
         try {
-            int elementCount = getDriver().findElements(By.tagName(text)).size();
+            int elementCount = getDriver().findElements(By.xpath("//*[@text()='" + text + "']")).size();
             Assert.assertEquals(elementCount, 0);
             logInfo.pass("Page does not contain text='" + text + "'");
         } catch (AssertionError | Exception e) {
@@ -367,17 +368,30 @@ public class element {
         }
     }
 
-//    public static void assignIdToElement(String locatorType, String locatorValue, String id){
-//        try {
-//            WebElement element = findElementBy(locatorType, locatorValue);
-//            JavascriptExecutor js = (JavascriptExecutor)getDriver();
-//            js.executeScript("")
-//            logInfo.pass("Page does not contain text='" + text + "'");
-//        } catch (AssertionError | Exception e) {
-//            testStepHandle("FAIL",getDriver(),logInfo.fail("Page contains text='" + text + "'"),e);
-//            logInfo.fail(e.getCause());
-//        }
-//    }
+    public static void assignIdToElement(String locatorType, String locatorValue, String newId){
+        try {
+            String id = "id";
+            WebElement element = findElementBy(locatorType, locatorValue);
+            JavascriptExecutor js = (JavascriptExecutor)getDriver();
+            js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", element, id, newId);
+            logInfo.pass("Set element id='" + newId + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Could not set element id='" + newId + "'"),e);
+            logInfo.fail(e.getCause());
+        }
+    }
+
+    public static void setElementAttribute(String locatorType, String locatorValue, String attrName, String attrValue){
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            JavascriptExecutor js = (JavascriptExecutor)getDriver();
+            js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", element, attrName, attrValue);
+            logInfo.pass("Set element " + attrName + "='" + attrValue + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Could not set element " + attrName + "='" + attrValue + "'"),e);
+            logInfo.fail(e.getCause());
+        }
+    }
 
     /**
      * Verifies that element identified with `locator` is disabled.
@@ -425,62 +439,36 @@ public class element {
         }
     }
 
-//    /**
-//     * Verifies that element identified with `locator` is visible.
-//     * @param locatorType
-//     * @param locatorValue
-//     */
-//    public static void elementShouldBeVisible(String locatorType, String locatorValue) {
-//        boolean tmp = false;
-//        switch (locatorType) {
-//            case "id":
-//                tmp = getDriver().findElement(By.id(locatorValue)).isDisplayed();
-//                break;
-//            case "name":
-//                tmp = getDriver().findElement(By.name(locatorValue)).isDisplayed();
-//                break;
-//            case "class":
-//                tmp = getDriver().findElement(By.className(locatorValue)).isDisplayed();
-//                break;
-//            case "xpath":
-//                tmp = getDriver().findElement(By.xpath(locatorValue)).isDisplayed();
-//                break;
-//            default:
-//                break;
-//        }
-//        try {
-//            if (tmp)
-//                logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is visible");
-//        } catch (AssertionError | Exception e) {
-//            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is not visible"), e);
-//        }
-//    }
-//
-//    /**
-//     * Verifies that element identified with `locator` is not visible.
-//     * @param locatorType
-//     * @param locatorValue
-//     */
-//    public static void elementShouldNotBeVisible(String locatorType, String locatorValue){
-//        boolean tmp;
-//        try {
-//            switch (locatorType){
-//                case "id": tmp = getDriver().findElement(By.id(locatorValue)).isDisplayed();
-//                    break;
-//                case "name": tmp = getDriver().findElement(By.name(locatorValue)).isDisplayed();
-//                    break;
-//                case "class": tmp = getDriver().findElement(By.className(locatorValue)).isDisplayed();
-//                    break;
-//                case "xpath": tmp = getDriver().findElement(By.xpath(locatorValue)).isDisplayed();
-//                    break;
-//                default: break;
-//            }
-//            if (tmp = false)
-//                logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is not visible");
-//        } catch (AssertionError | Exception e){
-//            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is visible"), e);
-//        }
-//    }
+    /**
+     * Verifies that element identified with `locator` is visible.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void elementShouldBeVisible(String locatorType, String locatorValue) {
+        boolean tmp = false;
+        try {
+            switch (locatorType) {
+                case "id":
+                    tmp = getDriver().findElement(By.id(locatorValue)).isDisplayed();
+                    break;
+                case "name":
+                    tmp = getDriver().findElement(By.name(locatorValue)).isDisplayed();
+                    break;
+                case "class":
+                    tmp = getDriver().findElement(By.className(locatorValue)).isDisplayed();
+                    break;
+                case "xpath":
+                    tmp = getDriver().findElement(By.xpath(locatorValue)).isDisplayed();
+                    break;
+                default:
+                    break;
+            }
+            if (tmp)
+                logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is visible");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is not visible"), e);
+        }
+    }
 
     /**
      * Verifies that element identified by `locator` contains text `expected`.
@@ -659,20 +647,20 @@ public class element {
         }
     }
 
-//    /**
-//     * Clicks button identified by `locator`.
-//     * @param locatorType
-//     * @param locatorValue
-//     */
-//    public static void clickButton(String locatorType, String locatorValue){
-//        try {
-//            WebElement element = getDriver().findElement(By.tagName("button"));
-//            element.click();
-//            logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "'");
-//        } catch (AssertionError | Exception e){
-//            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
-//        }
-//    }
+    /**
+     * Clicks button identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void clickButton(String locatorType, String locatorValue){
+        try {
+            WebElement element = getDriver().findElement(By.xpath("//button[@" + locatorType + "='" + locatorValue + "']"));
+            element.click();
+            logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
+        }
+    }
 
     /**
      * Click element `locator` at `xoffset/yoffset`.
