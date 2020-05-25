@@ -21,12 +21,16 @@ import static testListeners.extentReportListener.logInfo;
 
 public class json{
 
-    public static HttpPost httpPost;
-    public static HttpGet httpGet;
-    public static String responseString;
-    public static Object responseJson;
-    public static int respCode;
-    public static Object requestJson;
+    private static HttpPost httpPost;
+    private static HttpGet httpGet;
+    private static String responseString;
+    private static Object responseJson;
+    private static int respCode;
+    private static Object requestJson;
+
+    public static Object getResponseJson() {
+        return responseJson;
+    }
 
     public static Object parseJson() {
         try{
@@ -101,7 +105,7 @@ public class json{
 
     public static void loadJsonFromFile(String fileName) {
         try{
-            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/requests" + fileName + ".json";
+            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/requests/json/" + fileName + ".json";
             JSONParser jsonParser = new JSONParser();
             FileReader reader = new FileReader(jsonLocation);
             requestJson = jsonParser.parse(reader);
@@ -120,14 +124,32 @@ public class json{
 
     public static void saveJsonToFile(String fileName, Object fileToSave) throws IOException {
         try{
-            File folder = new File(System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/");
+            File folder = new File(System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/json/");
             folder.mkdir();
-            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/" + fileName + ".json";
+            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/json/" + fileName + ".json";
             FileWriter file = new FileWriter(jsonLocation);
             file.write(fileToSave.toString());
             file.flush();
         }  catch (AssertionError | IOException e){
             backendTestStepHandle("FAIL", logInfo.fail("To be determined"), e);
         }
+    }
+
+    public static void responseShouldBe(String expected){
+        Object expectedResponse = loadJsonResponseFromFile(expected);
+        Assert.assertEquals(responseJson, expectedResponse);
+    }
+
+    public static Object loadJsonResponseFromFile(String fileName){
+        Object loadedJson = null;
+        try{
+            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/responses/json/" + fileName + ".json";
+            JSONParser jsonParser = new JSONParser();
+            FileReader reader = new FileReader(jsonLocation);
+            loadedJson = jsonParser.parse(reader);
+        }  catch (AssertionError | Exception e){
+            backendTestStepHandle("FAIL", logInfo.fail("To be determined"), e);
+        }
+        return loadedJson;
     }
 }
