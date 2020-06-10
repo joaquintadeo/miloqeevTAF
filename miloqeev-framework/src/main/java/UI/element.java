@@ -344,7 +344,7 @@ public class element {
      */
     public static void pageShouldContain(String text){
         try {
-            int elementCount = getDriver().findElements(By.xpath("//*[@text()='" + text + "']")).size();
+            int elementCount = getDriver().findElements(By.xpath("//*[text()='" + text + "']")).size();
             Assert.assertNotEquals(elementCount, 0);
             logInfo.pass("Page contains text='" + text + "'");
         } catch (AssertionError | Exception e) {

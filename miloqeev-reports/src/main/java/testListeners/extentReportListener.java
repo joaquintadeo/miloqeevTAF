@@ -105,7 +105,7 @@ public class extentReportListener {
         try {
             test = extent.createTest(Feature.class, feature);
             test = test.createNode(Scenario.class, scenario);
-            logInfo = test.createNode(new GherkinKeyword("Given"), "Given" + " " + step);
+            logInfo = test.createNode(new GherkinKeyword("Given"), "Given" + " \'" + step + "\'");
 
         } catch (AssertionError | Exception e){
             logInfo.fail(e);
@@ -115,7 +115,7 @@ public class extentReportListener {
     public static void createTestStep(String gherkinKeyword, String step){
         if (gherkinKeyword == "When") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("When"), gherkinKeyword + " " + step);
+                logInfo = test.createNode(new GherkinKeyword("When"), gherkinKeyword + " \'" + step + "\'");
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
@@ -123,7 +123,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "Then"){
             try {
-                logInfo = test.createNode(new GherkinKeyword("Then"), gherkinKeyword + " " + step);
+                logInfo = test.createNode(new GherkinKeyword("Then"), gherkinKeyword + " \'" + step + "\'");
 
             } catch (AssertionError | Exception e){
                 logInfo.fail(e);
@@ -131,7 +131,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "And") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("And"), gherkinKeyword + " " + step);
+                logInfo = test.createNode(new GherkinKeyword("And"), gherkinKeyword + " \'" + step + "\'");
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
