@@ -1,5 +1,6 @@
 package tests.backend;
 
+import BE.customExceptions;
 import cucumber.api.java.en.Given;
 import org.apache.http.ParseException;
 
@@ -19,16 +20,23 @@ public class getDummy {
 //        statusShouldBe(300);
 //    }
 //
-//    @Given("User sends get request")
-//    public void userSendsGetRequest() throws IOException, ParseException {
-//        createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
-//        loadJsonFromFile("postDummy");
-//        setRequestHeader("Content-Type", "application/json");
-//        postRequest("http://dummy.restapiexample.com/api/v1/create");
-//        logRespStatusToConsole();
-//        saveJsonToFile("postDummyResponse2", getResponseJson());
-//    }
+    @Given("User sends get request")
+    public void userSendsGetRequest() throws IOException, customExceptions {
+        createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
+        loadJsonFromFile("postDummy");
+        postRequest("http://dummy.restapiexample.com/api/v1/create");
+        logRespStatusToConsole();
+        logJsonToConsole(getResponseJson());
+        saveJsonToFile("dummyResp", getResponseJson());
+    }
 
+//    @Given("User sends get request")
+//    public void userSendsGetRequest2() throws IOException {
+//        createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
+//        getRequest("http://dummy.restapiexample.com/api/v1/employees");
+//        logJsonToConsole(getResponseJson());
+//    }
+//
 //    @Given("User sends get request")
 //    public void userSendsGetRequest3() throws IOException {
 //        createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
@@ -39,14 +47,14 @@ public class getDummy {
 //        saveXmlToFile("test", getResponseXml());
 //    }
 
-        @Given("User sends get request")
-    public void userSendsGetRequest() throws IOException, ParseException {
-        createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
-        loadXmlFromFile("postDummy");
-        setRequestHeader("Content-Type", "application/xml");
-        setXmlRequestHeader("Accept", "application/xml");
-        postXmlRequest("https://reqbin.com/echo/post/xml");
-        logXmlRespStatusToConsole();
-        saveXmlToFile("postDummyResponse2", getResponseXml());
-    }
+//        @Given("User sends get request")
+//    public void userSendsGetRequest() throws IOException, ParseException {
+//        createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
+//        loadXmlFromFile("postDummy");
+//        setRequestHeader("Content-Type", "application/xml");
+//        setXmlRequestHeader("Accept", "application/xml");
+//        postXmlRequest("https://reqbin.com/echo/post/xml");
+//        logXmlRespStatusToConsole();
+//        saveXmlToFile("postDummyResponse2", getResponseXml());
+//    }
 }
