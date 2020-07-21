@@ -144,6 +144,7 @@ public class extentReportListener {
             case "FAIL":
                 extenttest.fail(MarkupHelper.createLabel("Test Case is Failed : ", ExtentColor.RED));
                 extenttest.error(throwable.fillInStackTrace());
+                break;
             case "PASS":
                 extenttest.pass(MarkupHelper.createLabel("Test Case is Passed : ", ExtentColor.GREEN));
                 break;
