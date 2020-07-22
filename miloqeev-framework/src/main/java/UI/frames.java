@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import static UI.element.findElementBy;
-import static testListeners.extentReportListener.*;
 import static UI.browserManagement.getDriver;
+import static UI.element.findElementBy;
+import static testListeners.extentReportListener.logInfo;
+import static testListeners.extentReportListener.testStepHandle;
 
 public class frames {
 

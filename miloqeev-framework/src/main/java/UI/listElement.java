@@ -14,6 +14,11 @@ import static testListeners.extentReportListener.testStepHandle;
 
 public class listElement {
 
+    /**
+     * Returns all labels of list identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
     public static void getListItems(String locatorType, String locatorValue){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);
@@ -30,6 +35,12 @@ public class listElement {
         }
     }
 
+    /**
+     * Selects element by label from list identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param label
+     */
     public static void selectFromListByLabel(String locatorType, String locatorValue, String label){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);
@@ -41,6 +52,12 @@ public class listElement {
         }
     }
 
+    /**
+     * Selects element by value from list identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param value
+     */
     public static void selectFromListByValue(String locatorType, String locatorValue, String value){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);
@@ -52,6 +69,12 @@ public class listElement {
         }
     }
 
+    /**
+     * Selects element by index from list identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param index
+     */
     public static void selectFromListByIndex(String locatorType, String locatorValue, int index){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);
@@ -63,6 +86,12 @@ public class listElement {
         }
     }
 
+    /**
+     * Deselects element by label from list identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param label
+     */
     public static void deselectFromListByLabel(String locatorType, String locatorValue, String label){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);
@@ -74,6 +103,12 @@ public class listElement {
         }
     }
 
+    /**
+     * Deselects element by value from list identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param value
+     */
     public static void deselectFromListByValue(String locatorType, String locatorValue, String value){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);
@@ -85,6 +120,12 @@ public class listElement {
         }
     }
 
+    /**
+     * Deselects element by index from list identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param index
+     */
     public static void deselectFromListByIndex(String locatorType, String locatorValue, int index){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);
@@ -96,6 +137,11 @@ public class listElement {
         }
     }
 
+    /**
+     * Verifies that list identified by `locator` has no selection.
+     * @param locatorType
+     * @param locatorValue
+     */
     public static void listSelectionShouldBeEmpty(String locatorType, String locatorValue){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);
@@ -107,6 +153,11 @@ public class listElement {
         }
     }
 
+    /**
+     * Verifies that list identified by `locator` is present.
+     * @param locatorType
+     * @param locatorValue
+     */
     public static void pageShouldContainList(String locatorType, String locatorValue){
         try {
             int numberOfElements = getElementCount(locatorType, locatorValue);
@@ -119,6 +170,11 @@ public class listElement {
         }
     }
 
+    /**
+     * Verifies that list identified by `locator` is not present.
+     * @param locatorType
+     * @param locatorValue
+     */
     public static void pageShouldNotContainList(String locatorType, String locatorValue){
         try {
             int numberOfElements = getElementCount(locatorType, locatorValue);
@@ -130,6 +186,11 @@ public class listElement {
         }
     }
 
+    /**
+     * Selects all elements from list identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
     public static void selectAllFromList(String locatorType, String locatorValue){
         try{
             WebElement list = findElementBy(locatorType, locatorValue);

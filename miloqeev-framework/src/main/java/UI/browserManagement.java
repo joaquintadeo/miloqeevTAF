@@ -9,7 +9,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.util.concurrent.TimeUnit;
 
-import static testListeners.extentReportListener.*;
+import static testListeners.extentReportListener.logInfo;
+import static testListeners.extentReportListener.testStepHandle;
 
 public class browserManagement {
     private static WebDriver driver;

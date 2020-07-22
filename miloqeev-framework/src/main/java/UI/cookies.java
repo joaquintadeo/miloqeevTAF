@@ -5,9 +5,9 @@ import org.openqa.selenium.Cookie;
 import java.util.Date;
 import java.util.Set;
 
+import static UI.browserManagement.getDriver;
 import static testListeners.extentReportListener.logInfo;
 import static testListeners.extentReportListener.testStepHandle;
-import static UI.browserManagement.getDriver;
 
 public class cookies {
 

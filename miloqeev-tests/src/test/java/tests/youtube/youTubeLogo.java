@@ -5,8 +5,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import testListeners.extentReportListener;
 
+import static UI.alert.acceptAlert;
 import static UI.browserManagement.*;
 import static UI.element.*;
+import static UI.javascript.executeJavaScript;
 import static UI.window.*;
 import static youTubePage.youTubeLandingPage.*;
 
@@ -30,6 +32,9 @@ public class youTubeLogo extends extentReportListener{
     public void user_must_see_YouTube_logo() throws Throwable{
         createTestStep("Then", "User must see YouTube logo");
         pageShouldContainElement("id", YOUTUBE_IMG);
+        executeJavaScript("alert('Hello')");
+        Thread.sleep(2000);
+        acceptAlert(5);
         closeBrowser();
     }
 }

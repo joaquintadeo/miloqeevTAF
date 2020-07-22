@@ -2,19 +2,25 @@ package UI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.util.List;
 
 import static UI.browserManagement.getDriver;
 import static UI.element.findElementBy;
-import static UI.element.getElementCount;
 import static testListeners.extentReportListener.logInfo;
 import static testListeners.extentReportListener.testStepHandle;
 
 public class tableElement {
 
+    /**
+     * Returns contents of table cell identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param rowIndex
+     * @param colIndex
+     * @return
+     */
     public static String getTableCell(String locatorType, String locatorValue, int rowIndex, int colIndex){
         String tableCell = null;
         try{
@@ -29,6 +35,14 @@ public class tableElement {
         return tableCell;
     }
 
+    /**
+     * Verifies that table cell identified by `locator` contains text `expected`.
+     * @param locatorType
+     * @param locatorValue
+     * @param rowIndex
+     * @param colIndex
+     * @param expectedText
+     */
     public static void tableCellShouldContain(String locatorType, String locatorValue, int rowIndex, int colIndex, String expectedText){
         String tableCell = null;
         try{
@@ -43,6 +57,12 @@ public class tableElement {
         }
     }
 
+    /**
+     * Verifies that table identified by `locator` contains text `expected`.
+     * @param locatorType
+     * @param locatorValue
+     * @param expectedText
+     */
     public static void tableShouldContain(String locatorType, String locatorValue, String expectedText){
         try{
             int tableElementCount = getDriver().findElements(By.xpath("//*[@" + locatorType + "='" + locatorValue + "']//*[text()='" + expectedText + "']")).size();
@@ -53,6 +73,12 @@ public class tableElement {
         }
     }
 
+    /**
+     * Verifies that table column identified by `locator` contains text `expected`.
+     * @param locatorType
+     * @param locatorValue
+     * @param expectedText
+     */
     public static void tableColumnShouldContain(String locatorType, String locatorValue, String expectedText){
         try{
             int tableElementCount = getDriver().findElements(By.xpath("//*[@" + locatorType + "='" + locatorValue + "']//tr//td[text()='" + expectedText + "']")).size();
@@ -63,6 +89,12 @@ public class tableElement {
         }
     }
 
+    /**
+     * Verifies that table row identified by `locator` contains text `expected`.
+     * @param locatorType
+     * @param locatorValue
+     * @param expectedText
+     */
     public static void tableRowShouldContain(String locatorType, String locatorValue, String expectedText){
         try{
             int tableElementCount = getDriver().findElements(By.xpath("//*[@" + locatorType + "='" + locatorValue + "']//tr//th[text()='" + expectedText + "']")).size();
@@ -73,6 +105,12 @@ public class tableElement {
         }
     }
 
+    /**
+     * Verifies that footer identified by `locator` contains text `expected`.
+     * @param locatorType
+     * @param locatorValue
+     * @param expectedText
+     */
     public static void footerShouldContain(String locatorType, String locatorValue, String expectedText){
         try{
             int footerElementCount = getDriver().findElements(By.xpath("//*[@" + locatorType + "='" + locatorValue + "']//*[text()='" + expectedText + "']")).size();
@@ -83,6 +121,12 @@ public class tableElement {
         }
     }
 
+    /**
+     * Verifies that header identified by `locator` contains text `expected`.
+     * @param locatorType
+     * @param locatorValue
+     * @param expectedText
+     */
     public static void headerShouldContain(String locatorType, String locatorValue, String expectedText){
         try{
             int headerElementCount = getDriver().findElements(By.xpath("//*[@" + locatorType + "='" + locatorValue + "']//*[text()='" + expectedText + "']")).size();

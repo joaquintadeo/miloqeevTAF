@@ -4,11 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
-import static testListeners.extentReportListener.*;
 import static UI.browserManagement.getDriver;
+import static testListeners.extentReportListener.logInfo;
+import static testListeners.extentReportListener.testStepHandle;
 
 public class wait {
 

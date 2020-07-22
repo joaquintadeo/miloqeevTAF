@@ -5,8 +5,9 @@ import org.openqa.selenium.Point;
 
 import java.util.Set;
 
-import static testListeners.extentReportListener.*;
 import static UI.browserManagement.getDriver;
+import static testListeners.extentReportListener.logInfo;
+import static testListeners.extentReportListener.testStepHandle;
 
 public class window {
 

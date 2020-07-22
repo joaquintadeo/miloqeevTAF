@@ -7,8 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-import static testListeners.extentReportListener.*;
 import static UI.browserManagement.getDriver;
+import static testListeners.extentReportListener.logInfo;
+import static testListeners.extentReportListener.testStepHandle;
 
 public class element {
 
@@ -367,6 +368,12 @@ public class element {
         }
     }
 
+    /**
+     * Assigns given Id to element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param newId
+     */
     public static void assignIdToElement(String locatorType, String locatorValue, String newId){
         try {
             String id = "id";
@@ -380,6 +387,13 @@ public class element {
         }
     }
 
+    /**
+     * Assigns given Attribute to element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param attrName
+     * @param attrValue
+     */
     public static void setElementAttribute(String locatorType, String locatorValue, String attrName, String attrValue){
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
