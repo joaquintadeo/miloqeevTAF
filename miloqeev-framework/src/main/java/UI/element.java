@@ -224,9 +224,8 @@ public class element {
     public static void pageShouldContainElement(String locatorType, String locatorValue){
         try {
             int numberOfElements = getElementCount(locatorType, locatorValue);
-            int expectedNumberOfElements = 0;
             int actualNumberOfElements = numberOfElements;
-            Assert.assertNotEquals(expectedNumberOfElements, actualNumberOfElements, "Page does not contain element located by '" + locatorType + "=" + locatorValue + "'");
+            Assert.assertNotEquals(0, actualNumberOfElements, "Page does not contain element located by '" + locatorType + "=" + locatorValue + "'");
             logInfo.pass("Validated presence of element located by '" + locatorType + "=" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
             testStepHandle("FAIL",getDriver(),logInfo.fail("Page does not contain element located by '" + locatorType + "=" + locatorValue + "'"),e);
