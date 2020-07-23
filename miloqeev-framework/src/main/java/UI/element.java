@@ -2,11 +2,16 @@ package UI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-public class element extends browserManagement{
+import static UI.browserManagement.getDriver;
+import static testListeners.extentReportListener.logInfo;
+import static testListeners.extentReportListener.testStepHandle;
+
+public class element {
 
     /**
      * Finds and return `element` by given locator.
@@ -18,19 +23,19 @@ public class element extends browserManagement{
         WebElement tmp = null;
         try{
             switch (locatorType){
-                case "id": tmp = driver.findElement(By.id(locatorValue));
+                case "id": tmp = getDriver().findElement(By.id(locatorValue));
                     break;
-                case "name": tmp = driver.findElement(By.name(locatorValue));
+                case "name": tmp = getDriver().findElement(By.name(locatorValue));
                     break;
-                case "class": tmp = driver.findElement(By.className(locatorValue));
+                case "class": tmp = getDriver().findElement(By.className(locatorValue));
                     break;
-                case "xpath": tmp = driver.findElement(By.xpath(locatorValue));
+                case "xpath": tmp = getDriver().findElement(By.xpath(locatorValue));
                     break;
                 default: break;
             }
             logInfo.pass("Found element located by '" + locatorType + "=" + locatorValue + "' and saved to variable");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Could not find element located by '" + locatorType + "=" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not find element located by '" + locatorType + "=" + locatorValue + "'"), e);
         }
         return tmp;
     }
@@ -43,19 +48,19 @@ public class element extends browserManagement{
     public static void findElementsBy(String locatorType, String locatorValue){
         try{
             switch (locatorType){
-                case "id": driver.findElements(By.id(locatorValue));
+                case "id": getDriver().findElements(By.id(locatorValue));
                     break;
-                case "name": driver.findElements(By.name(locatorValue));
+                case "name": getDriver().findElements(By.name(locatorValue));
                     break;
-                case "class": driver.findElements(By.className(locatorValue));
+                case "class": getDriver().findElements(By.className(locatorValue));
                     break;
-                case "xpath": driver.findElements(By.xpath(locatorValue));
+                case "xpath": getDriver().findElements(By.xpath(locatorValue));
                     break;
                 default: break;
             }
             logInfo.pass("Found all elements located by '" + locatorType + "=" + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Could not find elements located by '" + locatorType + "=" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not find elements located by '" + locatorType + "=" + locatorValue + "'"), e);
         }
     }
 
@@ -70,7 +75,7 @@ public class element extends browserManagement{
             element.submit();
             logInfo.pass("Submitted form located by '" + locatorType + "=" + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Could not submit form located by '" + locatorType + "=" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not submit form located by '" + locatorType + "=" + locatorValue + "'"), e);
         }
     }
 
@@ -86,7 +91,7 @@ public class element extends browserManagement{
             element.sendKeys(text);
             logInfo.pass("Entered '" + text + "' in element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Could not enter text in element located by '" + locatorType + "=" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not enter text in element located by '" + locatorType + "=" + locatorValue + "'"), e);
         }
     }
 
@@ -103,7 +108,7 @@ public class element extends browserManagement{
             element.submit();
             logInfo.pass("Entered '" + text + "' and submitted form in element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Could not enter 'text=" + text + "' and submit form in element located by '" + locatorType + "=" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not enter 'text=" + text + "' and submit form in element located by '" + locatorType + "=" + locatorValue + "'"), e);
         }
     }
 
@@ -119,7 +124,7 @@ public class element extends browserManagement{
             element.sendKeys(password);
             logInfo.pass("Entered 'password' in element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Could not enter password in element located by '" + locatorType + "=" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not enter password in element located by '" + locatorType + "=" + locatorValue + "'"), e);
         }
     }
 
@@ -128,11 +133,11 @@ public class element extends browserManagement{
      */
     public static void pageShouldContainCheckbox() {
         try {
-            WebElement checkbox = driver.findElement(By.xpath("//*[@type='checkbox']"));
+            WebElement checkbox = getDriver().findElement(By.xpath("//*[@type='checkbox']"));
             checkbox.isDisplayed();
             logInfo.pass("Page contains checkbox");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Page does not contain checkbox"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Page does not contain checkbox"), e);
         }
     }
 
@@ -141,11 +146,11 @@ public class element extends browserManagement{
      */
     public static void pageShouldContainRadioButton() {
         try {
-            WebElement checkbox = driver.findElement(By.xpath("//*[@type='radio']"));
+            WebElement checkbox = getDriver().findElement(By.xpath("//*[@type='radio']"));
             checkbox.isDisplayed();
             logInfo.pass("Page contains radio button");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Page does not contain radio button"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Page does not contain radio button"), e);
         }
     }
 
@@ -160,7 +165,7 @@ public class element extends browserManagement{
             checkbox.click();
             logInfo.pass("Checkbox clicked");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not click checkbox"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not click checkbox"), e);
         }
     }
 
@@ -175,7 +180,7 @@ public class element extends browserManagement{
             checkbox.click();
             logInfo.pass("Radio button clicked");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not click radio button"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not click radio button"), e);
         }
     }
 
@@ -192,7 +197,7 @@ public class element extends browserManagement{
             value = element.getAttribute("value");
             logInfo.pass("Saved element's value='" + value + "' to variable");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not save element's value to variable"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not save element's value to variable"), e);
         }
         return value;
     }
@@ -208,7 +213,7 @@ public class element extends browserManagement{
             element.click();
             logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
         }
     }
 
@@ -220,12 +225,11 @@ public class element extends browserManagement{
     public static void pageShouldContainElement(String locatorType, String locatorValue){
         try {
             int numberOfElements = getElementCount(locatorType, locatorValue);
-            int expectedNumberOfElements = 0;
             int actualNumberOfElements = numberOfElements;
-            Assert.assertNotEquals(expectedNumberOfElements, actualNumberOfElements, "Page does not contain element located by '" + locatorType + "=" + locatorValue + "'");
+            Assert.assertNotEquals(0, actualNumberOfElements, "Page does not contain element located by '" + locatorType + "=" + locatorValue + "'");
             logInfo.pass("Validated presence of element located by '" + locatorType + "=" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL",driver,logInfo.fail("Page does not contain element located by '" + locatorType + "=" + locatorValue + "'"),e);
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Page does not contain element located by '" + locatorType + "=" + locatorValue + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
@@ -241,7 +245,7 @@ public class element extends browserManagement{
             Assert.assertEquals(0, numberOfElements);
             logInfo.pass("Validated no presence of element located by '" + locatorType + "=" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL",driver,logInfo.fail("Page contains element located by '" + locatorType + "=" + locatorValue + "'"),e);
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Page contains element located by '" + locatorType + "=" + locatorValue + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
@@ -255,13 +259,13 @@ public class element extends browserManagement{
     public static int getElementCount(String locatorType, String locatorValue){
         int elementCount = 0;
         switch (locatorType){
-            case "id": elementCount = driver.findElements(By.id(locatorValue)).size();
+            case "id": elementCount = getDriver().findElements(By.id(locatorValue)).size();
                 break;
-            case "name": elementCount = driver.findElements(By.name(locatorValue)).size();
+            case "name": elementCount = getDriver().findElements(By.name(locatorValue)).size();
                 break;
-            case "class": elementCount = driver.findElements(By.className(locatorValue)).size();
+            case "class": elementCount = getDriver().findElements(By.className(locatorValue)).size();
                 break;
-            case "xpath": elementCount = driver.findElements(By.xpath(locatorValue)).size();
+            case "xpath": elementCount = getDriver().findElements(By.xpath(locatorValue)).size();
                 break;
             default: break;
         }
@@ -282,7 +286,7 @@ public class element extends browserManagement{
             Assert.assertEquals(actualValue, expectedValue);
             logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' contained expected value '" + expectedValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' did not contain expected value '" + expectedValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' did not contain expected value '" + expectedValue + "'"), e);
         }
     }
 
@@ -300,7 +304,7 @@ public class element extends browserManagement{
             Assert.assertNotEquals(actualValue, expectedValue);
             logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' did not contain expected value '" + expectedValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' contained expected value '" + expectedValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' contained expected value '" + expectedValue + "'"), e);
         }
     }
 
@@ -310,11 +314,11 @@ public class element extends browserManagement{
      */
     public static void pageShouldContainLink(String linkText){
         try {
-            int elementCount = driver.findElements(By.linkText(linkText)).size();
+            int elementCount = getDriver().findElements(By.linkText(linkText)).size();
             Assert.assertNotEquals(elementCount, 0);
             logInfo.pass("Page contains link text='" + linkText + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL",driver,logInfo.fail("Page did not contain link text='" + linkText + "'"),e);
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Page did not contain link text='" + linkText + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
@@ -325,11 +329,11 @@ public class element extends browserManagement{
      */
     public static void pageShouldNotContainLink(String linkText){
         try {
-            int elementCount = driver.findElements(By.linkText(linkText)).size();
+            int elementCount = getDriver().findElements(By.linkText(linkText)).size();
             Assert.assertEquals(elementCount, 0);
             logInfo.pass("Page does not contain link text='" + linkText + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL",driver,logInfo.fail("Page contains link text='" + linkText + "'"),e);
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Page contains link text='" + linkText + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
@@ -340,11 +344,11 @@ public class element extends browserManagement{
      */
     public static void pageShouldContain(String text){
         try {
-            int elementCount = driver.findElements(By.tagName(text)).size();
+            int elementCount = getDriver().findElements(By.xpath("//*[text()='" + text + "']")).size();
             Assert.assertNotEquals(elementCount, 0);
             logInfo.pass("Page contains text='" + text + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL",driver,logInfo.fail("Page did not contain text='" + text + "'"),e);
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Page did not contain text='" + text + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
@@ -355,26 +359,52 @@ public class element extends browserManagement{
      */
     public static void pageShouldNotContain(String text){
         try {
-            int elementCount = driver.findElements(By.tagName(text)).size();
+            int elementCount = getDriver().findElements(By.xpath("//*[@text()='" + text + "']")).size();
             Assert.assertEquals(elementCount, 0);
             logInfo.pass("Page does not contain text='" + text + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL",driver,logInfo.fail("Page contains text='" + text + "'"),e);
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Page contains text='" + text + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
 
-//    public static void assignIdToElement(String locatorType, String locatorValue, String id){
-//        try {
-//            WebElement element = findElementBy(locatorType, locatorValue);
-//            JavascriptExecutor js = (JavascriptExecutor)driver;
-//            js.executeScript("")
-//            logInfo.pass("Page does not contain text='" + text + "'");
-//        } catch (AssertionError | Exception e) {
-//            testStepHandle("FAIL",driver,logInfo.fail("Page contains text='" + text + "'"),e);
-//            logInfo.fail(e.getCause());
-//        }
-//    }
+    /**
+     * Assigns given Id to element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param newId
+     */
+    public static void assignIdToElement(String locatorType, String locatorValue, String newId){
+        try {
+            String id = "id";
+            WebElement element = findElementBy(locatorType, locatorValue);
+            JavascriptExecutor js = (JavascriptExecutor)getDriver();
+            js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", element, id, newId);
+            logInfo.pass("Set element id='" + newId + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Could not set element id='" + newId + "'"),e);
+            logInfo.fail(e.getCause());
+        }
+    }
+
+    /**
+     * Assigns given Attribute to element identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     * @param attrName
+     * @param attrValue
+     */
+    public static void setElementAttribute(String locatorType, String locatorValue, String attrName, String attrValue){
+        try {
+            WebElement element = findElementBy(locatorType, locatorValue);
+            JavascriptExecutor js = (JavascriptExecutor)getDriver();
+            js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", element, attrName, attrValue);
+            logInfo.pass("Set element " + attrName + "='" + attrValue + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Could not set element " + attrName + "='" + attrValue + "'"),e);
+            logInfo.fail(e.getCause());
+        }
+    }
 
     /**
      * Verifies that element identified with `locator` is disabled.
@@ -387,7 +417,7 @@ public class element extends browserManagement{
             Assert.assertFalse(element.isEnabled());
             logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is disabled");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is enabled"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is enabled"), e);
         }
     }
 
@@ -402,7 +432,7 @@ public class element extends browserManagement{
             Assert.assertTrue(element.isEnabled());
             logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is enabled");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is disabled"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is disabled"), e);
         }
     }
 
@@ -412,72 +442,46 @@ public class element extends browserManagement{
      * @param locatorValue
      */
     public static void elementShouldBeFocused(String locatorType, String locatorValue){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.moveToElement(element).perform();
             logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is focused");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is not focused"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is not focused"), e);
         }
     }
 
-//    /**
-//     * Verifies that element identified with `locator` is visible.
-//     * @param locatorType
-//     * @param locatorValue
-//     */
-//    public static void elementShouldBeVisible(String locatorType, String locatorValue) {
-//        boolean tmp = false;
-//        switch (locatorType) {
-//            case "id":
-//                tmp = driver.findElement(By.id(locatorValue)).isDisplayed();
-//                break;
-//            case "name":
-//                tmp = driver.findElement(By.name(locatorValue)).isDisplayed();
-//                break;
-//            case "class":
-//                tmp = driver.findElement(By.className(locatorValue)).isDisplayed();
-//                break;
-//            case "xpath":
-//                tmp = driver.findElement(By.xpath(locatorValue)).isDisplayed();
-//                break;
-//            default:
-//                break;
-//        }
-//        try {
-//            if (tmp)
-//                logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is visible");
-//        } catch (AssertionError | Exception e) {
-//            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is not visible"), e);
-//        }
-//    }
-//
-//    /**
-//     * Verifies that element identified with `locator` is not visible.
-//     * @param locatorType
-//     * @param locatorValue
-//     */
-//    public static void elementShouldNotBeVisible(String locatorType, String locatorValue){
-//        boolean tmp;
-//        try {
-//            switch (locatorType){
-//                case "id": tmp = driver.findElement(By.id(locatorValue)).isDisplayed();
-//                    break;
-//                case "name": tmp = driver.findElement(By.name(locatorValue)).isDisplayed();
-//                    break;
-//                case "class": tmp = driver.findElement(By.className(locatorValue)).isDisplayed();
-//                    break;
-//                case "xpath": tmp = driver.findElement(By.xpath(locatorValue)).isDisplayed();
-//                    break;
-//                default: break;
-//            }
-//            if (tmp = false)
-//                logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is not visible");
-//        } catch (AssertionError | Exception e){
-//            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is visible"), e);
-//        }
-//    }
+    /**
+     * Verifies that element identified with `locator` is visible.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void elementShouldBeVisible(String locatorType, String locatorValue) {
+        boolean tmp = false;
+        try {
+            switch (locatorType) {
+                case "id":
+                    tmp = getDriver().findElement(By.id(locatorValue)).isDisplayed();
+                    break;
+                case "name":
+                    tmp = getDriver().findElement(By.name(locatorValue)).isDisplayed();
+                    break;
+                case "class":
+                    tmp = getDriver().findElement(By.className(locatorValue)).isDisplayed();
+                    break;
+                case "xpath":
+                    tmp = getDriver().findElement(By.xpath(locatorValue)).isDisplayed();
+                    break;
+                default:
+                    break;
+            }
+            if (tmp)
+                logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' is visible");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' is not visible"), e);
+        }
+    }
 
     /**
      * Verifies that element identified by `locator` contains text `expected`.
@@ -493,7 +497,7 @@ public class element extends browserManagement{
             Assert.assertEquals(actualValue, expectedValue);
             logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' contained expected text '" + expectedValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' did not contain expected text '" + expectedValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' did not contain expected text '" + expectedValue + "'"), e);
         }
     }
 
@@ -511,7 +515,7 @@ public class element extends browserManagement{
             Assert.assertNotEquals(actualValue, expectedValue);
             logInfo.pass("Element located by '" + locatorType + " = " + locatorValue + "' did not contain expected text '" + expectedValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' contained expected text '" + expectedValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + " = " + locatorValue + "' contained expected text '" + expectedValue + "'"), e);
         }
     }
 
@@ -528,7 +532,7 @@ public class element extends browserManagement{
             attribute = element.getAttribute("attribute");
             logInfo.pass("Saved element's attribute='" + attribute + "' to variable");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not save element's attribute to variable"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not save element's attribute to variable"), e);
         }
         return attribute;
     }
@@ -547,7 +551,7 @@ public class element extends browserManagement{
             Assert.assertEquals(actualAttribute, expectedAttribute);
             logInfo.pass("Element attribute located by '" + locatorType + "=" + locatorValue + "' contains value: '" + expectedAttribute + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Element attribute should have been: '" + expectedAttribute + "' but it was: '" + actualAttribute + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element attribute should have been: '" + expectedAttribute + "' but it was: '" + actualAttribute + "'"), e);
         }
     }
 
@@ -564,7 +568,7 @@ public class element extends browserManagement{
             horizontalPosition = element.getLocation().getX();
             logInfo.pass("Saved to variable horizontal position of element located by" + locatorType + "='" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not save to variable horizontal position of element located by" + locatorType + "='" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not save to variable horizontal position of element located by" + locatorType + "='" + locatorValue + "'"), e);
         }
         return horizontalPosition;
     }
@@ -582,7 +586,7 @@ public class element extends browserManagement{
             varticalPosition = element.getLocation().getY();
             logInfo.pass("Saved to variable vertical position of element located by" + locatorType + "='" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not save to variable vertical position of element located by" + locatorType + "='" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not save to variable vertical position of element located by" + locatorType + "='" + locatorValue + "'"), e);
         }
         return varticalPosition;
     }
@@ -600,7 +604,7 @@ public class element extends browserManagement{
             elementSize = element.getSize();
             logInfo.pass("Saved to variable dimension of element located by " + locatorType + "='" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not save to variable dimension of element located by" + locatorType + "='" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not save to variable dimension of element located by" + locatorType + "='" + locatorValue + "'"), e);
         }
         return elementSize;
     }
@@ -618,7 +622,7 @@ public class element extends browserManagement{
             elementValue = element.getAttribute("value");
             logInfo.pass("Saved to variable value of element located by" + locatorType + "='" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not save to variable value of element located by " + locatorType + "='" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not save to variable value of element located by " + locatorType + "='" + locatorValue + "'"), e);
         }
         return elementValue;
     }
@@ -636,7 +640,7 @@ public class element extends browserManagement{
             elementText = element.getText();
             logInfo.pass("Saved to variable text of element located by" + locatorType + "='" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not save to variable text of element located by " + locatorType + "='" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not save to variable text of element located by " + locatorType + "='" + locatorValue + "'"), e);
         }
         return elementText;
     }
@@ -652,24 +656,24 @@ public class element extends browserManagement{
             element.clear();
             logInfo.pass("Saved to variable text of element located by " + locatorType + "='" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
-            testStepHandle("FAIL", driver, logInfo.fail("Could not save to variable text of element located by " + locatorType + "='" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not save to variable text of element located by " + locatorType + "='" + locatorValue + "'"), e);
         }
     }
 
-//    /**
-//     * Clicks button identified by `locator`.
-//     * @param locatorType
-//     * @param locatorValue
-//     */
-//    public static void clickButton(String locatorType, String locatorValue){
-//        try {
-//            WebElement element = driver.findElement(By.tagName("button"));
-//            element.click();
-//            logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "'");
-//        } catch (AssertionError | Exception e){
-//            testStepHandle("FAIL", driver, logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
-//        }
-//    }
+    /**
+     * Clicks button identified by `locator`.
+     * @param locatorType
+     * @param locatorValue
+     */
+    public static void clickButton(String locatorType, String locatorValue){
+        try {
+            WebElement element = getDriver().findElement(By.xpath("//button[@" + locatorType + "='" + locatorValue + "']"));
+            element.click();
+            logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType + "=" + locatorValue + "' was not clickable"), e);
+        }
+    }
 
     /**
      * Click element `locator` at `xoffset/yoffset`.
@@ -679,14 +683,14 @@ public class element extends browserManagement{
      * @param yoffset
      */
     public static void clickElementAtCoordinates(String locatorType, String locatorValue, int xoffset, int yoffset){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.moveToElement(element);
             actions.moveByOffset(xoffset,yoffset).click().perform();
             logInfo.pass("Clicked element located by '" + locatorType + " = " + locatorValue + "' at coordinates '" + xoffset + ", " + yoffset + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to click element located by '" + locatorType + " = " + locatorValue + "' at coordinates '" + xoffset + ", " + yoffset + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to click element located by '" + locatorType + " = " + locatorValue + "' at coordinates '" + xoffset + ", " + yoffset + "'"), e);
         }
     }
 
@@ -696,13 +700,13 @@ public class element extends browserManagement{
      * @param locatorValue
      */
     public static void doubleClickElement(String locatorType, String locatorValue){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.moveToElement(element).doubleClick().perform();
             logInfo.pass("Double clicked element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to double click element located by '" + locatorType + " = " + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to double click element located by '" + locatorType + " = " + locatorValue + "'"), e);
         }
     }
 
@@ -712,13 +716,13 @@ public class element extends browserManagement{
      * @param locatorValue
      */
     public static void setFocusToElement(String locatorType, String locatorValue){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.moveToElement(element).perform();
             logInfo.pass("Set focus on element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to focus element located by '" + locatorType + " = " + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to focus element located by '" + locatorType + " = " + locatorValue + "'"), e);
         }
     }
 
@@ -730,14 +734,14 @@ public class element extends browserManagement{
      * @param targetValue
      */
     public static void dragAndDrop(String locatorType, String locatorValue, String targetType, String targetValue){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             WebElement target = findElementBy(targetType, targetValue);
             actions.dragAndDrop(element, target).perform();
             logInfo.pass("Drag element located by '" + locatorType + " = " + locatorValue + "' and dropped into target located by '" + targetType + "=" + targetValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to drag element located by '" + locatorType + " = " + locatorValue + "' and dropped into target located by '" + targetType + "=" + targetValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to drag element located by '" + locatorType + " = " + locatorValue + "' and dropped into target located by '" + targetType + "=" + targetValue + "'"), e);
         }
     }
 
@@ -749,13 +753,13 @@ public class element extends browserManagement{
      * @param yoffset
      */
     public static void dragAndDropByOffset(String locatorType, String locatorValue, int xoffset, int yoffset){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.dragAndDropBy(element, xoffset, yoffset).perform();
             logInfo.pass("Drag element located by '" + locatorType + " = " + locatorValue + "' and dropped at coordinates '" + xoffset + ", " + yoffset + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to drag element located by '" + locatorType + " = " + locatorValue + "' and dropped at coordinates '" + xoffset + ", " + yoffset + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to drag element located by '" + locatorType + " = " + locatorValue + "' and dropped at coordinates '" + xoffset + ", " + yoffset + "'"), e);
         }
     }
 
@@ -765,13 +769,13 @@ public class element extends browserManagement{
      * @param locatorValue
      */
     public static void mouseDown(String locatorType, String locatorValue){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.clickAndHold(element).perform();
             logInfo.pass("Simulating Mouse Down on element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to simulate Mouse Down on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to simulate Mouse Down on element located by '" + locatorType + " = " + locatorValue + "'"), e);
         }
     }
 
@@ -781,13 +785,13 @@ public class element extends browserManagement{
      * @param locatorValue
      */
     public static void mouseOver(String locatorType, String locatorValue){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.moveToElement(element).perform();
             logInfo.pass("Simulating Mouse Over on element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to simulate Mouse Over on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to simulate Mouse Over on element located by '" + locatorType + " = " + locatorValue + "'"), e);
         }
     }
 
@@ -797,13 +801,13 @@ public class element extends browserManagement{
      * @param locatorValue
      */
     public static void mouseUp(String locatorType, String locatorValue){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.release(element).perform();
             logInfo.pass("Simulating Mouse Up on element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to simulate Mouse Up on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to simulate Mouse Up on element located by '" + locatorType + " = " + locatorValue + "'"), e);
         }
     }
 
@@ -813,13 +817,13 @@ public class element extends browserManagement{
      * @param locatorValue
      */
     public static void openContextMenu(String locatorType, String locatorValue){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.contextClick(element).perform();
             logInfo.pass("Context menu opened on element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to open context menu on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to open context menu on element located by '" + locatorType + " = " + locatorValue + "'"), e);
         }
     }
 
@@ -827,16 +831,16 @@ public class element extends browserManagement{
      * Simulates preesing `key` on element identified by `locator`.
      * @param locatorType
      * @param locatorValue
-     * @param key 
+     * @param key
      */
     public static void pressKey(String locatorType, String locatorValue, String key){
-        Actions actions = new Actions(driver);
+        Actions actions = new Actions(getDriver());
         try {
             WebElement element = findElementBy(locatorType, locatorValue);
             actions.sendKeys(element, key);
             logInfo.pass("Pressing key '" + key + "' on element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to press key '" + key + "' on element located by '" + locatorType + " = " + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to press key '" + key + "' on element located by '" + locatorType + " = " + locatorValue + "'"), e);
         }
     }
 }

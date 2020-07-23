@@ -1,24 +1,24 @@
 package testListeners;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.GherkinKeyword;
+import com.aventstack.extentreports.gherkin.model.Feature;
+import com.aventstack.extentreports.gherkin.model.Scenario;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import com.aventstack.extentreports.GherkinKeyword;
-import com.aventstack.extentreports.gherkin.model.Feature;
-import com.aventstack.extentreports.gherkin.model.Scenario;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class extentReportListener {
     public static ExtentHtmlReporter report = null;
@@ -101,21 +101,21 @@ public class extentReportListener {
         return str;
     }
 
-    public static void createTest(String testName, String scenario, String name){
+    public static void createTest(String feature, String scenario, String step){
         try {
-            test = extent.createTest(Feature.class, testName);
+            test = extent.createTest(Feature.class, feature);
             test = test.createNode(Scenario.class, scenario);
-            logInfo = test.createNode(new GherkinKeyword("Given"), "Given" + " " + name);
+            logInfo = test.createNode(new GherkinKeyword("Given"), "Given" + " \'" + step + "\'");
 
         } catch (AssertionError | Exception e){
             logInfo.fail(e);
         }
     }
 
-    public static void createTestStep(String gherkinKeyword, String name){
+    public static void createTestStep(String gherkinKeyword, String step){
         if (gherkinKeyword == "When") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("When"), gherkinKeyword + " " + name);
+                logInfo = test.createNode(new GherkinKeyword("When"), gherkinKeyword + " \'" + step + "\'");
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
@@ -123,7 +123,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "Then"){
             try {
-                logInfo = test.createNode(new GherkinKeyword("Then"), gherkinKeyword + " " + name);
+                logInfo = test.createNode(new GherkinKeyword("Then"), gherkinKeyword + " \'" + step + "\'");
 
             } catch (AssertionError | Exception e){
                 logInfo.fail(e);
@@ -131,7 +131,7 @@ public class extentReportListener {
         }
         if (gherkinKeyword == "And") {
             try {
-                logInfo = test.createNode(new GherkinKeyword("And"), gherkinKeyword + " " + name);
+                logInfo = test.createNode(new GherkinKeyword("And"), gherkinKeyword + " \'" + step + "\'");
 
             } catch (AssertionError | Exception e) {
                 logInfo.fail(e);
@@ -144,6 +144,7 @@ public class extentReportListener {
             case "FAIL":
                 extenttest.fail(MarkupHelper.createLabel("Test Case is Failed : ", ExtentColor.RED));
                 extenttest.error(throwable.fillInStackTrace());
+                break;
             case "PASS":
                 extenttest.pass(MarkupHelper.createLabel("Test Case is Passed : ", ExtentColor.GREEN));
                 break;

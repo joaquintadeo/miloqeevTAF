@@ -1,14 +1,14 @@
 package UI;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static UI.element.findElementBy;
+import static UI.browserManagement.getDriver;
+import static testListeners.extentReportListener.logInfo;
+import static testListeners.extentReportListener.testStepHandle;
 
-public class alert extends browserManagement{
+public class alert {
 
     /**
      * Waits for alert to appear on current page.
@@ -16,12 +16,12 @@ public class alert extends browserManagement{
      * @param timeout
      */
     public static void waitAlert(int timeout){
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebDriverWait wait = new WebDriverWait(getDriver(), timeout);
         try{
             wait.until(ExpectedConditions.alertIsPresent());
             logInfo.pass("Successfully waited for alert to appear'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Alert not found in '" + timeout + " seconds'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Alert not found in '" + timeout + " seconds'"), e);
         }
     }
 
@@ -32,15 +32,32 @@ public class alert extends browserManagement{
      * @param timeout
      */
     public static void inputTextIntoAlert(String text, int timeout){
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        WebDriverWait wait = new WebDriverWait(getDriver(), timeout);
         try{
             waitAlert(timeout);
-            Alert alert = driver.switchTo().alert();
+            Alert alert = getDriver().switchTo().alert();
             alert.sendKeys(text);
             alert.accept();
             logInfo.pass("Entered 'text=" + text + "' and accepted alert");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", driver, logInfo.fail("Unable to enter 'text=" + text + "' and accept alert"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to enter 'text=" + text + "' and accept alert"), e);
+        }
+    }
+
+    /**
+     * Accepts an alert when it appears.
+     * Fails if `timeout` expires.
+     * @param timeout
+     */
+    public static void acceptAlert(int timeout){
+        WebDriverWait wait = new WebDriverWait(getDriver(), timeout);
+        try{
+            waitAlert(timeout);
+            Alert alert = getDriver().switchTo().alert();
+            alert.accept();
+            logInfo.pass("Accepted alert");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to accept alert"), e);
         }
     }
 }

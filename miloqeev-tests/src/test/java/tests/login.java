@@ -1,68 +1,67 @@
 package tests;
 
-import UI.*;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import loginPage.loginLandingPage;
-import testListeners.extentReportListener;
+import static UI.browserManagement.*;
+import static UI.element.*;
+import static UI.wait.*;
+import static UI.window.*;
+import static loginPage.loginLandingPage.*;
+import static testListeners.extentReportListener.*;
 
 public class login {
-    private static String loginUrl = loginLandingPage.loginUrl;
-    private static String user = loginLandingPage.nameInput;
-    private static String password = loginLandingPage.passwordInput;
-    private static String loginButton = loginLandingPage.loginButton;
 
     @Given("User navigates to login page")
     public void userNavigatesToLoginPage(){
-        extentReportListener.createTest("Testing successful login", "Login With Valid Credentials", "User navigates to login page");
-        browserManagement.openBrowser("chrome");
-        browserManagement.setBrowserImplicitWait(600);
-        window.maximizeBrowserWindow();
-        browserManagement.goTo(loginUrl);
+        createTest("Testing successful login", "Login With Valid Credentials", "User navigates to login page");
+        openBrowser("chrome");
+        setBrowserImplicitWait(600);
+        maximizeBrowserWindow();
+        goTo(LOGIN_URL);
     }
 
     @When("User enters valid credentials")
     public void userEntersValidCredentials(){
-        extentReportListener.createTestStep("When", "User enters valid credentials");
-        element.inputText("name", user, "test");
-        element.inputText("name", password, "pass");
+        createTestStep("When", "User enters valid credentials");
+        inputText("name", USERNAME_INP, "test");
+        inputText("name", PASSWORD_INP, "pass");
     }
 
     @Then("User should see success message")
     public void userShouldSeeSuccessMessage(){
-        extentReportListener.createTestStep("Then", "User should see success message");
-        wait.waitUntilPageContains("**Successful Login**", 5);
-        browserManagement.closeBrowser();
+        createTestStep("Then", "User should see success message");
+        waitUntilPageContains("**Successful Login**");
+        closeBrowser();
     }
 
     @Given("User navigates to login site")
     public void userNavigatesToLoginSite(){
-        extentReportListener.createTest("Testing successful login", "Login With Invalid Credentials", "User navigates to login page");
-        browserManagement.openBrowser("chrome");
-        browserManagement.setBrowserImplicitWait(600);
-        window.maximizeBrowserWindow();
-        browserManagement.goTo(loginUrl);
+        createTest("Testing successful login", "Login With Invalid Credentials", "User navigates to login page");
+        openBrowser("chrome");
+        setBrowserImplicitWait(600);
+        maximizeBrowserWindow();
+        goTo(LOGIN_URL);
     }
 
     @When("User enters invalid credentials")
     public void userEntersInvalidCredentials(){
-        extentReportListener.createTestStep("When", "User enters invalid credentials");
-        element.inputText("name", user, "test");
-        element.inputText("name", password, "test");
+        createTestStep("When", "User enters invalid credentials");
+        inputText("name", USERNAME_INP, "test");
+        inputText("name", PASSWORD_INP, "test");
     }
 
     @Then("User should see failure message")
     public void userShouldSeeFailureMessage(){
-        extentReportListener.createTestStep("Then", "User should see failure message");
-        wait.waitUntilPageContains("**Failed Login**", 5);
-        browserManagement.closeBrowser();
+        createTestStep("Then", "User should see failure message");
+        waitUntilPageContains("**Failed Login**", 5);
+        closeBrowser();
     }
 
     @And("User clicks login button")
     public void clicksLoginButton(){
-        extentReportListener.createTestStep("And", "User clicks login button");
-        element.clickElement("name", loginButton);
+        createTestStep("And", "User clicks login button");
+        clickElement("name", LOGIN_BTN);
     }
 }
