@@ -52,8 +52,30 @@ Keyword-Driven BDD Test Automation Framework for both Front-End and Backend-Test
 6. Execute test running config file.
 7. Check results in miloqeev-reports/test-results. In case of failure, a screenshot will be attached.
 
-* #####Template files inside every folder for creation assistance. 
+* ##### Execution from console
+    1. Open a command console.
+    2. Go to project root.
+    3. Execute 'mvn clean install -DskipTests'
     
+        * MAC
+            - Execute mvn -pl '!miloqeev-reports, !miloqeev-framework, !miloqeev-page-objects' test -DtestFile='testName'
+            
+        * Windows
+            - Execute mvn -pl miloqeev-tests test -DtestFile='testName'
+            
+* ##### Executable file
+    1. Create command file as template one inside miloqeev-tests/src/test/java/executables.
+    2. Open command console and go to miloqeev-tests/src/test/java/executables.
+    
+        * MAC
+
+            - To grant permissions for execution, run chmod 755 'filename'.command.
+            - Execute file.
+        
+        * Windows
+            - Execute file.
+
+#####* Template files inside every folder for creation assistance.
     
 [Back To The Top](#miloqeev-test-automation-framework)
 
