@@ -75,7 +75,7 @@ Keyword-Driven BDD Test Automation Framework for both Front-End and Backend-Test
         * Windows
             - Execute file.
 
-#####* Template files inside every folder for creation assistance.
+##### Template files inside every folder for creation assistance.
     
 [Back To The Top](#miloqeev-test-automation-framework)
 
