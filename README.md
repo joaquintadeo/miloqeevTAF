@@ -27,7 +27,7 @@ Keyword-Driven BDD Test Automation Framework for both Front-End and Backend-Test
 - [Extent Reports](https://extentreports.com/)
 - [Maven](https://maven.apache.org/)
 
-[Back To The Top](#read-me)
+[Back To The Top](#miloqeev-test-automation-framework)
 
 ---
 
@@ -55,12 +55,12 @@ Keyword-Driven BDD Test Automation Framework for both Front-End and Backend-Test
 * #####Template files inside every folder for creation assistance. 
     
     
-[Back To The Top](#read-me)
+[Back To The Top](#miloqeev-test-automation-framework)
 
 ---
 
 ## References
-[Back To The Top](#read-me)
+[Back To The Top](#miloqeev-test-automation-framework)
 
 ---
 
@@ -85,7 +85,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[Back To The Top](#read-me)
+[Back To The Top](#miloqeev-test-automation-framework)
 
 ---
 
@@ -94,4 +94,4 @@ SOFTWARE.
 - Linkedin - [Joaquin Tadeo](https://www.linkedin.com/in/joaqu%C3%ADn-tadeo-43a811166/?locale=en_US)
 - GitHub - [Joaquin Tadeo](https://github.com/joaquintadeo)
 
-[Back To The Top](#read-me)
+[Back To The Top](#miloqeev-test-automation-framework)
