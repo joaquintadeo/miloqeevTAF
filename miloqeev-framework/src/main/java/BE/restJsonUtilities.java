@@ -17,7 +17,7 @@ import java.io.IOException;
 import static testListeners.extentReportListener.backendTestStepHandle;
 import static testListeners.extentReportListener.logInfo;
 
-public class json{
+public class restJsonUtilities {
 
     private static HttpPost httpPost;
     private static HttpGet httpGet;
@@ -154,7 +154,7 @@ public class json{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPost = new HttpPost(url);
-            setRequestHeader("Content-Type", "application/json");
+            setRequestHeader("Content-Type", "application/restJsonUtilities");
             CloseableHttpResponse postResponse = httpClient.execute(httpPost);
             respCode = postResponse.getStatusLine().getStatusCode();
             responseString = EntityUtils.toString(postResponse.getEntity(), "UTF-8");
@@ -276,12 +276,12 @@ public class json{
     }
 
     /**
-     * Loads json content from a given file.
+     * Loads restJsonUtilities content from a given file.
      * @param fileName
      */
     public static void loadJsonFromFile(String fileName) {
         try{
-            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/requests/json/" + fileName + ".json";
+            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/requests/restJsonUtilities/" + fileName + ".restJsonUtilities";
             JSONParser jsonParser = new JSONParser();
             FileReader reader = new FileReader(jsonLocation);
             requestJson = jsonParser.parse(reader);
@@ -313,10 +313,10 @@ public class json{
      */
     public static void saveJsonToFile(String fileName, Object fileToSave) throws IOException {
         try{
-            String jsonLocationFolder = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/json/";
+            String jsonLocationFolder = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/restJsonUtilities/";
             File folder = new File(jsonLocationFolder);
             folder.mkdirs();
-            String jsonLocation = jsonLocationFolder + fileName + ".json";
+            String jsonLocation = jsonLocationFolder + fileName + ".restJsonUtilities";
             File json = new File(jsonLocation);
             json.createNewFile();
             FileWriter file = new FileWriter(jsonLocation);
@@ -343,14 +343,14 @@ public class json{
     }
 
     /**
-     * Loads json content from a given file.
+     * Loads restJsonUtilities content from a given file.
      * @param fileName
      * @return
      */
     public static Object loadJsonResponseFromFile(String fileName){
         Object loadedJson = null;
         try{
-            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/responses/json/" + fileName + ".json";
+            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/responses/restJsonUtilities/" + fileName + ".restJsonUtilities";
             JSONParser jsonParser = new JSONParser();
             FileReader reader = new FileReader(jsonLocation);
             loadedJson = jsonParser.parse(reader);

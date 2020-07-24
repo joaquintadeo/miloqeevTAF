@@ -19,12 +19,12 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static BE.json.checkException;
+import static BE.restJsonUtilities.checkException;
 import static java.nio.charset.StandardCharsets.US_ASCII;
 import static testListeners.extentReportListener.backendTestStepHandle;
 import static testListeners.extentReportListener.logInfo;
 
-public class xml {
+public class restXmlUtilities {
 
     private static HttpPost httpPost;
     private static HttpGet httpGet;
@@ -115,7 +115,7 @@ public class xml {
     }
 
     /**
-     * Logs the json inside response payload into console.
+     * Logs the restJsonUtilities inside response payload into console.
      */
     public static void logRespXmlToConsole() {
         try{
@@ -293,10 +293,10 @@ public class xml {
      */
     public static void saveXmlToFile(String fileName, Object fileToSave) throws IOException {
         try{
-            String xmlLocationFolder = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/xml/";
+            String xmlLocationFolder = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/restXmlUtilities/";
             File folder = new File(xmlLocationFolder);
             folder.mkdirs();
-            String xmlLocation = xmlLocationFolder + fileName + ".xml";
+            String xmlLocation = xmlLocationFolder + fileName + ".restXmlUtilities";
             File json = new File(xmlLocation);
             json.createNewFile();
             FileWriter file = new FileWriter(xmlLocation);
@@ -342,7 +342,7 @@ public class xml {
      */
     public static void loadXmlFromFile(String fileName) {
         try{
-            String xmlLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/requests/xml/" + fileName + ".xml";
+            String xmlLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/requests/restXmlUtilities/" + fileName + ".restXmlUtilities";
             requestXml = formatXml(readFile(xmlLocation, US_ASCII));
             logInfo.pass("Successfully loaded XML from file '" + fileName + "'");
         }  catch (AssertionError | Exception e){
@@ -358,7 +358,7 @@ public class xml {
     public static Object loadXmlResponseFromFile(String fileName) {
         Object loadedXml = null;
         try{
-            String xmlLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/responses/xml/" + fileName + ".xml";
+            String xmlLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/responses/restXmlUtilities/" + fileName + ".restXmlUtilities";
             loadedXml = formatXml(readFile(xmlLocation, US_ASCII));
             logInfo.pass("Successfully loaded XML from file '" + fileName + "'");
         }  catch (AssertionError | Exception e){

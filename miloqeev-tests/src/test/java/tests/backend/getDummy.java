@@ -4,7 +4,7 @@ import BE.restCustomExceptions;
 import cucumber.api.java.en.Given;
 
 import java.io.IOException;
-import static BE.json.*;;
+import static BE.restJsonUtilities.*;;
 import static testListeners.extentReportListener.*;
 
 public class getDummy {
@@ -38,8 +38,8 @@ public class getDummy {
 //    @Given("User sends get request")
 //    public void userSendsGetRequest3() throws IOException {
 //        createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
-//        setXmlRequestHeader("Content-Type", "application/xml");
-//        setXmlRequestHeader("Accept", "application/xml");
+//        setXmlRequestHeader("Content-Type", "application/restXmlUtilities");
+//        setXmlRequestHeader("Accept", "application/restXmlUtilities");
 //        getXmlRequest("https://reqbin.com/echo/get/xml");
 //        responseShouldBe("getDummy");
 //        saveXmlToFile("test", getResponseXml());
@@ -49,8 +49,8 @@ public class getDummy {
 //    public void userSendsGetRequest() throws IOException, ParseException {
 //        createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
 //        loadXmlFromFile("postDummy");
-//        setRequestHeader("Content-Type", "application/xml");
-//        setXmlRequestHeader("Accept", "application/xml");
+//        setRequestHeader("Content-Type", "application/restXmlUtilities");
+//        setXmlRequestHeader("Accept", "application/restXmlUtilities");
 //        postXmlRequest("https://reqbin.com/echo/post/xml");
 //        logXmlRespStatusToConsole();
 //        saveXmlToFile("postDummyResponse2", getResponseXml());
