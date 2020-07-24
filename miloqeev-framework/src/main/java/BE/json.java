@@ -130,7 +130,7 @@ public class json{
      * Sends a GET request on the session to the given url.
      * @param url
      */
-    public static void getRequest(String url) throws customExceptions, IOException{
+    public static void getRequest(String url) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpGet = new HttpGet(url);
@@ -140,7 +140,7 @@ public class json{
             responseJson = parseJson();
             checkException(getRespCode(), 200);
             logInfo.pass("Sent GET request to url '" + url + "'");
-        }  catch (customExceptions ex){
+        }  catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send GET request to url '" + url + "'"), ex);
         }
@@ -150,7 +150,7 @@ public class json{
      * Send a POST request on the session to the given url.
      * @param url
      */
-    public static void postRequest(String url) throws customExceptions, IOException{
+    public static void postRequest(String url) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPost = new HttpPost(url);
@@ -161,7 +161,7 @@ public class json{
             responseJson = parseJson();
             checkException(getRespCode(), 200);
             logInfo.pass("Sent POST request to url '" + url + "'");
-        } catch (customExceptions ex){
+        } catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send POST request to url '" + url + "'"), ex);
         }
@@ -171,7 +171,7 @@ public class json{
      * Send a DELETE request on the session to the given url.
      * @param url
      */
-    public static void deleteRequest(String url) throws customExceptions, IOException{
+    public static void deleteRequest(String url) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpDelete = new HttpDelete(url);
@@ -181,7 +181,7 @@ public class json{
             responseJson = parseJson();
             checkException(getRespCode(), 202);
             logInfo.pass("Sent DELETE request to url '" + url + "'");
-        } catch (customExceptions ex){
+        } catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send DELETE request to url '" + url + "'"), ex);
         }
@@ -191,7 +191,7 @@ public class json{
      * Send a PATCH request on the session to the given url.
      * @param url
      */
-    public static void patchRequest(String url) throws customExceptions, IOException {
+    public static void patchRequest(String url) throws restCustomExceptions, IOException {
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPatch = new HttpPatch(url);
@@ -201,7 +201,7 @@ public class json{
             responseJson = parseJson();
             checkException(getRespCode(), 200);
             logInfo.pass("Sent PATCH request to url '" + url + "'");
-        } catch (customExceptions ex){
+        } catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send PATCH request to url '" + url + "'"), ex);
         }
@@ -211,7 +211,7 @@ public class json{
      * Send a PUT request on the session to the given url.
      * @param url
      */
-    public static void putRequest(String url) throws customExceptions, IOException {
+    public static void putRequest(String url) throws restCustomExceptions, IOException {
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPut = new HttpPut(url);
@@ -221,7 +221,7 @@ public class json{
             responseJson = parseJson();
             checkException(getRespCode(), 200);
             logInfo.pass("Sent PUT request to url '" + url + "'");
-        } catch (customExceptions ex){
+        } catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send PUT request to url '" + url + "'"), ex);
         }
@@ -231,46 +231,46 @@ public class json{
      * Validates the request status code.
      * @param respCode
      * @param expectedCode
-     * @throws customExceptions
+     * @throws restCustomExceptions
      */
-    public static void checkException(int respCode, int expectedCode) throws customExceptions{
+    public static void checkException(int respCode, int expectedCode) throws restCustomExceptions {
         switch (respCode){
             case 400:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("400 Bad Request");
+                throw new restCustomExceptions("400 Bad Request");
             case 401:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("401 Unauthorized");
+                throw new restCustomExceptions("401 Unauthorized");
             case 403:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("400 Forbidden");
+                throw new restCustomExceptions("400 Forbidden");
             case 404:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("404 Not Found");
+                throw new restCustomExceptions("404 Not Found");
             case 405:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("405 Method Not Allowed");
+                throw new restCustomExceptions("405 Method Not Allowed");
             case 408:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("408 Request Timeout");
+                throw new restCustomExceptions("408 Request Timeout");
             case 500:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("500 Internal Server Error");
+                throw new restCustomExceptions("500 Internal Server Error");
             case 501:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("501 Not Implemented");
+                throw new restCustomExceptions("501 Not Implemented");
             case 502:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("502 Bad Gateway");
+                throw new restCustomExceptions("502 Bad Gateway");
             case 503:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("503 Service Unavailable");
+                throw new restCustomExceptions("503 Service Unavailable");
             case 504:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("504 Gateway Timeout");
+                throw new restCustomExceptions("504 Gateway Timeout");
             case 505:
                 Assert.assertEquals(respCode, expectedCode);
-                throw new customExceptions("505 HTTP Version Not Supported");
+                throw new restCustomExceptions("505 HTTP Version Not Supported");
             default: break;
         }
     }

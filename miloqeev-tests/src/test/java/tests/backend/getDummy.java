@@ -1,12 +1,10 @@
 package tests.backend;
 
-import BE.customExceptions;
+import BE.restCustomExceptions;
 import cucumber.api.java.en.Given;
-import org.apache.http.ParseException;
 
 import java.io.IOException;
 import static BE.json.*;;
-import static BE.xml.*;
 import static testListeners.extentReportListener.*;
 
 public class getDummy {
@@ -21,7 +19,7 @@ public class getDummy {
 //    }
 //
     @Given("User sends get request")
-    public void userSendsGetRequest() throws IOException, customExceptions {
+    public void userSendsGetRequest() throws IOException, restCustomExceptions {
         createTest("Testing get request", "Get Dummy Endpoint", "User sends get request");
         loadJsonFromFile("postDummy");
         postRequest("http://dummy.restapiexample.com/api/v1/create");

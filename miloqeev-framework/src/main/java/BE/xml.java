@@ -189,7 +189,7 @@ public class xml {
      * Sends a GET XML request on the session to the given url.
      * @param url
      */
-    public static void getXmlRequest(String url) throws customExceptions, IOException{
+    public static void getXmlRequest(String url) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpGet = new HttpGet(url);
@@ -199,7 +199,7 @@ public class xml {
             responseXml = formatXml(responseString);
             checkException(getRespCode(), 200);
             logInfo.pass("Sent XML GET request to url '" + url + "'");
-        }  catch (customExceptions ex){
+        }  catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send XML GET request to url '" + url + "'"), ex);
         }
@@ -209,7 +209,7 @@ public class xml {
      * Sends a POST XML request on the session to the given url.
      * @param url
      */
-    public static void postXmlRequest(String url) throws customExceptions, IOException{
+    public static void postXmlRequest(String url) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPost = new HttpPost(url);
@@ -219,7 +219,7 @@ public class xml {
             responseXml = formatXml(responseString);
             checkException(getRespCode(), 200);
             logInfo.pass("Sent XML POST request to url '" + url + "'");
-        }  catch (customExceptions ex){
+        }  catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send XML POST request to url '" + url + "'"), ex);
         }
@@ -229,7 +229,7 @@ public class xml {
      * Sends a DELETE XML request on the session to the given url.
      * @param url
      */
-    public static void deleteXmlRequest(String url) throws customExceptions, IOException{
+    public static void deleteXmlRequest(String url) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpDelete = new HttpDelete(url);
@@ -239,7 +239,7 @@ public class xml {
             responseXml = formatXml(responseString);
             checkException(getRespCode(), 202);
             logInfo.pass("Sent XML DELETE request to url '" + url + "'");
-        }  catch (customExceptions ex){
+        }  catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send XML DELETE request to url '" + url + "'"), ex);
         }
@@ -249,7 +249,7 @@ public class xml {
      * Sends a PATCH XML request on the session to the given url.
      * @param url
      */
-    public static void patchXmlRequest(String url) throws customExceptions, IOException{
+    public static void patchXmlRequest(String url) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPatch = new HttpPatch(url);
@@ -259,7 +259,7 @@ public class xml {
             responseXml = formatXml(responseString);
             checkException(getRespCode(), 200);
             logInfo.pass("Sent XML PATCH request to url '" + url + "'");
-        }  catch (customExceptions ex){
+        }  catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send XML PATCH request to url '" + url + "'"), ex);
         }
@@ -269,7 +269,7 @@ public class xml {
      * Sends a PUT XML request on the session to the given url.
      * @param url
      */
-    public static void putXmlRequest(String url) throws customExceptions, IOException{
+    public static void putXmlRequest(String url) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPut = new HttpPut(url);
@@ -279,7 +279,7 @@ public class xml {
             responseXml = formatXml(responseString);
             checkException(getRespCode(), 200);
             logInfo.pass("Sent XML PUT request to url '" + url + "'");
-        }  catch (customExceptions ex){
+        }  catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
             backendTestStepHandle("FAIL", logInfo.fail("Failed to send XML PUT request to url '" + url + "'"), ex);
         }
