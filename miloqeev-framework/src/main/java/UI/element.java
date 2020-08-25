@@ -1,5 +1,6 @@
 package UI;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,6 +14,13 @@ import static testListeners.extentReportListener.testStepHandle;
 
 public class element {
 
+    private static String locatorType2;
+    private static String locatorValue2;
+
+    public static void separateElementLocatorTypeFromValue(String element){
+        locatorType2 = StringUtils.substringBefore(element, "=");
+        locatorValue2 = StringUtils.substringAfter(element, "=");
+    }
     /**
      * Finds and return `element` by given locator.
      * @param locatorType
@@ -36,6 +44,28 @@ public class element {
             logInfo.pass("Found element located by '" + locatorType + "=" + locatorValue + "' and saved to variable");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", getDriver(), logInfo.fail("Could not find element located by '" + locatorType + "=" + locatorValue + "'"), e);
+        }
+        return tmp;
+    }
+
+    public static WebElement findElementBy2(String element){
+        separateElementLocatorTypeFromValue(element);
+        WebElement tmp = null;
+        try{
+            switch (locatorType2){
+                case "id": tmp = getDriver().findElement(By.id(locatorValue2));
+                    break;
+                case "name": tmp = getDriver().findElement(By.name(locatorValue2));
+                    break;
+                case "class": tmp = getDriver().findElement(By.className(locatorValue2));
+                    break;
+                case "xpath": tmp = getDriver().findElement(By.xpath(locatorValue2));
+                    break;
+                default: break;
+            }
+            logInfo.pass("Found element located by '" + locatorType2 + "=" + locatorValue2 + "' and saved to variable");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not find element located by '" + locatorType2 + "=" + locatorValue2 + "'"), e);
         }
         return tmp;
     }
@@ -92,6 +122,16 @@ public class element {
             logInfo.pass("Entered '" + text + "' in element located by '" + locatorType + " = " + locatorValue + "'");
         } catch (AssertionError | Exception e){
             testStepHandle("FAIL", getDriver(), logInfo.fail("Could not enter text in element located by '" + locatorType + "=" + locatorValue + "'"), e);
+        }
+    }
+
+    public static void inputText2(String webElement, String text){
+        try {
+            WebElement element = findElementBy2(webElement);
+            element.sendKeys(text);
+            logInfo.pass("Entered '" + text + "' in element located by '" + locatorType2 + " = " + locatorValue2 + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Could not enter text in element located by '" + locatorType2 + "=" + locatorValue2 + "'"), e);
         }
     }
 
@@ -217,6 +257,16 @@ public class element {
         }
     }
 
+    public static void clickElement2(String webElement){
+        try {
+            WebElement element = findElementBy2(webElement);
+            element.click();
+            logInfo.pass("Clicked element located by '" + locatorType2 + " = " + locatorValue2 + "'");
+        } catch (AssertionError | Exception e){
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Element located by '" + locatorType2 + "=" + locatorValue2 + "' was not clickable"), e);
+        }
+    }
+
     /**
      * Verifies that element `locator` is found on the current page.
      * @param locatorType
@@ -230,6 +280,18 @@ public class element {
             logInfo.pass("Validated presence of element located by '" + locatorType + "=" + locatorValue + "'");
         } catch (AssertionError | Exception e) {
             testStepHandle("FAIL",getDriver(),logInfo.fail("Page does not contain element located by '" + locatorType + "=" + locatorValue + "'"),e);
+            logInfo.fail(e.getCause());
+        }
+    }
+
+    public static void pageShouldContainElement2(String webElement){
+        try {
+//            int numberOfElements = getElementCount2(webElement);
+            int actualNumberOfElements = getElementCount2(webElement);
+            Assert.assertNotEquals(0, actualNumberOfElements, "Page does not contain element located by '" + locatorType2 + "=" + locatorValue2 + "'");
+            logInfo.pass("Validated presence of element located by '" + locatorType2 + "=" + locatorValue2 + "'");
+        } catch (AssertionError | Exception e) {
+            testStepHandle("FAIL",getDriver(),logInfo.fail("Page does not contain element located by '" + locatorType2 + "=" + locatorValue2 + "'"),e);
             logInfo.fail(e.getCause());
         }
     }
@@ -266,6 +328,23 @@ public class element {
             case "class": elementCount = getDriver().findElements(By.className(locatorValue)).size();
                 break;
             case "xpath": elementCount = getDriver().findElements(By.xpath(locatorValue)).size();
+                break;
+            default: break;
+        }
+        return elementCount;
+    }
+
+    public static int getElementCount2(String webElement){
+        separateElementLocatorTypeFromValue(webElement);
+        int elementCount = 0;
+        switch (locatorType2){
+            case "id": elementCount = getDriver().findElements(By.id(locatorValue2)).size();
+                break;
+            case "name": elementCount = getDriver().findElements(By.name(locatorValue2)).size();
+                break;
+            case "class": elementCount = getDriver().findElements(By.className(locatorValue2)).size();
+                break;
+            case "xpath": elementCount = getDriver().findElements(By.xpath(locatorValue2)).size();
                 break;
             default: break;
         }

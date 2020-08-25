@@ -7,7 +7,7 @@
     <!-- Test Started... -->
     <test name="Automation Test Report">
         <classes>
-            <class name="testRunners.youTubeTestRunner"/>
+            <class name="testRunners.prestashop.cartTestRunner"/>
             <!--            <class name="com.automationFramework.testRunner.testRunner"></class>-->
         </classes>
     </test>

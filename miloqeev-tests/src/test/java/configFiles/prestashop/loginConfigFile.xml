@@ -7,7 +7,7 @@
     <!-- Test Started... -->
     <test name="Automation Test Report">
         <classes>
-            <class name="testRunners.getTestRunner"/>
+            <class name="testRunners.prestashop.loginTestRunner"/>
             <!--            <class name="com.automationFramework.testRunner.testRunner"></class>-->
         </classes>
     </test>

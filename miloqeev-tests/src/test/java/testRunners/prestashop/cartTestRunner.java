@@ -1,4 +1,4 @@
-package testRunners;
+package testRunners.prestashop;
 
 import io.cucumber.testng.CucumberFeatureWrapper;
 import io.cucumber.testng.CucumberOptions;
@@ -10,12 +10,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 @CucumberOptions(
-        features = "src/test/resources/features",
-        glue = {"tests/youtube"},
-        tags = {"@YouTubeTest"},
+        features = "src/test/resources/features/prestashop",
+        glue = {"tests/prestashop"},
+        tags = {"@cart"},
         monochrome = true
 )
-public class youTubeTestRunner {
+public class cartTestRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
 
     @BeforeClass(alwaysRun = true)
