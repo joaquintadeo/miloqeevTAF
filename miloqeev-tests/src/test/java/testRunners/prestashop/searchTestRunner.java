@@ -12,10 +12,10 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/resources/features/prestashop",
         glue = {"tests/prestashop"},
-        tags = {"@login, @cart, @search, @empty, @checkout"},
+        tags = {"@search"},
         monochrome = true
 )
-public class suiteTestRunner {
+public class searchTestRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
 
     @BeforeClass(alwaysRun = true)
