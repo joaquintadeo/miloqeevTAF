@@ -1,0 +1,13 @@
+{
+  "password": "superman",
+  "name": "Cam Newton",
+  "email": "camnewton@miloqeev.com",
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/users/camnewton"
+    },
+    "user": {
+      "href": "http://localhost:8080/users/camnewton"
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "_embedded": {
+    "users": [
+      {
+        "password": "dwill",
+        "name": "Deron Williams",
+        "email": "deronwilliams@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/deronwilliams"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/deronwilliams"
+          }
+        }
+      },
+      {
+        "password": "googleme",
+        "name": "Dion Waiters",
+        "email": "dionwaiters@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/dionwaiters"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/dionwaiters"
+          }
+        }
+      },
+      {
+        "password": "dekendorf",
+        "name": "Drazen Petrovic",
+        "email": "drazenpetrovic@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/drazenpetrovic"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/drazenpetrovic"
+          }
+        }
+      },
+      {
+        "password": "thedragon",
+        "name": "Goran Dragic",
+        "email": "gorandragic@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/gorandragic"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/gorandragic"
+          }
+        }
+      },
+      {
+        "password": "go",
+        "name": "Greg Oden",
+        "email": "gregoden@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/gregoden"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/gregoden"
+          }
+        }
+      },
+      {
+        "password": "nugget",
+        "name": "Jamal Murray",
+        "email": "jamalmurray@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/jamalmurray"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/jamalmurray"
+          }
+        }
+      },
+      {
+        "password": "spree",
+        "name": "Latrell Sprewell",
+        "email": "latrellsprewell@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/latrellsprewell"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/latrellsprewell"
+          }
+        }
+      },
+      {
+        "password": "smartceltic",
+        "name": "Marcus Smart",
+        "email": "marcussmart@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/marcussmart"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/marcussmart"
+          }
+        }
+      },
+      {
+        "password": "beasy",
+        "name": "Michael Beasley",
+        "email": "michaelbeasley@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/michaelbeasley"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/michaelbeasley"
+          }
+        }
+      },
+      {
+        "password": "pistolpete",
+        "name": "Pete Maravich",
+        "email": "petemaravich@miloqeev.com",
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/users/petemaravich"
+          },
+          "user": {
+            "href": "http://localhost:8080/users/petemaravich"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/users{?page,size,sort}",
+      "templated": true
+    },
+    "profile": {
+      "href": "http://localhost:8080/profile/users"
+    }
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 10,
+    "totalPages": 1,
+    "number": 0
+  }
+}
