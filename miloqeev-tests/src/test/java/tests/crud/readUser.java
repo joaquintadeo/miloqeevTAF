@@ -21,6 +21,5 @@ public class readUser {
     public void UserShouldSeeAllUsers() {
         createTestStep("Then", "User should see all users");
         statusShouldBe(200);
-        responseShouldBe("readUser");
     }
 }

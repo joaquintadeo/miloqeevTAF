@@ -120,10 +120,10 @@ public class restJsonUtilities {
      */
     public static void statusShouldBe(int expectedStatus) {
         try{
-            Assert.assertEquals(getRespCode(), expectedStatus, "Response status should have been " + expectedStatus + "but instead was " + getRespCode());
-            logInfo.pass("Response status should have been " + expectedStatus + "but instead was " + getRespCode());
+            Assert.assertEquals(getRespCode(), expectedStatus);
+            logInfo.pass("Verified status code was '" + expectedStatus + "'");
         } catch (AssertionError | Exception e){
-            backendTestStepHandle("FAIL", logInfo.fail("Response status should have been " + expectedStatus + "but instead was " + getRespCode()), e);
+            backendTestStepHandle("FAIL", logInfo.fail("Response status should have been " + expectedStatus + " but instead was " + getRespCode()), e);
         }
     }
 
@@ -160,7 +160,6 @@ public class restJsonUtilities {
             CloseableHttpResponse postResponse = httpClient.execute(httpPost);
             respCode = postResponse.getStatusLine().getStatusCode();
             responseString = EntityUtils.toString(postResponse.getEntity(), "UTF-8");
-            responseJson = parseJson();
             checkException(getRespCode(), expectedCode);
             logInfo.pass("Sent POST request to url '" + url + "'");
         } catch (restCustomExceptions ex){
@@ -221,8 +220,6 @@ public class restJsonUtilities {
             setPutRequestHeader("Content-Type", "application/json");
             CloseableHttpResponse postResponse = httpClient.execute(httpPut);
             respCode = postResponse.getStatusLine().getStatusCode();
-//            responseString = EntityUtils.toString(postResponse.getEntity(), "UTF-8");
-            responseJson = parseJson();
             checkException(getRespCode(), expectedCode);
             logInfo.pass("Sent PUT request to url '" + url + "'");
         } catch (restCustomExceptions ex){

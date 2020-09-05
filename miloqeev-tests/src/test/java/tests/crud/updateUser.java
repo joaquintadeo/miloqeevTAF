@@ -12,16 +12,18 @@ import static testListeners.extentReportListener.createTestStep;
 
 public class updateUser {
     @Given("User sends put request to update user")
-    public void userSendsPutRequestToUpdateUser() throws IOException, restCustomExceptions {
+    public void userSendsPutRequestToUpdateUser() throws IOException, restCustomExceptions{
         createTest("Update User", "Update User", "User sends put request to update user");
+        loadJsonFromFile("createUser");
+        postRequest("http://localhost:8080/users", 201);
         loadJsonFromFile("updateUser");
         putRequest("http://localhost:8080/users/camnewton", 200);
     }
 
     @Then("User should be updated")
-    public void newUserShouldBeCreated() {
+    public void newUserShouldBeCreated() throws IOException, restCustomExceptions{
         createTestStep("Then", "User should be updated");
-        statusShouldBe(200);
-        responseShouldBe("updateUser");
+        statusShouldBe(204);
+        deleteRequest("http://localhost:8080/users/camnewton", 204);
     }
 }

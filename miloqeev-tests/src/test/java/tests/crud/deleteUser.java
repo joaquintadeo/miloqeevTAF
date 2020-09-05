@@ -14,6 +14,8 @@ public class deleteUser {
     @Given("User sends request to delete user")
     public void userSendsRequestToDeleteUser() throws IOException, restCustomExceptions {
         createTest("Delete User", "Delete User", "User sends request to delete user");
+        loadJsonFromFile("createUser");
+        postRequest("http://localhost:8080/users", 201);
         deleteRequest("http://localhost:8080/users/camnewton", 204);
     }
 

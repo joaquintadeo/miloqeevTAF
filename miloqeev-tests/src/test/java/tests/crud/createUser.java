@@ -12,16 +12,16 @@ import static testListeners.extentReportListener.createTestStep;
 
 public class createUser {
     @Given("User sends post request to create user")
-    public void userSendsPostRequestToCreateUser() throws IOException, restCustomExceptions {
+    public void userSendsPostRequestToCreateUser() throws IOException, restCustomExceptions{
         createTest("Create User", "Create User", "User sends post request to create user");
         loadJsonFromFile("createUser");
         postRequest("http://localhost:8080/users", 201);
     }
 
     @Then("New user should be created")
-    public void newUserShouldBeCreated() {
+    public void newUserShouldBeCreated() throws IOException, restCustomExceptions{
         createTestStep("Then", "New user should be created");
         statusShouldBe(201);
-        responseShouldBe("createUser");
+        deleteRequest("http://localhost:8080/users/camnewton", 204);
     }
 }
