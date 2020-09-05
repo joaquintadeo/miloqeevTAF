@@ -13,16 +13,15 @@ public class frames {
 
     /**
      * Sets frame identified by `locator` as the current frame.
-     * @param locatorType
-     * @param locatorValue
+     * @param locator
      */
-    public static void selectFrame(String locatorType, String locatorValue){
+    public static void selectFrame(String locator){
         try{
-            WebElement element = findElementBy(locatorType, locatorValue);
+            WebElement element = findElementBy(locator);
             getDriver().switchTo().frame(element);
-            logInfo.pass("Selecting frame located by '" + locatorType + "=" + locatorValue + "'");
+            logInfo.pass("Selecting frame located by '" + locator + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to select frame located by '" + locatorType + "=" + locatorValue + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Unable to select frame located by '" + locator + "'"), e);
         }
     }
 
@@ -70,19 +69,18 @@ public class frames {
 
     /**
      * Verifies that frame identified by `locator` contains `text`.
-     * @param locatorType
-     * @param locatorValue
+     * @param locator
      * @param text
      */
-    public static void frameShouldContain(String locatorType, String locatorValue, String text){
+    public static void frameShouldContain(String locator, String text){
         try{
-            WebElement element = findElementBy(locatorType, locatorValue);
+            WebElement element = findElementBy(locator);
             getDriver().switchTo().frame(element);
             int elementCount = getDriver().findElements(By.tagName(text)).size();
             Assert.assertEquals(elementCount, 0);
-            logInfo.pass("Frame located by '" + locatorType + "=" + locatorValue + "' contains text='" + text + "'");
+            logInfo.pass("Frame located by '" + locator + "' contains text='" + text + "'");
         } catch (AssertionError | Exception e){
-            testStepHandle("FAIL", getDriver(), logInfo.fail("Frame located by '" + locatorType + "=" + locatorValue + "' did not contain text='" + text + "'"), e);
+            testStepHandle("FAIL", getDriver(), logInfo.fail("Frame located by '" + locator + "' did not contain text='" + text + "'"), e);
         }
     }
 }

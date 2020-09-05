@@ -3,6 +3,7 @@ package BE;
 
 import io.cucumber.datatable.dependency.com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.methods.*;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -119,10 +120,10 @@ public class restJsonUtilities {
      */
     public static void statusShouldBe(int expectedStatus) {
         try{
-            Assert.assertEquals(getRespCode(), expectedStatus, "Response status should have been " + expectedStatus + "but instead was " + getRespCode());
-            logInfo.pass("Response status should have been " + expectedStatus + "but instead was " + getRespCode());
+            Assert.assertEquals(getRespCode(), expectedStatus);
+            logInfo.pass("Verified status code was '" + expectedStatus + "'");
         } catch (AssertionError | Exception e){
-            backendTestStepHandle("FAIL", logInfo.fail("Response status should have been " + expectedStatus + "but instead was " + getRespCode()), e);
+            backendTestStepHandle("FAIL", logInfo.fail("Response status should have been " + expectedStatus + " but instead was " + getRespCode()), e);
         }
     }
 
@@ -130,7 +131,7 @@ public class restJsonUtilities {
      * Sends a GET request on the session to the given url.
      * @param url
      */
-    public static void getRequest(String url) throws restCustomExceptions, IOException{
+    public static void getRequest(String url, int expectedCode) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpGet = new HttpGet(url);
@@ -138,7 +139,7 @@ public class restJsonUtilities {
             respCode = getResponse.getStatusLine().getStatusCode();
             responseString = EntityUtils.toString(getResponse.getEntity(), "UTF-8");
             responseJson = parseJson();
-            checkException(getRespCode(), 200);
+            checkException(getRespCode(), expectedCode);
             logInfo.pass("Sent GET request to url '" + url + "'");
         }  catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
@@ -150,16 +151,16 @@ public class restJsonUtilities {
      * Send a POST request on the session to the given url.
      * @param url
      */
-    public static void postRequest(String url) throws restCustomExceptions, IOException{
+    public static void postRequest(String url, int expectedCode) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPost = new HttpPost(url);
-            setRequestHeader("Content-Type", "application/restJsonUtilities");
+            httpPost.setEntity(new StringEntity(requestJson.toString()));
+            setRequestHeader("Content-Type", "application/json");
             CloseableHttpResponse postResponse = httpClient.execute(httpPost);
             respCode = postResponse.getStatusLine().getStatusCode();
             responseString = EntityUtils.toString(postResponse.getEntity(), "UTF-8");
-            responseJson = parseJson();
-            checkException(getRespCode(), 200);
+            checkException(getRespCode(), expectedCode);
             logInfo.pass("Sent POST request to url '" + url + "'");
         } catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
@@ -171,15 +172,13 @@ public class restJsonUtilities {
      * Send a DELETE request on the session to the given url.
      * @param url
      */
-    public static void deleteRequest(String url) throws restCustomExceptions, IOException{
+    public static void deleteRequest(String url, int expectedCode) throws restCustomExceptions, IOException{
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpDelete = new HttpDelete(url);
             CloseableHttpResponse postResponse = httpClient.execute(httpDelete);
             respCode = postResponse.getStatusLine().getStatusCode();
-            responseString = EntityUtils.toString(postResponse.getEntity(), "UTF-8");
-            responseJson = parseJson();
-            checkException(getRespCode(), 202);
+            checkException(getRespCode(), expectedCode);
             logInfo.pass("Sent DELETE request to url '" + url + "'");
         } catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
@@ -191,15 +190,17 @@ public class restJsonUtilities {
      * Send a PATCH request on the session to the given url.
      * @param url
      */
-    public static void patchRequest(String url) throws restCustomExceptions, IOException {
+    public static void patchRequest(String url, int expectedCode) throws restCustomExceptions, IOException {
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPatch = new HttpPatch(url);
+            httpPatch.setEntity(new StringEntity(requestJson.toString()));
+            setPatchRequestHeader("Content-Type", "application/json");
             CloseableHttpResponse postResponse = httpClient.execute(httpPatch);
             respCode = postResponse.getStatusLine().getStatusCode();
             responseString = EntityUtils.toString(postResponse.getEntity(), "UTF-8");
             responseJson = parseJson();
-            checkException(getRespCode(), 200);
+            checkException(getRespCode(), expectedCode);
             logInfo.pass("Sent PATCH request to url '" + url + "'");
         } catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
@@ -211,15 +212,15 @@ public class restJsonUtilities {
      * Send a PUT request on the session to the given url.
      * @param url
      */
-    public static void putRequest(String url) throws restCustomExceptions, IOException {
+    public static void putRequest(String url, int expectedCode) throws restCustomExceptions, IOException {
         try{
             CloseableHttpClient httpClient = HttpClients.createDefault();
             httpPut = new HttpPut(url);
+            httpPut.setEntity(new StringEntity(requestJson.toString()));
+            setPutRequestHeader("Content-Type", "application/json");
             CloseableHttpResponse postResponse = httpClient.execute(httpPut);
             respCode = postResponse.getStatusLine().getStatusCode();
-            responseString = EntityUtils.toString(postResponse.getEntity(), "UTF-8");
-            responseJson = parseJson();
-            checkException(getRespCode(), 200);
+            checkException(getRespCode(), expectedCode);
             logInfo.pass("Sent PUT request to url '" + url + "'");
         } catch (restCustomExceptions ex){
             System.out.println("ex = " + ex.getMessage());
@@ -281,7 +282,7 @@ public class restJsonUtilities {
      */
     public static void loadJsonFromFile(String fileName) {
         try{
-            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/requests/restJsonUtilities/" + fileName + ".restJsonUtilities";
+            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/requests/json/" + fileName + ".json";
             JSONParser jsonParser = new JSONParser();
             FileReader reader = new FileReader(jsonLocation);
             requestJson = jsonParser.parse(reader);
@@ -306,6 +307,34 @@ public class restJsonUtilities {
     }
 
     /**
+     * Sets request desired headers.
+     * @param name
+     * @param value
+     */
+    public static void setPatchRequestHeader(String name, String value) {
+        try{
+            httpPatch.addHeader(name, value);
+            logInfo.pass("Set Request header " + name + " to: " + value);
+        }  catch (AssertionError | Exception e){
+            backendTestStepHandle("FAIL", logInfo.fail("Could not set Request header " + name + " to: " + value), e);
+        }
+    }
+
+    /**
+     * Sets request desired headers.
+     * @param name
+     * @param value
+     */
+    public static void setPutRequestHeader(String name, String value) {
+        try{
+            httpPut.addHeader(name, value);
+            logInfo.pass("Set Request header " + name + " to: " + value);
+        }  catch (AssertionError | Exception e){
+            backendTestStepHandle("FAIL", logInfo.fail("Could not set Request header " + name + " to: " + value), e);
+        }
+    }
+
+    /**
      * Saves Json object to the given file.
      * @param fileName
      * @param fileToSave
@@ -313,10 +342,10 @@ public class restJsonUtilities {
      */
     public static void saveJsonToFile(String fileName, Object fileToSave) throws IOException {
         try{
-            String jsonLocationFolder = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/restJsonUtilities/";
+            String jsonLocationFolder = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-reports/test-results/responses/json/";
             File folder = new File(jsonLocationFolder);
             folder.mkdirs();
-            String jsonLocation = jsonLocationFolder + fileName + ".restJsonUtilities";
+            String jsonLocation = jsonLocationFolder + fileName + ".json";
             File json = new File(jsonLocation);
             json.createNewFile();
             FileWriter file = new FileWriter(jsonLocation);
@@ -350,7 +379,7 @@ public class restJsonUtilities {
     public static Object loadJsonResponseFromFile(String fileName){
         Object loadedJson = null;
         try{
-            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/responses/restJsonUtilities/" + fileName + ".restJsonUtilities";
+            String jsonLocation = System.getProperty("user.dir") + File.separator + ".." + File.separator + "miloqeev-tests/src/test/resources/responses/json/" + fileName + ".json";
             JSONParser jsonParser = new JSONParser();
             FileReader reader = new FileReader(jsonLocation);
             loadedJson = jsonParser.parse(reader);
